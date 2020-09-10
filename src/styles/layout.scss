@@ -1,0 +1,32 @@
+html {
+  font-family: 10px helvetica, arial, sans-serif;
+  font-size: 10px;
+  color: #000;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
