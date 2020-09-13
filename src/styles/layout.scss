@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  font-family: 10px helvetica, arial, sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 10px;
   color: #000;
   -ms-text-size-adjust: 100%;
@@ -12,21 +22,4 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: transparent;
-}
-
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-  &:hover,
-  &:focus {
-    color: #fff;
-  }
 }
