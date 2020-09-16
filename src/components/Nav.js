@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
 import { theme } from '../styles/theme';
+import Logo from '../assets/logo.svg';
 
 export const navItems = [
   {
@@ -31,6 +32,26 @@ const Header = ({ ...props }) => {
       }}
     >
       {props.children}
+    </Box>
+  );
+};
+
+const SiteLogo = () => {
+  return (
+    <Box
+      as={Link}
+      to="/"
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: ['auto'],
+        width: ['300px', '', '424px'],
+        margin: '0 auto',
+        py: [3, '', 5],
+      }}
+    >
+      <Logo />
     </Box>
   );
 };
@@ -98,6 +119,7 @@ const NavItem = ({ item, index }) => {
 const Nav = () => {
   return (
     <Header>
+      <SiteLogo />
       <NavBar>
         {navItems.map((item, index) => {
           return <NavItem key={index} index={index} item={item}></NavItem>;
