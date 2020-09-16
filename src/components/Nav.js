@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
+import { theme } from '../styles/theme';
 
 export const navItems = [
   {
@@ -44,6 +45,7 @@ const NavBar = ({ ...props }) => {
         flexDirection: 'row',
         alignItems: 'center',
         height: 'auto',
+        background: theme.colors.navy, // Temporary
       }}
     >
       <Box
@@ -51,6 +53,7 @@ const NavBar = ({ ...props }) => {
         sx={{
           display: 'flex',
           flex: '1 0 auto',
+          justifyContent: 'center',
           height: 'auto',
         }}
       >
@@ -76,12 +79,12 @@ const NavItem = ({ item, index }) => {
           textDecoration: 'none',
           fontSize: '20px',
           fontWeight: 'semiBold',
-          color: 'black',
+          color: theme.colors.white, // Temporary
           '&:hover': {
-            color: 'navy',
+            color: theme.colors.white, // Temporary,
           },
           '&:focus': {
-            color: 'navy',
+            color: theme.colors.white, // Temporary,
           },
         }}
         to={item.url}
