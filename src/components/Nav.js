@@ -7,19 +7,19 @@ import Logo from '../assets/logo.svg';
 export const navItems = [
   {
     title: 'RSVP',
-    url: 'rsvp',
+    url: '/rsvp',
   },
   {
     title: 'The Day',
-    url: 'the-day',
+    url: '/the-day',
   },
   {
     title: 'FAQ',
-    url: 'faq',
+    url: '/faq',
   },
   {
     title: 'Registry',
-    url: 'registry',
+    url: '/registry',
   },
 ];
 
@@ -86,10 +86,7 @@ const NavBar = ({ ...props }) => {
 
 const NavItem = ({ item, index }) => {
   return (
-    <Text
-      as="li"
-      sx={{ m: 0, p: 0, listStyle: 'none', width: ['100%', 'auto'] }}
-    >
+    <Text as="li" sx={{ m: 0, p: 0, listStyle: 'none', width: ['auto'] }}>
       <Box
         as={Link}
         sx={{
