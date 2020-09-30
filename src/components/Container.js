@@ -17,11 +17,22 @@ const Container = ({ children }) => {
   );
 };
 
+export const ImageWrapper = ({ ...props }) => (
+  <Box
+    sx={{
+      margin: '0 auto',
+      maxWidth: '1440px',
+      width: '100%',
+    }}
+    {...props}
+  />
+);
+
 export const ContentWrapper = ({ ...props }) => (
   <Box
     sx={{
       margin: '0 auto',
-      maxWidth: '1920px',
+      maxWidth: '1180px',
       width: '100%',
     }}
     {...props}
