@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Flex, Text } from 'rebass';
-import { ContentWrapper } from './Container';
 import { theme } from '../styles/theme';
+import { ContentWrapper } from './Container';
 import { faqs } from '../content/faq-content';
 
 const Accordion = () => {

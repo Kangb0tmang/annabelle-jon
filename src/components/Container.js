@@ -1,22 +1,6 @@
 import React from 'react';
 import { Box, Flex } from 'rebass';
 
-const Container = ({ children }) => {
-  return (
-    <Flex
-      sx={{
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100%',
-      }}
-    >
-      {children}
-    </Flex>
-  );
-};
-
 export const ImageWrapper = ({ ...props }) => (
   <Box
     sx={{
@@ -38,5 +22,21 @@ export const ContentWrapper = ({ ...props }) => (
     {...props}
   />
 );
+
+const Container = ({ children }) => {
+  return (
+    <Flex
+      sx={{
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
+      }}
+    >
+      {children}
+    </Flex>
+  );
+};
 
 export default Container;

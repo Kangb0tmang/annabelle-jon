@@ -10,6 +10,7 @@ export const theme = {
     pink: '#ffd1dc',
     gold: '#fdb927',
     purple: '#552583',
+    formError: '#F08080',
   },
   fontWeights: {
     regular: 400,
