@@ -48,7 +48,7 @@ const SiteLogo = () => {
         height: ['auto'],
         width: ['300px', '', '424px'],
         margin: '0 auto',
-        py: [3, '', 5],
+        py: ['15px', '', '30px'],
       }}
     >
       <Logo />
@@ -96,7 +96,7 @@ const NavItem = ({ item, index }) => {
           p: '15px',
           textDecoration: 'none',
           fontSize: '20px',
-          fontWeight: 'semiBold',
+          fontWeight: theme.fontWeights.medium,
           color: theme.colors.white, // Temporary
           '&:hover': {
             color: theme.colors.white, // Temporary,

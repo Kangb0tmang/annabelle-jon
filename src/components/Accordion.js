@@ -18,16 +18,16 @@ const Accordion = () => {
       >
         {faqs.map((faq, index) => {
           return (
-            <Box key={index} sx={{ mb: 2, '&:last-child': { mb: 0 } }}>
+            <Box key={index} sx={{ mb: '20px', '&:last-child': { mb: 0 } }}>
               <Box
                 as="button"
                 sx={{
                   width: '100%',
-                  p: 3,
+                  p: '15px',
                   border: `1px solid ${theme.colors.grey}`,
                   borderRadius: '4px',
                   textAlign: 'left',
-                  fontSize: 4,
+                  fontSize: '18px',
                   fontWeight: theme.fontWeights.medium,
                 }}
                 onClick={() => {
@@ -48,8 +48,9 @@ const Accordion = () => {
                 <Text
                   as="p"
                   sx={{
-                    fontSize: 3,
-                    py: 3,
+                    fontSize: '18px',
+                    py: '10px',
+                    pr: '20px',
                     transition: 'opacity 0.3s 0s ease-in-out',
                     opacity: activeItem === index ? '1' : '0',
                   }}
