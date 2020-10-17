@@ -1,11 +1,12 @@
 import React from 'react';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
+import PageHeading from '../components/PageHeading';
 
 const Home = () => (
   <Page>
     <SEO title="Registry" />
-    <h1>Gift Registry</h1>
+    <PageHeading>Gift Registry</PageHeading>
   </Page>
 );
 
