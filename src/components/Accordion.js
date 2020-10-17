@@ -14,6 +14,8 @@ const Accordion = () => {
         sx={{
           flexDirection: 'column',
           width: '100%',
+          mt: ['25px', '', '50px'],
+          px: '20px',
         }}
       >
         {faqs.map((faq, index) => {
@@ -27,7 +29,7 @@ const Accordion = () => {
                   border: `1px solid ${theme.colors.grey}`,
                   borderRadius: '4px',
                   textAlign: 'left',
-                  fontSize: '18px',
+                  fontSize: ['18px', '', '24px'],
                   fontWeight: theme.fontWeights.medium,
                 }}
                 onClick={() => {
@@ -48,7 +50,7 @@ const Accordion = () => {
                 <Text
                   as="p"
                   sx={{
-                    fontSize: '18px',
+                    fontSize: ['16px', '', '18px'],
                     py: '10px',
                     pr: '20px',
                     transition: 'opacity 0.3s 0s ease-in-out',
