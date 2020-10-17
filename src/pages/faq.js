@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import Accordion from '../components/Accordion';
 
-const Home = () => (
+const FAQ = () => (
   <Page>
     <SEO title="FAQ" />
     <PageHeading>Frequently Asked Questions</PageHeading>
@@ -12,4 +12,4 @@ const Home = () => (
   </Page>
 );
 
-export default Home;
+export default FAQ;

@@ -3,11 +3,11 @@ import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 
-const Home = () => (
+const Registry = () => (
   <Page>
     <SEO title="Registry" />
     <PageHeading>Gift Registry</PageHeading>
   </Page>
 );
 
-export default Home;
+export default Registry;
