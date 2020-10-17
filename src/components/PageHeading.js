@@ -11,7 +11,7 @@ const PageHeading = ({ ...props }) => {
         mb: ['25px', '', '30px'],
         fontSize: ['24px', '', '50px'],
         fontWeight: theme.fontWeights.bold,
-        color: theme.colors.navy,
+        color: theme.colours.navy,
       }}
     >
       {props.children}

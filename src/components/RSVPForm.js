@@ -47,7 +47,7 @@ const RSVPForm = () => {
               sx={{
                 fontSize: ['16px'],
                 fontWeight: theme.fontWeights.medium,
-                color: theme.colors.formError,
+                color: theme.colours.formError,
               }}
             >
               {errors.name && errors.name.message}
@@ -82,7 +82,7 @@ const RSVPForm = () => {
               sx={{
                 fontSize: ['16px'],
                 fontWeight: theme.fontWeights.medium,
-                color: theme.colors.formError,
+                color: theme.colours.formError,
               }}
             >
               {errors.email && errors.email.message}
@@ -102,6 +102,7 @@ const RSVPForm = () => {
             <Textarea
               id="dietary-req"
               name="dietary-req"
+              rows="5"
               sx={{ fontSize: ['18px', '', '22px'] }}
             />
           </Box>
@@ -111,7 +112,7 @@ const RSVPForm = () => {
               alignSelf: 'flex-start',
               p: '10px',
               mt: ['10px', '', '20px'],
-              border: `1px solid ${theme.colors.black}`,
+              border: `1px solid ${theme.colours.black}`,
               borderRadius: '2px',
               lineHeight: ['16px', '', '20px'],
               fontSize: ['18px', '', '22px'],

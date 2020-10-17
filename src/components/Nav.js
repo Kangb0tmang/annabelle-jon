@@ -66,7 +66,7 @@ const NavBar = ({ ...props }) => {
         flexDirection: 'row',
         alignItems: 'center',
         height: 'auto',
-        background: theme.colors.navy, // Temporary
+        background: theme.colours.navy, // Temporary
       }}
     >
       <Box
@@ -97,12 +97,12 @@ const NavItem = ({ item, index }) => {
           textDecoration: 'none',
           fontSize: '20px',
           fontWeight: theme.fontWeights.medium,
-          color: theme.colors.white, // Temporary
+          color: theme.colours.white, // Temporary
           '&:hover': {
-            color: theme.colors.white, // Temporary,
+            color: theme.colours.white, // Temporary,
           },
           '&:focus': {
-            color: theme.colors.white, // Temporary,
+            color: theme.colours.white, // Temporary,
           },
         }}
         to={item.url}

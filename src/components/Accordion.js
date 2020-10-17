@@ -26,7 +26,7 @@ const Accordion = () => {
                 sx={{
                   width: '100%',
                   p: '15px',
-                  border: `1px solid ${theme.colors.grey}`,
+                  border: `1px solid ${theme.colours.grey}`,
                   borderRadius: '4px',
                   textAlign: 'left',
                   fontSize: ['18px', '', '24px'],
