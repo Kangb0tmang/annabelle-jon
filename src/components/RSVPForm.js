@@ -6,12 +6,40 @@ import { theme } from '../styles/theme';
 import { ContentWrapper } from './Container';
 
 const RSVPForm = () => {
-  const { handleSubmit, register, errors } = useForm();
-  const onSubmit = (values) => console.log(values);
+  const { handleSubmit, register, errors, formState } = useForm();
+  const { isValid, isSubmitting, isSubmitSuccessful } = formState;
+  const functionURL = 'https://sand-wildebeest-1919.twil.io/send-email';
+  const onSubmit = async (data) => {
+    console.log(data);
+    const fromEmail = `${data.email}`;
+    const name = `${data.name}`;
+    const subject = `Wedding RSVP from ${data.name}`;
+    const body = `${data.dietary}`;
+
+    const response = await fetch(functionURL, {
+      method: 'post',
+      headers: {
+        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      },
+      body: new URLSearchParams({ fromEmail, name, subject, body }).toString(),
+    });
+
+    if (response.status === 200) {
+      console.log(response.json());
+    } else {
+      const json = await response.json();
+      console.log(json);
+    }
+  };
 
   return (
     <ContentWrapper>
-      <Box as="form" onSubmit={handleSubmit(onSubmit)}>
+      <Box
+        as="form"
+        onSubmit={handleSubmit(onSubmit)}
+        method="post"
+        action={functionURL}
+      >
         <Flex
           sx={{
             flexDirection: 'column',
@@ -90,7 +118,7 @@ const RSVPForm = () => {
           </Box>
           <Box sx={{ width: '100%', mb: '20px' }}>
             <Label
-              htmlFor="dietary-req"
+              htmlFor="dietary"
               sx={{
                 mb: '5px',
                 fontSize: ['20px', '', '24px'],
@@ -100,10 +128,11 @@ const RSVPForm = () => {
               Dietary Requirements
             </Label>
             <Textarea
-              id="dietary-req"
-              name="dietary-req"
+              id="dietary"
+              name="dietary"
               rows="5"
               sx={{ fontSize: ['18px', '', '22px'] }}
+              ref={register}
             />
           </Box>
           <Box
@@ -120,6 +149,14 @@ const RSVPForm = () => {
             }}
           >
             RSVP
+          </Box>
+          <Box>
+            <Text as="h1" sx={{ fontSize: '30px' }}>
+              Valid form? {isValid ? 'Yes' : 'No'}
+            </Text>
+            <Text as="h2" sx={{ fontSize: '25px' }}>
+              Successful submit? {isSubmitSuccessful ? 'Yes' : 'Nope'}
+            </Text>
           </Box>
         </Flex>
       </Box>
