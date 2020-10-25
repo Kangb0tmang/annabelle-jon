@@ -9,7 +9,8 @@ const PageHeading = ({ ...props }) => {
       sx={{
         mt: ['25px', '', '40px'],
         mb: ['25px', '', '30px'],
-        fontSize: ['24px', '', '50px'],
+        lineHeight: ['30px', '', '45px'],
+        fontSize: ['35px', '', '50px'],
         fontWeight: theme.fontWeights.bold,
         color: theme.colours.navy,
       }}
