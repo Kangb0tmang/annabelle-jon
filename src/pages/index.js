@@ -4,7 +4,8 @@ import Img from 'gatsby-image';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
-import { ImageWrapper } from '../components/Container';
+import { ContentWrapper, ImageWrapper } from '../components/Container';
+import Countdown from '../components/Countdown';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -30,6 +31,9 @@ const Home = () => {
       <ImageWrapper>
         <Img fluid={data.file.childImageSharp.fluid} />
       </ImageWrapper>
+      <ContentWrapper>
+        <Countdown />
+      </ContentWrapper>
     </Page>
   );
 };
