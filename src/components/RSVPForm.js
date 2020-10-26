@@ -1,19 +1,21 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { Box, Flex, Text } from 'rebass';
 import { Label, Input, Textarea } from '@rebass/forms';
 import { theme } from '../styles/theme';
-import { ContentWrapper } from './Container';
+import { ContentWrapper, ImageWrapper } from './Container';
 
 const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const { isValid, isSubmitting, isSubmitSuccessful } = formState;
   const functionURL = 'https://sand-wildebeest-1919.twil.io/send-email';
-  const onSubmit = async (data) => {
-    const fromEmail = `${data.email}`;
-    const name = `${data.name}`;
-    const subject = `Wedding RSVP from ${data.name}`;
-    const body = `${data.dietary}`;
+  const onSubmit = async (form) => {
+    const fromEmail = `${form.email}`;
+    const name = `${form.name}`;
+    const subject = `Wedding RSVP from ${form.name}`;
+    const body = `${form.dietary}`;
 
     const response = await fetch(functionURL, {
       method: 'post',
@@ -32,32 +34,54 @@ const RSVPForm = () => {
     }
   };
 
+  const data = useStaticQuery(graphql`
+    query rsvpImgQuery {
+      file(relativePath: { eq: "rsvp.jpg" }) {
+        childImageSharp {
+          fluid {
+            aspectRatio
+            base64
+            sizes
+            src
+            srcSet
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <ContentWrapper>
+      <ImageWrapper>
+        <Img fluid={data.file.childImageSharp.fluid} />
+      </ImageWrapper>
       {isSubmitSuccessful ? (
-        <Flex
-          sx={{
-            alignItems: 'center',
-            width: '100%',
-            maxWidth: '600px',
-            margin: '0 auto',
-            px: '20px',
-          }}
-        >
-          <Box sx={{ mt: ['25px', '', '40px'] }}>
-            <Text
-              as="p"
-              sx={{
-                lineHeight: ['28px', '36px'],
-                textAlign: 'center',
-                fontSize: ['30px', '', '40px'],
-                fontWeight: theme.fontWeights.medium,
-              }}
-            >
-              Thank you for your RSVP. We look forward to celebrating with you!
-            </Text>
-          </Box>
-        </Flex>
+        <>
+          <Flex
+            sx={{
+              alignItems: 'center',
+              width: '100%',
+              maxWidth: '600px',
+              margin: '0 auto',
+              px: '20px',
+            }}
+          >
+            <Box sx={{ mt: ['25px', '', '40px'] }}>
+              <Text
+                as="p"
+                sx={{
+                  lineHeight: ['28px', '36px'],
+                  textAlign: 'center',
+                  fontSize: ['30px', '', '40px'],
+                  fontWeight: theme.fontWeights.medium,
+                }}
+              >
+                Thank you for your RSVP. We look forward to celebrating with
+                you!
+              </Text>
+            </Box>
+          </Flex>
+        </>
       ) : (
         <Box
           as="form"

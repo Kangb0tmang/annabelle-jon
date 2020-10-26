@@ -4,9 +4,10 @@ import { Box, Flex } from 'rebass';
 export const ImageWrapper = ({ ...props }) => (
   <Box
     sx={{
-      margin: '0 auto',
-      maxWidth: '1440px',
+      maxWidth: '1000px',
       width: '100%',
+      mx: 'auto',
+      my: ['30px', '', '50px', '100px'],
     }}
     {...props}
   />
