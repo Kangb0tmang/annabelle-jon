@@ -9,7 +9,7 @@ import { ContentWrapper, ImageWrapper } from './Container';
 
 const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
-  const { isValid, isSubmitting, isSubmitSuccessful } = formState;
+  const { isSubmitSuccessful } = formState;
   const functionURL = 'https://sand-wildebeest-1919.twil.io/send-email';
   const onSubmit = async (form) => {
     const fromEmail = `${form.email}`;
@@ -88,6 +88,7 @@ const RSVPForm = () => {
           onSubmit={handleSubmit(onSubmit)}
           method="post"
           action={functionURL}
+          sx={{ mb: ['30px', '', '100px'] }}
         >
           <Flex
             sx={{
