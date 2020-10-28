@@ -66,7 +66,7 @@ const NavBar = ({ ...props }) => {
         flexDirection: 'row',
         alignItems: 'center',
         height: 'auto',
-        background: theme.colours.navy, // Temporary
+        bg: theme.colours.navy, // Temporary
       }}
     >
       <Box
@@ -86,30 +86,53 @@ const NavBar = ({ ...props }) => {
 
 const NavItem = ({ item, index }) => {
   return (
-    <Text as="li" sx={{ m: 0, p: 0, listStyle: 'none', width: ['auto'] }}>
-      <Box
+    <Box
+      as="li"
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        m: 0,
+        p: 0,
+        listStyle: 'none',
+        width: ['auto'],
+      }}
+    >
+      <Text
         as={Link}
+        to={item.url}
         sx={{
-          display: 'flex',
-          alignItems: 'center',
           position: 'relative',
+          alignSelf: 'center',
           p: '15px',
           textDecoration: 'none',
-          fontSize: '20px',
+          lineHeight: ['18px', '', '22px'],
+          fontSize: ['20px', '', '24px'],
           fontWeight: theme.fontWeights.medium,
           color: theme.colours.white, // Temporary
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            left: '20px',
+            bottom: '6px',
+            width: '0px',
+            height: '1px',
+          },
           '&:hover': {
             color: theme.colours.white, // Temporary,
+            '&:after': {
+              width: 'calc(100% - 40px)',
+              transition: 'width 0.2s ease',
+              bg: theme.colours.gold, // Temporary
+            },
           },
           '&:focus': {
             color: theme.colours.white, // Temporary,
           },
         }}
-        to={item.url}
       >
         {item.title}
-      </Box>
-    </Text>
+      </Text>
+    </Box>
   );
 };
 

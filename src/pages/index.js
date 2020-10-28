@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import { ContentWrapper, ImageWrapper } from '../components/Container';
 import Countdown from '../components/Countdown';
+import RSVPButton from '../components/RSVPButton';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -34,6 +35,7 @@ const Home = () => {
       <ContentWrapper>
         <Countdown />
       </ContentWrapper>
+      <RSVPButton />
     </Page>
   );
 };
