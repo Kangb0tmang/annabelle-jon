@@ -76,7 +76,7 @@ const Countdown = () => {
         justifyContent: 'center',
         width: '100%',
         maxWidth: '600px',
-        margin: '0 auto',
+        m: '0 auto',
         px: '20px',
       }}
     >

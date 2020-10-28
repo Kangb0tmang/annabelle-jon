@@ -47,7 +47,7 @@ const SiteLogo = () => {
         justifyContent: 'center',
         height: ['auto'],
         width: ['300px', '', '424px'],
-        margin: '0 auto',
+        m: '0 auto',
         py: ['15px', '', '30px'],
       }}
     >
@@ -91,9 +91,6 @@ const NavItem = ({ item, index }) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        m: 0,
-        p: 0,
-        listStyle: 'none',
         width: ['auto'],
       }}
     >

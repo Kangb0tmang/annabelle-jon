@@ -62,7 +62,7 @@ const RSVPForm = () => {
               alignItems: 'center',
               width: '100%',
               maxWidth: '600px',
-              margin: '0 auto',
+              m: '0 auto',
               px: '20px',
             }}
           >
@@ -88,7 +88,6 @@ const RSVPForm = () => {
           onSubmit={handleSubmit(onSubmit)}
           method="post"
           action={functionURL}
-          sx={{ mb: ['30px', '', '100px'] }}
         >
           <Flex
             sx={{
@@ -96,7 +95,7 @@ const RSVPForm = () => {
               alignItems: 'center',
               width: '100%',
               maxWidth: '550px',
-              margin: '0 auto',
+              m: '0 auto',
               px: '20px',
             }}
           >
