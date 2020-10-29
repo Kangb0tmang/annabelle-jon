@@ -43,7 +43,7 @@ const Footer = () => {
                     },
                   }}
                 >
-                  Annabelle: <Link to="0433222111">0433222111</Link>
+                  Annabelle: <a href="tel:0433222111">0433222111</a>
                 </Text>
               </Box>
               <Box as="li">
@@ -57,7 +57,7 @@ const Footer = () => {
                     },
                   }}
                 >
-                  Jon: <Link to="0488222333">0488222333</Link>
+                  Jon: <a href="tel:0488222333">0488222333</a>
                 </Text>
               </Box>
             </Box>
