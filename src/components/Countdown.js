@@ -60,7 +60,7 @@ const Countdown = () => {
           sx={{
             lineHeight: ['18px', '', '28px'],
             fontSize: ['20px', '', '30px'],
-            fontWeight: theme.fontWeights.medium,
+            fontWeight: theme.fontWeights.bold,
           }}
         >
           {interval}

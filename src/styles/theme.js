@@ -12,6 +12,9 @@ export const theme = {
     purple: '#552583',
     formError: '#F08080',
   },
+  fontFamily: {
+    heading: "'Montserrat', sans-serif",
+  },
   fontWeights: {
     regular: 400,
     medium: 500,

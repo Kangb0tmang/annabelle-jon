@@ -73,7 +73,6 @@ const RSVPForm = () => {
                   lineHeight: ['28px', '36px'],
                   textAlign: 'center',
                   fontSize: ['30px', '', '40px'],
-                  fontWeight: theme.fontWeights.medium,
                 }}
               >
                 Thank you for your RSVP. We look forward to celebrating with
@@ -105,7 +104,7 @@ const RSVPForm = () => {
                 sx={{
                   mb: '5px',
                   fontSize: ['20px', '', '24px'],
-                  fontWeight: theme.fontWeights.medium,
+                  fontWeight: theme.fontWeights.bold,
                 }}
               >
                 Name
@@ -123,7 +122,7 @@ const RSVPForm = () => {
                 as="p"
                 sx={{
                   fontSize: ['16px'],
-                  fontWeight: theme.fontWeights.medium,
+                  fontWeight: theme.fontWeights.bold,
                   color: theme.colours.formError,
                 }}
               >
@@ -136,7 +135,7 @@ const RSVPForm = () => {
                 sx={{
                   mb: '5px',
                   fontSize: ['20px', '', '24px'],
-                  fontWeight: theme.fontWeights.medium,
+                  fontWeight: theme.fontWeights.bold,
                 }}
               >
                 Email
@@ -158,7 +157,7 @@ const RSVPForm = () => {
                 as="p"
                 sx={{
                   fontSize: ['16px'],
-                  fontWeight: theme.fontWeights.medium,
+                  fontWeight: theme.fontWeights.bold,
                   color: theme.colours.formError,
                 }}
               >
@@ -171,7 +170,7 @@ const RSVPForm = () => {
                 sx={{
                   mb: '5px',
                   fontSize: ['20px', '', '24px'],
-                  fontWeight: theme.fontWeights.medium,
+                  fontWeight: theme.fontWeights.bold,
                 }}
               >
                 Dietary Requirements
@@ -194,7 +193,7 @@ const RSVPForm = () => {
                 borderRadius: '2px',
                 lineHeight: ['16px', '', '20px'],
                 fontSize: ['18px', '', '22px'],
-                fontWeight: theme.fontWeights.medium,
+                fontWeight: theme.fontWeights.bold,
               }}
             >
               RSVP

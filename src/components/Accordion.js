@@ -30,7 +30,7 @@ const Accordion = () => {
                   borderRadius: '4px',
                   textAlign: 'left',
                   fontSize: ['18px', '', '24px'],
-                  fontWeight: theme.fontWeights.medium,
+                  fontWeight: theme.fontWeights.bold,
                 }}
                 onClick={() => {
                   setOpen(activeItem === index ? !open : true);

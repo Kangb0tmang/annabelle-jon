@@ -104,7 +104,7 @@ const NavItem = ({ item, index }) => {
           textDecoration: 'none',
           lineHeight: ['18px', '', '22px'],
           fontSize: ['20px', '', '24px'],
-          fontWeight: theme.fontWeights.medium,
+          fontWeight: theme.fontWeights.bold,
           color: theme.colours.white, // Temporary
           '&:after': {
             content: '""',
