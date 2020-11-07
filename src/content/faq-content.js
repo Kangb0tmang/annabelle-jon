@@ -1,27 +1,54 @@
 export const faqs = [
   {
-    question: 'First question',
-    response:
-      "Eat owner's food mesmerizing birds find box a little too small and curl up with fur hanging out or cough hairball on conveniently placed pants. Immediately regret falling into bathtub shake treat bag, so intrigued by the shower pee in human's bed until he cleans the litter box going to catch the red dot today going to catch the red dot today but pet me pet me pet me pet me, bite, scratch, why are you petting me yet lick butt.",
+    question: 'When’s the RSVP deadline?',
+    response: 'Monday 29 March 2021',
   },
   {
-    question: 'Next question',
+    question: 'Can I bring a plus 1?',
     response:
-      "Eat an easter feather as if it were a bird then burp victoriously, but tender purr. Step on your keyboard while you're gaming and then turn in a circle adventure always hiss at vacuum cleaner so i will ruin the couch with my claws for dont wait for the storm to pass.",
+      'Unfortunately due to venue restrictions, we are unable to accommodate plus ones. We appreciate your understanding.',
   },
   {
-    question: 'Another one',
+    question: 'What happens if I have dietary requirements?',
     response:
-      'Make meme, make cute face hide when guests come over, and sleeps on my head brown cats with pink ears. All of a sudden cat goes crazy scratch leg; meow for can opener to feed me but stare at wall turn and meow stare at wall some more meow again continue staring destroy house in 5 seconds sleeps on my head.',
+      'Please make sure you tell us your dietary requirements when you RSVP on our site.',
   },
   {
-    question: 'You rang?',
+    question: 'Is there a gift registry?',
     response:
-      'Stares at human while pushing stuff off a table pet me pet me pet me pet me, bite, scratch, why are you petting me for mesmerizing birds, but play riveting piece on synthesizer keyboard so attack the child. Kitty time.',
+      'If you do wish to celebrate with a gift, a contribution towards our wishing well would be much appreciated.',
   },
   {
-    question: 'Please hold',
+    question: 'What time should I arrive?',
     response:
-      "Lick master's hand at first then bite because im moody spend all night ensuring people don't sleep sleep all day and please let me outside pouty face yay! wait, it's cold out please let me inside pouty face oh, thank you rub against mommy's leg oh it looks so nice out, please let me outside again the neighbor cat was mean to me please let me back inside, rub face on owner jump on fridge. Litter kitter kitty litty little kitten big roar roar feed me bite off human's toes chase mice, so chase the pig around the house. Push your water glass on the floor shake treat bag, yet cat mojo yet stare out cat door then go back inside and always hungry. ",
+      'Please arrive at least 15 minutes prior to the wedding start time.',
+  },
+  {
+    question: 'Is there parking available on site?',
+    response: 'Yes, there is parking available on site.',
+  },
+  {
+    question: 'Will the ceremony be indoors or outdoors?',
+    response:
+      'Ceremony will be outdoors, however if it were to rain the ceremony will be held indoors.',
+  },
+  {
+    question: 'Will I be able to take photos during the ceremony?',
+    response:
+      'We would appreciate it if you save the photo taking till after the ceremony and allow our photographer to capture our moment.',
+  },
+  {
+    question: 'Will hand sanitiser and masks be provided?',
+    response:
+      'Please bring your own face mask, however there will be emergency masks available if needed. Hand sanitisers will be available at the venue.',
+  },
+  {
+    question: 'What should I do if I can’t make it?’',
+    response:
+      "Please RSVP as soon as you know you can't make it. We'll miss you! :(",
+  },
+  {
+    question: 'Who can I contact for further questions?',
+    response: 'Feel free to contact either Annabelle or Jon.',
   },
 ];
