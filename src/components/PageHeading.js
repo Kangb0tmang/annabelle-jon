@@ -12,7 +12,7 @@ const PageHeading = ({ ...props }) => {
         fontFamily: theme.fontFamily.heading,
         fontSize: ['35px', '', '50px'],
         fontWeight: theme.fontWeights.bold,
-        color: theme.colours.navy,
+        color: theme.colours.black,
       }}
     >
       {props.children}

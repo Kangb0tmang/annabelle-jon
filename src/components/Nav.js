@@ -112,7 +112,7 @@ const NavItem = ({ item, index }) => {
             left: '20px',
             bottom: '6px',
             width: '0px',
-            height: '1px',
+            height: '2px',
           },
           '&:hover': {
             color: theme.colours.white, // Temporary,

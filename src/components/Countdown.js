@@ -47,7 +47,7 @@ const Countdown = () => {
         <Text
           as="p"
           sx={{
-            mb: '10px',
+            pb: '20px',
             lineHeight: ['28px', '', '48px'],
             fontSize: ['30px', '', '50px'],
             fontWeight: theme.fontWeights.bold,
@@ -58,9 +58,12 @@ const Countdown = () => {
         <Text
           as="p"
           sx={{
+            p: '10px',
             lineHeight: ['18px', '', '28px'],
+            bg: theme.colours.navy,
             fontSize: ['20px', '', '30px'],
             fontWeight: theme.fontWeights.bold,
+            color: theme.colours.pink,
           }}
         >
           {interval}
