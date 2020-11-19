@@ -70,11 +70,9 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
         alignItems: ['flex-start', '', 'center'],
         position: ['fixed', '', 'relative'],
         zIndex: '100',
-        transform: [mobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)'],
         height: ['100%', '', 'auto'],
-        width: ['100vw', '', 'auto'],
+        width: [mobileMenuOpen ? '100vw' : '0', '', 'auto'],
         bg: [theme.colours.white, '', theme.colours.navy], // Temporary
-        transition: 'transform 0.5s ease',
       }}
     >
       <Box
