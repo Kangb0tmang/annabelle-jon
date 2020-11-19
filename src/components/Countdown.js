@@ -39,8 +39,13 @@ const Countdown = () => {
         sx={{
           mr: ['25px', '', '40px'],
           textAlign: 'center',
-          '&:last-child': {
+          '@media only screen and (max-width: 500px)': {
             mr: '0',
+            flex: '1 1 50%',
+            p: '10px',
+          },
+          '&:last-child': {
+            mr: ['', '', '0'],
           },
         }}
       >
@@ -81,6 +86,9 @@ const Countdown = () => {
         maxWidth: '600px',
         m: '0 auto',
         px: '20px',
+        '@media only screen and (max-width: 500px)': {
+          flexWrap: 'wrap',
+        },
       }}
     >
       {timerComponents.length ? (

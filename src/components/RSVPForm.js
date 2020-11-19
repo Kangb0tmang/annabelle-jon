@@ -119,7 +119,7 @@ const RSVPForm = () => {
             >
               Attending?
             </Text>
-            <Flex sx={{ display: 'flex', width: '100%', mb: '30px' }}>
+            <Flex sx={{ width: '100%', mb: '30px' }}>
               <Box sx={{ mr: '20px' }}>
                 <Label>
                   <Radio
