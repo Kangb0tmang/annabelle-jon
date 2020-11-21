@@ -46,9 +46,12 @@ const SiteLogo = () => {
         alignItems: 'center',
         justifyContent: 'center',
         height: ['auto'],
-        width: ['300px', '', '424px'],
+        width: ['250px', '', '424px'],
         m: ['0', '', '0 auto'],
         py: ['15px', '', '30px'],
+        '@media only screen and (min-width: 500px) and (max-width: 740px)': {
+          width: '300px',
+        },
         '@media only screen and (max-width: 740px)': {
           ml: '20px',
         },
@@ -134,7 +137,7 @@ const NavItem = ({ item, index }) => {
             },
           },
           '&:focus': {
-            color: theme.colours.white, // Temporary
+            color: ['', '', theme.colours.white], // Temporary
           },
         }}
       >
@@ -159,8 +162,8 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
       <Box
         sx={{
           position: 'relative',
-          width: '50px',
-          height: '50px',
+          width: '30px',
+          height: '30px',
           cursor: 'pointer',
           borderRadius: '5px',
         }}
@@ -174,9 +177,9 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'relative',
-              width: mobileMenuOpen ? 0 : '50px',
+              width: mobileMenuOpen ? 0 : '30px',
               height: '4px',
-              m: '10px 0',
+              m: '7px 0',
               bg: theme.colours.navy, // Temporary
               transitionProperty: 'all',
               transitionDuration: '0.25s',
@@ -187,9 +190,9 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'relative',
-              width: mobileMenuOpen ? 0 : '50px',
+              width: mobileMenuOpen ? 0 : '30px',
               height: '4px',
-              m: '10px 0',
+              m: '7px 0',
               bg: theme.colours.navy, // Temporary
               transitionProperty: 'all',
               transitionDuration: '0.25s',
@@ -200,9 +203,9 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'relative',
-              width: mobileMenuOpen ? 0 : '50px',
+              width: mobileMenuOpen ? 0 : '30px',
               height: '4px',
-              m: '10px 0',
+              m: '7px 0',
               bg: theme.colours.navy, // Temporary
               transitionProperty: 'all',
               transitionDuration: '0.25s',
@@ -215,6 +218,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
         <Box
           sx={{
             position: 'absolute',
+            top: '5px',
             width: '100%',
             height: '100%',
             transform: 'rotate(45deg)',
@@ -224,7 +228,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
             sx={{
               position: 'absolute',
               top: '10%',
-              left: '24px',
+              left: '13px',
               width: '4px',
               height: mobileMenuOpen ? '80%' : 0,
               borderRadius: '5px',
@@ -238,7 +242,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'absolute',
-              top: '24px',
+              top: '13px',
               left: '10%',
               width: mobileMenuOpen ? '80%' : 0,
               height: '4px',
