@@ -59,6 +59,7 @@ const SiteLogo = () => {
   );
 };
 
+// Transition: https://codepen.io/shieldsma91/pen/zLpbLX
 const NavBar = ({ mobileMenuOpen, ...props }) => {
   return (
     <Box
@@ -70,15 +71,17 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
         alignItems: ['flex-start', '', 'center'],
         position: ['fixed', '', 'relative'],
         zIndex: '100',
+        transform: [mobileMenuOpen ? 'none' : 'translateX(-100%)', '', 'none'],
+        width: ['100vw', '', 'auto'],
         height: ['100%', '', 'auto'],
-        width: [mobileMenuOpen ? '100vw' : '0', '', 'auto'],
         bg: [theme.colours.white, '', theme.colours.navy], // Temporary
+        transition: 'transform 0.5s ease-in-out 0.5s',
       }}
     >
       <Box
         as="ul"
         sx={{
-          display: [mobileMenuOpen ? 'flex' : 'none', '', 'flex'],
+          display: 'flex',
           flexDirection: ['column', '', 'row'],
           flex: '1 0 auto',
           justifyContent: ['flex-start', '', 'center'],
@@ -98,7 +101,8 @@ const NavItem = ({ item, index }) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        width: ['auto'],
+        justifyContent: 'center',
+        width: 'auto',
       }}
     >
       <Text
@@ -122,7 +126,7 @@ const NavItem = ({ item, index }) => {
             height: '2px',
           },
           '&:hover': {
-            color: ['', '', theme.colours.white], // Temporary,
+            color: ['', '', theme.colours.white], // Temporary
             '&:after': {
               width: 'calc(100% - 40px)',
               transition: 'width 0.2s ease',
@@ -130,7 +134,7 @@ const NavItem = ({ item, index }) => {
             },
           },
           '&:focus': {
-            color: theme.colours.white, // Temporary,
+            color: theme.colours.white, // Temporary
           },
         }}
       >
@@ -140,6 +144,7 @@ const NavItem = ({ item, index }) => {
   );
 };
 
+// Transition: https://codepen.io/designcouch/pen/hyFAD/
 const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
   return (
     <Box
@@ -147,20 +152,106 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
         display: ['block', '', 'none'],
         alignSelf: 'flex-end',
         position: 'absolute',
-        top: '30px',
+        top: '20px',
         right: '20px',
       }}
     >
-      <Text
-        as="a"
-        href="#"
+      <Box
+        sx={{
+          position: 'relative',
+          width: '50px',
+          height: '50px',
+          cursor: 'pointer',
+          borderRadius: '5px',
+        }}
         onClick={(e) => {
           e.preventDefault();
           setMobileMenuOpen(!mobileMenuOpen);
         }}
       >
-        {mobileMenuOpen ? 'Close' : 'Open'}
-      </Text>
+        {/* Hamburger */}
+        <Box sx={{ position: 'absolute', width: '100%', height: '100%' }}>
+          <Box
+            sx={{
+              position: 'relative',
+              width: mobileMenuOpen ? 0 : '50px',
+              height: '4px',
+              m: '10px 0',
+              bg: theme.colours.navy, // Temporary
+              transitionProperty: 'all',
+              transitionDuration: '0.25s',
+              transitionTimingFunction: 'ease-in-out',
+              transitionDelay: mobileMenuOpen ? '0s' : '0.5s',
+            }}
+          ></Box>
+          <Box
+            sx={{
+              position: 'relative',
+              width: mobileMenuOpen ? 0 : '50px',
+              height: '4px',
+              m: '10px 0',
+              bg: theme.colours.navy, // Temporary
+              transitionProperty: 'all',
+              transitionDuration: '0.25s',
+              transitionTimingFunction: 'ease-in-out',
+              transitionDelay: mobileMenuOpen ? '0.125s' : '0.625s',
+            }}
+          ></Box>
+          <Box
+            sx={{
+              position: 'relative',
+              width: mobileMenuOpen ? 0 : '50px',
+              height: '4px',
+              m: '10px 0',
+              bg: theme.colours.navy, // Temporary
+              transitionProperty: 'all',
+              transitionDuration: '0.25s',
+              transitionTimingFunction: 'ease-in-out',
+              transitionDelay: mobileMenuOpen ? '0.25s' : '0.75s',
+            }}
+          ></Box>
+        </Box>
+        {/* Cross */}
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            transform: 'rotate(45deg)',
+          }}
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '10%',
+              left: '24px',
+              width: '4px',
+              height: mobileMenuOpen ? '80%' : 0,
+              borderRadius: '5px',
+              bg: theme.colours.navy, // Temporary
+              transitionProperty: 'all',
+              transitionDuration: '0.25s',
+              transitionTimingFunction: 'ease-in-out',
+              transitionDelay: mobileMenuOpen ? '0.625s' : '0s',
+            }}
+          ></Box>
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '24px',
+              left: '10%',
+              width: mobileMenuOpen ? '80%' : 0,
+              height: '4px',
+              borderRadius: '5px',
+              bg: theme.colours.navy, // Temporary
+              transitionProperty: 'all',
+              transitionDuration: '0.25s',
+              transitionTimingFunction: 'ease-in-out',
+              transitionDelay: mobileMenuOpen ? '0.375s' : '0.25s',
+            }}
+          ></Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
