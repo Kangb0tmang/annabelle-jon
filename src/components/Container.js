@@ -7,7 +7,7 @@ export const ImageWrapper = ({ ...props }) => (
       maxWidth: '800px',
       width: '100%',
       mx: 'auto',
-      my: ['30px', '', '50px', '100px'],
+      my: ['30px', '', '50px', '80px'],
     }}
     {...props}
   />

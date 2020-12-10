@@ -7,8 +7,9 @@ const PageHeading = ({ ...props }) => {
     <Text
       as="h1"
       sx={{
-        mt: ['30px', '', '50px', '80px'],
+        mt: ['80px', '', '50px'],
         lineHeight: ['30px', '', '45px'],
+        textAlign: 'center',
         fontFamily: theme.fontFamily.heading,
         fontSize: ['35px', '', '50px'],
         fontWeight: theme.fontWeights.bold,

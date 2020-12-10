@@ -5,7 +5,13 @@ import { theme } from '../styles/theme';
 
 const RSVPButton = () => {
   return (
-    <Box sx={{ mt: ['50px', '', '80px'], padding: ['15px', '', '25px'] }}>
+    <Box
+      sx={{
+        mt: ['50px', '', '80px'],
+        padding: ['15px', '', '25px'],
+        textAlign: 'center',
+      }}
+    >
       <Text
         as={Link}
         to="/rsvp"

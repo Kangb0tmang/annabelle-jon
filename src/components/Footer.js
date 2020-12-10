@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Box, Flex, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import { ContentWrapper } from '../components/Container';
@@ -11,7 +10,6 @@ const Footer = () => {
       sx={{
         mt: ['50px', '', '80px'],
         width: '100%',
-        bg: theme.colours.navy,
       }}
     >
       <ContentWrapper>
@@ -36,10 +34,11 @@ const Footer = () => {
                 <Text
                   as="p"
                   sx={{
-                    color: theme.colours.white,
+                    fontWeight: theme.fontWeights.bold,
+                    color: theme.colours.navy,
                     a: {
                       textDecoration: 'none',
-                      color: theme.colours.white,
+                      color: theme.colours.navy,
                     },
                   }}
                 >
@@ -50,10 +49,11 @@ const Footer = () => {
                 <Text
                   as="p"
                   sx={{
-                    color: theme.colours.white,
+                    fontWeight: theme.fontWeights.bold,
+                    color: theme.colours.navy,
                     a: {
                       textDecoration: 'none',
-                      color: theme.colours.white,
+                      color: theme.colours.navy,
                     },
                   }}
                 >
@@ -64,7 +64,11 @@ const Footer = () => {
             <Box>
               <Text
                 as="p"
-                sx={{ mt: ['20px', '', '0'], color: theme.colours.white }}
+                sx={{
+                  mt: ['20px', '', '0'],
+                  fontWeight: theme.fontWeights.bold,
+                  color: theme.colours.navy,
+                }}
               >
                 Website by: Jon Kang
               </Text>

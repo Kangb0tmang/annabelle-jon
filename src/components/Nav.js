@@ -45,15 +45,16 @@ const SiteLogo = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: ['auto'],
+        height: 'auto',
         width: ['250px', '', '424px'],
-        m: ['0', '', '0 auto'],
-        py: ['15px', '', '30px'],
-        '@media only screen and (min-width: 500px) and (max-width: 740px)': {
-          width: '300px',
-        },
+        mt: ['50px', '', '150px'],
+        mb: '0',
+        mx: 'auto',
         '@media only screen and (max-width: 740px)': {
-          ml: '20px',
+          mt: '50px',
+        },
+        '@media only screen and (max-width: 400px)': {
+          width: '200px',
         },
       }}
     >
@@ -76,8 +77,9 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
         zIndex: '100',
         transform: [mobileMenuOpen ? 'none' : 'translateX(-100%)', '', 'none'],
         width: ['100vw', '', 'auto'],
-        height: ['100%', '', 'auto'],
-        bg: [theme.colours.white, '', theme.colours.navy], // Temporary
+        height: ['100vh', '', 'auto'],
+        mt: ['20px', '', '60px'],
+        bg: [theme.colours.white, '', 'transparent'], // Temporary
         transition: 'transform 0.5s ease-in-out 0.5s',
       }}
     >
@@ -89,6 +91,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
           flex: '1 0 auto',
           justifyContent: ['flex-start', '', 'center'],
           height: 'auto',
+          pt: ['50px', '', '0'],
         }}
       >
         {props.children}
@@ -119,7 +122,7 @@ const NavItem = ({ item, index }) => {
           lineHeight: ['18px', '', '22px'],
           fontSize: ['20px', '', '24px'],
           fontWeight: theme.fontWeights.bold,
-          color: [theme.colours.navy, '', theme.colours.white], // Temporary
+          color: theme.colours.navy, // Temporary
           '&:after': {
             content: '""',
             position: 'absolute',
@@ -129,11 +132,10 @@ const NavItem = ({ item, index }) => {
             height: '2px',
           },
           '&:hover': {
-            color: ['', '', theme.colours.white], // Temporary
             '&:after': {
               width: 'calc(100% - 40px)',
               transition: 'width 0.2s ease',
-              bg: theme.colours.gold, // Temporary
+              bg: theme.colours.purple, // Temporary
             },
           },
           '&:focus': {
@@ -153,19 +155,19 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
     <Box
       sx={{
         display: ['block', '', 'none'],
-        alignSelf: 'flex-end',
         position: 'absolute',
-        top: '20px',
-        right: '20px',
+        alignSelf: 'flex-end',
+        left: '50%',
+        transform: 'translate(-50%, 15px)',
+        zIndex: 200,
       }}
     >
       <Box
         sx={{
           position: 'relative',
-          width: '30px',
-          height: '30px',
+          width: '40px',
+          height: '40px',
           cursor: 'pointer',
-          borderRadius: '5px',
         }}
         onClick={(e) => {
           e.preventDefault();
@@ -177,7 +179,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'relative',
-              width: mobileMenuOpen ? 0 : '30px',
+              width: mobileMenuOpen ? 0 : '40px',
               height: '4px',
               m: '7px 0',
               bg: theme.colours.navy, // Temporary
@@ -190,7 +192,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'relative',
-              width: mobileMenuOpen ? 0 : '30px',
+              width: mobileMenuOpen ? 0 : '40px',
               height: '4px',
               m: '7px 0',
               bg: theme.colours.navy, // Temporary
@@ -203,7 +205,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'relative',
-              width: mobileMenuOpen ? 0 : '30px',
+              width: mobileMenuOpen ? 0 : '40px',
               height: '4px',
               m: '7px 0',
               bg: theme.colours.navy, // Temporary
@@ -227,10 +229,10 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'absolute',
-              top: '10%',
-              left: '13px',
+              top: '0%',
+              left: '18px',
               width: '4px',
-              height: mobileMenuOpen ? '80%' : 0,
+              height: mobileMenuOpen ? '100%' : 0,
               borderRadius: '5px',
               bg: theme.colours.navy, // Temporary
               transitionProperty: 'all',
@@ -242,9 +244,9 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Box
             sx={{
               position: 'absolute',
-              top: '13px',
-              left: '10%',
-              width: mobileMenuOpen ? '80%' : 0,
+              top: '18px',
+              left: '0%',
+              width: mobileMenuOpen ? '100%' : 0,
               height: '4px',
               borderRadius: '5px',
               bg: theme.colours.navy, // Temporary
