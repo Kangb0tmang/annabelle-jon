@@ -15,6 +15,9 @@ import Countdown from '../components/Countdown';
 import RSVPButton from '../components/RSVPButton';
 import backgroundImage from '../images/background.jpg';
 
+// Or use custom variable
+console.log(process.env.NODE_ENV);
+
 const Home = () => {
   const data = useStaticQuery(graphql`
     query homeImgQuery {
@@ -50,29 +53,35 @@ const Home = () => {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <Box
-            sx={{
-              maxWidth: '1000px',
-              width: '100%',
-              backgroundColor: [
-                'transparent',
-                '',
-                '',
-                'rgba(255, 255, 255, 0.7)',
-              ],
-            }}
-          >
-            <Nav />
-            <PageHeading>The Kangs</PageHeading>
-            <ImageWrapper>
-              <Img fluid={data.file.childImageSharp.fluid} />
-            </ImageWrapper>
-            <ContentWrapper>
-              <Countdown />
-            </ContentWrapper>
-            <RSVPButton />
-            <Footer />
-          </Box>
+          {process.env.NODE_ENV === 'production' ? (
+            <Box sx={{ height: '100vh', mt: '10%' }}>
+              <PageHeading>Coming Soon</PageHeading>
+            </Box>
+          ) : (
+            <Box
+              sx={{
+                maxWidth: '1000px',
+                width: '100%',
+                backgroundColor: [
+                  'transparent',
+                  '',
+                  '',
+                  'rgba(255, 255, 255, 0.7)',
+                ],
+              }}
+            >
+              <Nav />
+              <PageHeading>The Kangs</PageHeading>
+              <ImageWrapper>
+                <Img fluid={data.file.childImageSharp.fluid} />
+              </ImageWrapper>
+              <ContentWrapper>
+                <Countdown />
+              </ContentWrapper>
+              <RSVPButton />
+              <Footer />
+            </Box>
+          )}
         </Box>
       </Container>
     </Layout>
