@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Box, Flex, Text } from 'rebass';
-import { Label, Input, Radio, Textarea } from '@rebass/forms';
+import { Label, Input, Textarea } from '@rebass/forms';
 import { theme } from '../styles/theme';
 import { ContentWrapper, ImageWrapper } from './Container';
 
@@ -119,31 +119,100 @@ const RSVPForm = () => {
             >
               Attending?
             </Text>
+            {/* Radio buttons: https://codepen.io/gabrielferreira/pen/oYxNVy/ */}
             <Flex sx={{ width: '100%', mb: '30px' }}>
               <Box sx={{ mr: '20px' }}>
                 <Label>
-                  <Radio
+                  <Input
+                    type="radio"
                     name="rsvp"
                     id="Yes"
                     value="Yes"
                     checked={rsvp === 'Yes'}
                     onChange={() => setRSVP('Yes')}
                     ref={register}
+                    sx={{
+                      display: 'none',
+                      '&:checked': {
+                        '+ div': {
+                          bg: theme.colours.gold,
+                          span: { color: theme.colours.purple },
+                        },
+                      },
+                    }}
                   />
-                  Yes
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      width: '50px',
+                      height: '50px',
+                      textAlign: 'center',
+                      bg: theme.colours.navy,
+                      willChange: 'transition',
+                      transition: 'all, 250ms ease',
+                    }}
+                  >
+                    <Text
+                      as="span"
+                      sx={{
+                        fontWeight: theme.fontWeights.bold,
+                        color: theme.colours.white,
+                      }}
+                    >
+                      Yes
+                    </Text>
+                  </Box>
                 </Label>
               </Box>
               <Box>
                 <Label>
-                  <Radio
+                  <Input
+                    type="radio"
                     name="rsvp"
                     id="No"
                     value="No"
                     checked={rsvp === 'No'}
                     onChange={() => setRSVP('No')}
                     ref={register}
+                    sx={{
+                      display: 'none',
+                      '&:checked': {
+                        '+ div': {
+                          bg: theme.colours.formError,
+                          span: { color: theme.colours.navy },
+                        },
+                      },
+                    }}
                   />
-                  No
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      width: '50px',
+                      height: '50px',
+                      textAlign: 'center',
+                      bg: theme.colours.navy,
+                      willChange: 'transition',
+                      transition: 'all, 250ms ease',
+                    }}
+                  >
+                    <Text
+                      as="span"
+                      sx={{
+                        fontWeight: theme.fontWeights.bold,
+                        color: theme.colours.white,
+                      }}
+                    >
+                      No
+                    </Text>
+                  </Box>
                 </Label>
               </Box>
             </Flex>
