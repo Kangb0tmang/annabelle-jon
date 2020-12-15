@@ -81,7 +81,7 @@ const RSVPForm = () => {
               <Text
                 as="p"
                 sx={{
-                  lineHeight: ['28px', '36px'],
+                  lineHeight: ['30px', '40px'],
                   textAlign: 'center',
                   fontSize: ['30px', '', '40px'],
                 }}
