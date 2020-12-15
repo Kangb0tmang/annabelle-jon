@@ -132,6 +132,7 @@ const NavItem = ({ item, index }) => {
             height: '2px',
           },
           '&:hover': {
+            color: theme.colours.black, // Temporary
             '&:after': {
               width: 'calc(100% - 40px)',
               transition: 'width 0.2s ease',
@@ -139,7 +140,7 @@ const NavItem = ({ item, index }) => {
             },
           },
           '&:focus': {
-            color: ['', '', theme.colours.white], // Temporary
+            color: theme.colours.black, // Temporary
           },
         }}
       >

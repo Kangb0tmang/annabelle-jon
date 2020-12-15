@@ -1,19 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Box } from 'rebass';
-import Layout from '../components/Layout';
+import Page from '../components/Page';
 import SEO from '../components/SEO';
-import Nav from '../components/Nav';
-import Img from 'gatsby-image';
-import Footer from '../components/Footer';
 import PageHeading from '../components/PageHeading';
-import Container, {
-  ContentWrapper,
-  ImageWrapper,
-} from '../components/Container';
+import Img from 'gatsby-image';
+import { ContentWrapper, ImageWrapper } from '../components/Container';
 import Countdown from '../components/Countdown';
 import RSVPButton from '../components/RSVPButton';
-import backgroundImage from '../images/background.jpg';
 
 // Or use custom variable
 console.log(process.env.NODE_ENV);
@@ -36,55 +30,25 @@ const Home = () => {
   `);
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <Container>
-        <Box
-          sx={{
-            position: 'relative',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: '100%',
-            height: '100%',
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: ['100% 250px', '', '100%'],
-            backgroundPosition: 'center top',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          {process.env.NODE_ENV === 'production' ? (
-            <Box sx={{ height: '100vh', mt: '10%' }}>
-              <PageHeading>Coming Soon</PageHeading>
-            </Box>
-          ) : (
-            <Box
-              sx={{
-                maxWidth: '1000px',
-                width: '100%',
-                backgroundColor: [
-                  'transparent',
-                  '',
-                  '',
-                  'rgba(255, 255, 255, 0.7)',
-                ],
-              }}
-            >
-              <Nav />
-              <PageHeading>The Kangs</PageHeading>
-              <ImageWrapper>
-                <Img fluid={data.file.childImageSharp.fluid} />
-              </ImageWrapper>
-              <ContentWrapper>
-                <Countdown />
-              </ContentWrapper>
-              <RSVPButton />
-              <Footer />
-            </Box>
-          )}
+    <Page>
+      <SEO title="The Kangs" />
+      {process.env.NODE_ENV === 'production' ? (
+        <Box sx={{ height: '100vh', mt: '10%' }}>
+          <PageHeading>Coming Soon</PageHeading>
         </Box>
-      </Container>
-    </Layout>
+      ) : (
+        <>
+          <PageHeading>The Kangs</PageHeading>
+          <ImageWrapper>
+            <Img fluid={data.file.childImageSharp.fluid} />
+          </ImageWrapper>
+          <ContentWrapper>
+            <Countdown />
+          </ContentWrapper>
+          <RSVPButton />
+        </>
+      )}
+    </Page>
   );
 };
 
