@@ -31,6 +31,9 @@ const Accordion = () => {
                   textAlign: 'left',
                   fontSize: ['18px', '', '24px'],
                   fontWeight: theme.fontWeights.bold,
+                  '&:hover': {
+                    cursor: 'pointer',
+                  },
                 }}
                 onClick={() => {
                   setOpen(activeItem === index ? !open : true);
