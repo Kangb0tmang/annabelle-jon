@@ -17,7 +17,7 @@ export const ContentWrapper = ({ ...props }) => (
   <Box
     sx={{
       margin: '0 auto',
-      maxWidth: '1000px',
+      maxWidth: '960px',
       width: '100%',
     }}
     {...props}

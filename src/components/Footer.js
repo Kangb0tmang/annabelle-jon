@@ -12,70 +12,68 @@ const Footer = () => {
         width: '100%',
       }}
     >
-      <ContentWrapper>
-        <Flex
+      <Flex
+        sx={{
+          display: 'flex',
+          m: '0 auto',
+          p: ['50px 20px', '', '70px 20px', '70px 0'],
+          width: '100%',
+        }}
+      >
+        <Box
           sx={{
             display: 'flex',
-            m: '0 auto',
-            p: ['50px 20px', '', '70px 20px'],
+            flexDirection: ['column', '', 'row'],
+            justifyContent: ['center', '', 'space-between'],
             width: '100%',
           }}
         >
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: ['column', '', 'row'],
-              justifyContent: ['center', '', 'space-between'],
-              width: '100%',
-            }}
-          >
-            <Box as="ul">
-              <Box as="li">
-                <Text
-                  as="p"
-                  sx={{
-                    fontWeight: theme.fontWeights.bold,
-                    color: theme.colours.navy,
-                    a: {
-                      textDecoration: 'none',
-                      color: theme.colours.navy,
-                    },
-                  }}
-                >
-                  Annabelle: <a href="tel:0433222111">0433222111</a>
-                </Text>
-              </Box>
-              <Box as="li">
-                <Text
-                  as="p"
-                  sx={{
-                    fontWeight: theme.fontWeights.bold,
-                    color: theme.colours.navy,
-                    a: {
-                      textDecoration: 'none',
-                      color: theme.colours.navy,
-                    },
-                  }}
-                >
-                  Jon: <a href="tel:0488222333">0488222333</a>
-                </Text>
-              </Box>
-            </Box>
-            <Box>
+          <Box as="ul">
+            <Box as="li">
               <Text
                 as="p"
                 sx={{
-                  mt: ['20px', '', '0'],
                   fontWeight: theme.fontWeights.bold,
                   color: theme.colours.navy,
+                  a: {
+                    textDecoration: 'none',
+                    color: theme.colours.navy,
+                  },
                 }}
               >
-                Website by: Jon Kang
+                Annabelle: <a href="tel:0433222111">0433222111</a>
+              </Text>
+            </Box>
+            <Box as="li">
+              <Text
+                as="p"
+                sx={{
+                  fontWeight: theme.fontWeights.bold,
+                  color: theme.colours.navy,
+                  a: {
+                    textDecoration: 'none',
+                    color: theme.colours.navy,
+                  },
+                }}
+              >
+                Jon: <a href="tel:0488222333">0488222333</a>
               </Text>
             </Box>
           </Box>
-        </Flex>
-      </ContentWrapper>
+          <Box>
+            <Text
+              as="p"
+              sx={{
+                mt: ['20px', '', '0'],
+                fontWeight: theme.fontWeights.bold,
+                color: theme.colours.navy,
+              }}
+            >
+              Website by: Jon Kang
+            </Text>
+          </Box>
+        </Box>
+      </Flex>
     </Box>
   );
 };
