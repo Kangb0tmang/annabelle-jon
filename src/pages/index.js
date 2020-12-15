@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Box } from 'rebass';
 import Page from '../components/Page';
+import PreLaunchPage from '../components/PreLaunchPage';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import Img from 'gatsby-image';
@@ -29,25 +29,19 @@ const Home = () => {
     }
   `);
 
-  return (
+  return process.env.NODE_ENV === 'production' ? (
+    <PreLaunchPage />
+  ) : (
     <Page>
       <SEO title="The Kangs" />
-      {process.env.NODE_ENV === 'production' ? (
-        <Box sx={{ height: '100vh', mt: '10%' }}>
-          <PageHeading>Coming Soon</PageHeading>
-        </Box>
-      ) : (
-        <>
-          <PageHeading>The Kangs</PageHeading>
-          <ImageWrapper>
-            <Img fluid={data.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <ContentWrapper>
-            <Countdown />
-          </ContentWrapper>
-          <RSVPButton />
-        </>
-      )}
+      <PageHeading>The Kangs</PageHeading>
+      <ImageWrapper>
+        <Img fluid={data.file.childImageSharp.fluid} />
+      </ImageWrapper>
+      <ContentWrapper>
+        <Countdown />
+      </ContentWrapper>
+      <RSVPButton />
     </Page>
   );
 };

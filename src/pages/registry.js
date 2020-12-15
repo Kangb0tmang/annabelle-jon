@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Page from '../components/Page';
+import PreLaunchPage from '../components/PreLaunchPage';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import { ImageWrapper } from '../components/Container';
@@ -23,7 +24,9 @@ const Registry = () => {
     }
   `);
 
-  return (
+  return process.env.NODE_ENV === 'production' ? (
+    <PreLaunchPage />
+  ) : (
     <Page>
       <SEO title="Registry" />
       <PageHeading>Gift Registry</PageHeading>
