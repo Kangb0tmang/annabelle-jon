@@ -24,9 +24,7 @@ const Registry = () => {
     }
   `);
 
-  return process.env.NODE_ENV === 'production' ? (
-    <PreLaunchPage />
-  ) : (
+  return (
     <Page>
       <SEO title="Registry" />
       <PageHeading>Gift Registry</PageHeading>

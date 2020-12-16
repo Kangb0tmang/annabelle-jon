@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Page from '../components/Page';
-import PreLaunchPage from '../components/PreLaunchPage';
 import Map from '../components/Map';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
@@ -25,9 +24,7 @@ const OnTheDay = () => {
     }
   `);
 
-  return process.env.NODE_ENV === 'production' ? (
-    <PreLaunchPage />
-  ) : (
+  return (
     <Page>
       <SEO title="On The Day" />
       <PageHeading>What happens on the big day?</PageHeading>
