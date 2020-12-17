@@ -11,7 +11,7 @@ const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const [rsvp, setRSVP] = useState('');
   const { isSubmitSuccessful } = formState;
-  const functionURL = 'https://sand-wildebeest-1919.twil.io/send-email';
+  const functionURL = `${process.env.GATSBY_TWILIO_FUNCTION_URL}`;
   const onSubmit = async (form) => {
     console.log(form);
     const rsvp = `${form.rsvp}`;
