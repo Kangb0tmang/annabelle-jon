@@ -18,6 +18,10 @@ export const navItems = [
     title: 'Registry',
     url: '/registry',
   },
+  {
+    title: 'RSVP',
+    url: '/rsvp',
+  },
 ];
 
 const Header = ({ ...props }) => {
@@ -45,6 +49,7 @@ const SiteLogo = () => {
       as={Link}
       to="/"
       sx={{
+        zIndex: '190',
         height: 'auto',
         width: 'auto',
         mt: ['10px', '', '20px'],
@@ -94,7 +99,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
           flex: '1 0 auto',
           justifyContent: ['flex-start', '', 'center'],
           height: 'auto',
-          pt: ['50px', '', '0'],
+          mt: ['150px', '', '0'],
         }}
       >
         {props.children}
@@ -112,6 +117,9 @@ const NavItem = ({ item }) => {
         alignItems: 'center',
         justifyContent: 'center',
         width: 'auto',
+        '&:nth-child(4)': {
+          display: ['flex', '', 'none'],
+        },
       }}
     >
       <Text
@@ -168,6 +176,7 @@ const RSVPNavItem = () => {
         as={Link}
         to="/rsvp"
         sx={{
+          display: ['none', '', 'block'],
           position: 'relative',
           width: 'auto',
           p: ['15px', '', '15px 20px'],
