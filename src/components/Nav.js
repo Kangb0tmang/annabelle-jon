@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import Logo from '../assets/logo.svg';
-import LargeLeaf from '../assets/large-leaf.svg';
 
 export const navItems = [
   {
