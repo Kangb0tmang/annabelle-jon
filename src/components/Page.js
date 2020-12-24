@@ -4,7 +4,7 @@ import Container from './Container';
 import Layout from './Layout';
 import Nav from './Nav';
 import Footer from './Footer';
-import backgroundImage from '../images/background.jpg';
+import backgroundImage from '../images/background-flipped.jpg';
 
 const Page = ({ children }) => {
   return (
@@ -20,26 +20,13 @@ const Page = ({ children }) => {
             height: '100%',
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: ['100% 250px', '', '100%'],
-            backgroundPosition: 'center top',
+            backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <Box
-            sx={{
-              maxWidth: '1000px',
-              width: '100%',
-              backgroundColor: [
-                'transparent',
-                '',
-                '',
-                'rgba(255, 255, 255, 0.7)',
-              ],
-            }}
-          >
-            <Nav />
-            {children}
-            <Footer />
-          </Box>
+          <Nav />
+          {children}
+          <Footer />
         </Box>
       </Container>
     </Layout>

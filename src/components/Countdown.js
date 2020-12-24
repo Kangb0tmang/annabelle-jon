@@ -37,15 +37,35 @@ const Countdown = () => {
       <Box
         key={index}
         sx={{
-          mr: ['25px', '', '40px'],
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          px: '40px',
           textAlign: 'center',
           '@media only screen and (max-width: 500px)': {
-            mr: '0',
+            mx: '0',
             flex: '1 1 50%',
             p: '10px',
           },
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            display: ['none', 'inline-block'],
+            top: ['10px', '', '20px'],
+            right: 0,
+            width: '1px',
+            height: ['30px', '', '50px'],
+            bg: theme.colours.lightblue,
+            '@media only screen and (max-width: 500px)': {
+              display: 'none',
+            },
+          },
           '&:last-child': {
             mr: ['', '', '0'],
+            '&:after': {
+              content: 'none',
+            },
           },
         }}
       >
@@ -54,8 +74,10 @@ const Countdown = () => {
           sx={{
             pb: '20px',
             lineHeight: ['28px', '', '48px'],
-            fontSize: ['30px', '', '50px'],
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['50px', '', '70px'],
             fontWeight: theme.fontWeights.bold,
+            color: theme.colours.navy,
           }}
         >
           {timeLeft[interval]}
@@ -65,9 +87,9 @@ const Countdown = () => {
           sx={{
             p: '10px',
             lineHeight: ['18px', '', '28px'],
-            fontSize: ['20px', '', '30px'],
+            textTransform: 'uppercase',
+            fontSize: ['16px', '', '18px'],
             fontWeight: theme.fontWeights.bold,
-            color: theme.colours.navy,
           }}
         >
           {interval}
@@ -82,8 +104,7 @@ const Countdown = () => {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        maxWidth: '600px',
-        m: '0 auto',
+        m: ['0 auto 50px', '', '70px auto 0'],
         px: '20px',
         '@media only screen and (max-width: 500px)': {
           flexWrap: 'wrap',

@@ -8,6 +8,7 @@ export const theme = {
     grey: '#B4B6B9',
     lightgrey: '#E1DDDD',
     navy: '#122B58',
+    lightblue: '#42C5E4',
     pink: '#ffd1dc',
     gold: '#fdb927',
     purple: '#552583',
@@ -15,6 +16,7 @@ export const theme = {
   },
   fontFamily: {
     heading: "'Montserrat', sans-serif",
+    cormorant: "'Cormorant Garamond, sans-serif'",
   },
   fontWeights: {
     regular: 400,

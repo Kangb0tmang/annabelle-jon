@@ -3,12 +3,9 @@ import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import Logo from '../assets/logo.svg';
+import LargeLeaf from '../assets/large-leaf.svg';
 
 export const navItems = [
-  {
-    title: 'RSVP',
-    url: '/rsvp',
-  },
   {
     title: 'The Day',
     url: '/the-day',
@@ -28,7 +25,13 @@ const Header = ({ ...props }) => {
     <Box
       as="header"
       sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: ['center', '', 'space-between'],
         width: '100%',
+        '@media only screen and (max-width: 400px)': {
+          justifyContent: 'space-between',
+        },
       }}
     >
       {props.children}
@@ -42,23 +45,27 @@ const SiteLogo = () => {
       as={Link}
       to="/"
       sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         height: 'auto',
-        width: ['250px', '', '424px'],
-        mt: ['50px', '', '150px'],
-        mb: '0',
-        mx: 'auto',
-        '@media only screen and (max-width: 740px)': {
-          mt: '50px',
+        width: 'auto',
+        mt: ['10px', '', '20px'],
+        ml: [0, 0, '20px'],
+        svg: {
+          width: ['200px', '', '', 'auto'],
         },
         '@media only screen and (max-width: 400px)': {
-          width: '200px',
+          ml: '10px',
         },
       }}
     >
       <Logo />
+    </Box>
+  );
+};
+
+const HeaderLeaf = () => {
+  return (
+    <Box sx={{ display: ['none', '', 'block'] }}>
+      <LargeLeaf />
     </Box>
   );
 };
@@ -69,10 +76,6 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
     <Box
       as="nav"
       sx={{
-        display: 'flex',
-        flex: '1 0 auto',
-        flexDirection: 'row',
-        alignItems: ['flex-start', '', 'center'],
         position: ['fixed', '', 'relative'],
         zIndex: '100',
         transform: [mobileMenuOpen ? 'none' : 'translateX(-100%)', '', 'none'],
@@ -100,7 +103,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
   );
 };
 
-const NavItem = ({ item, index }) => {
+const NavItem = ({ item }) => {
   return (
     <Box
       as="li"
@@ -150,6 +153,55 @@ const NavItem = ({ item, index }) => {
   );
 };
 
+const RSVPNavItem = () => {
+  return (
+    <Box
+      as="li"
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        mr: '20px',
+      }}
+    >
+      <Text
+        as={Link}
+        to="/rsvp"
+        sx={{
+          position: 'relative',
+          width: 'auto',
+          p: ['15px', '', '15px 20px'],
+          textDecoration: 'none',
+          lineHeight: ['18px', '', '22px'],
+          border: `1px solid ${theme.colours.black}`,
+          borderRadius: '5px',
+          fontSize: ['20px', '', '24px'],
+          fontWeight: theme.fontWeights.bold,
+          color: theme.colours.navy, // Temporary
+          transition: 'background 0.3s linear',
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            left: '20px',
+            bottom: '6px',
+            width: '0px',
+            height: '2px',
+          },
+          '&:hover': {
+            bg: theme.colours.navy, // Temporary
+            color: theme.colours.white, // Temporary
+          },
+          '&:focus': {
+            color: theme.colours.white, // Temporary
+          },
+        }}
+      >
+        RSVP
+      </Text>
+    </Box>
+  );
+};
+
 // Transition: https://codepen.io/designcouch/pen/hyFAD/
 const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
   return (
@@ -157,9 +209,8 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
       sx={{
         display: ['block', '', 'none'],
         position: 'absolute',
-        alignSelf: 'flex-end',
-        left: '50%',
-        transform: 'translate(-50%, 15px)',
+        top: '20px',
+        right: '30px',
         zIndex: 200,
       }}
     >
@@ -277,6 +328,7 @@ const Nav = () => {
         {navItems.map((item, index) => {
           return <NavItem key={index} index={index} item={item}></NavItem>;
         })}
+        <RSVPNavItem />
       </NavBar>
     </Header>
   );

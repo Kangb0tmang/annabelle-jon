@@ -8,15 +8,18 @@ const Footer = () => {
     <Box
       as="footer"
       sx={{
-        mt: ['50px', '', '80px'],
+        mt: ['30px', '', '30px'],
+        mb: ['80px', '', '150px', '200px'],
         width: '100%',
       }}
     >
       <Flex
         sx={{
           display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
           m: '0 auto',
-          p: ['50px 20px', '', '70px 20px', '70px 0'],
           width: '100%',
         }}
       >
@@ -24,54 +27,58 @@ const Footer = () => {
           sx={{
             display: 'flex',
             flexDirection: ['column', '', 'row'],
-            justifyContent: ['center', '', 'space-between'],
-            width: '100%',
+            alignItems: 'center',
           }}
         >
-          <Box as="ul">
-            <Box as="li">
-              <Text
-                as="p"
-                sx={{
-                  fontWeight: theme.fontWeights.bold,
-                  color: theme.colours.navy,
-                  a: {
-                    textDecoration: 'none',
-                    color: theme.colours.navy,
-                  },
-                }}
-              >
-                Annabelle: <a href="tel:0433222111">0433222111</a>
-              </Text>
-            </Box>
-            <Box as="li">
-              <Text
-                as="p"
-                sx={{
-                  fontWeight: theme.fontWeights.bold,
-                  color: theme.colours.navy,
-                  a: {
-                    textDecoration: 'none',
-                    color: theme.colours.navy,
-                  },
-                }}
-              >
-                Jon: <a href="tel:0488222333">0488222333</a>
-              </Text>
-            </Box>
-          </Box>
-          <Box>
-            <Text
-              as="p"
-              sx={{
-                mt: ['20px', '', '0'],
-                fontWeight: theme.fontWeights.bold,
+          <Text
+            as="p"
+            sx={{
+              fontSize: ['14px', '', '20px'],
+              fontWeight: theme.fontWeights.bold,
+              color: theme.colours.navy,
+              a: {
+                textDecoration: 'none',
                 color: theme.colours.navy,
-              }}
-            >
-              Website by: Jon Kang
-            </Text>
-          </Box>
+              },
+            }}
+          >
+            Annabelle: <a href="tel:0433222111">0433222111</a>
+          </Text>
+          <Box
+            sx={{
+              display: ['none', '', 'block'],
+              width: '2px',
+              height: '30px',
+              mx: '8px',
+              bg: theme.colours.navy,
+            }}
+          />
+          <Text
+            as="p"
+            sx={{
+              fontSize: ['14px', '', '20px'],
+              fontWeight: theme.fontWeights.bold,
+              color: theme.colours.navy,
+              a: {
+                textDecoration: 'none',
+                color: theme.colours.navy,
+              },
+            }}
+          >
+            Jon: <a href="tel:0488222333">0488222333</a>
+          </Text>
+        </Box>
+        <Box>
+          <Text
+            as="p"
+            sx={{
+              fontSize: ['14px', '', '20px'],
+              fontWeight: theme.fontWeights.bold,
+              color: theme.colours.navy,
+            }}
+          >
+            Website by: Jon Kang
+          </Text>
         </Box>
       </Flex>
     </Box>
