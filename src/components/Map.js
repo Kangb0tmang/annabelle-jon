@@ -24,31 +24,21 @@ export default function Map({ options, onMount, className, onMountProps }) {
 
   return (
     <Box
-      sx={{ height: ['350px', '', '500px'], m: ['20px', '', '', '20px 0'] }}
+      sx={{
+        height: ['350px', '', '500px'],
+        m: ['20px', '', '', '20px 0'],
+      }}
       {...{ ref, className }}
+      data-nosnippet="true"
     />
   );
 }
 
 const venue = { lat: -37.74678130874577, lng: 145.23648631767588 };
 
-function addMarker(map) {
-  const marker = new window.google.maps.Marker({
-    map,
-    position: venue,
-  });
-  const infoWindow = new google.maps.InfoWindow({
-    content: 'Potters Receptions',
-  });
-  marker.addListener('click', () => {
-    infoWindow.open(map, marker);
-  });
-}
-
 Map.defaultProps = {
   options: {
     center: venue,
-    zoom: 15,
+    zoom: 16,
   },
-  onMount: addMarker,
 };

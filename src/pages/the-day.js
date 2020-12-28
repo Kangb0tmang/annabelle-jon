@@ -6,7 +6,7 @@ import Page from '../components/Page';
 import SEO from '../components/SEO';
 import Map from '../components/Map';
 import PageHeading from '../components/PageHeading';
-import { ImageWrapper } from '../components/Container';
+import { ContentWrapper, ImageWrapper } from '../components/Container';
 
 const OnTheDay = () => {
   const data = useStaticQuery(graphql`
@@ -52,7 +52,9 @@ const OnTheDay = () => {
           <Img fluid={data.file.childImageSharp.fluid} />
         </ImageWrapper>
       </Box>
-      <Map />
+      <ContentWrapper>
+        <Map />
+      </ContentWrapper>
     </Page>
   );
 };
