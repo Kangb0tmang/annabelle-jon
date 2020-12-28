@@ -116,7 +116,7 @@ const NavItem = ({ item }) => {
         alignItems: 'center',
         justifyContent: 'center',
         width: 'auto',
-        '&:nth-child(4)': {
+        '&:nth-of-type(4)': {
           display: ['flex', '', 'none'],
         },
       }}
