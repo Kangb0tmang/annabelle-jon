@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Box } from 'rebass';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
@@ -26,11 +27,31 @@ const FAQ = () => {
 
   return (
     <Page>
-      <SEO title="FAQ" />
-      <PageHeading>Frequently Asked Questions</PageHeading>
-      <ImageWrapper>
-        <Img fluid={data.file.childImageSharp.fluid} />
-      </ImageWrapper>
+      <SEO title="FAQS" />
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: ['column', '', 'row'],
+          justifyContent: 'center',
+          width: '100%',
+          mb: '50px',
+        }}
+      >
+        <Box
+          sx={{
+            alignSelf: ['flex-start', '', 'center'],
+            width: ['540px', '', 'auto'],
+            mx: ['auto', '', 0],
+            mb: ['50px', '', 0],
+            pl: ['20px', '', 0],
+          }}
+        >
+          <PageHeading>FAQS</PageHeading>
+        </Box>
+        <ImageWrapper>
+          <Img fluid={data.file.childImageSharp.fluid} />
+        </ImageWrapper>
+      </Box>
       <Accordion />
     </Page>
   );

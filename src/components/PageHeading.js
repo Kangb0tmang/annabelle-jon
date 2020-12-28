@@ -7,12 +7,10 @@ const PageHeading = ({ ...props }) => {
     <Text
       as="h1"
       sx={{
-        mt: ['80px', '', '50px'],
-        lineHeight: ['30px', '', '45px'],
-        textAlign: 'center',
+        mb: '15px',
+        mr: '20px',
+        textTransform: 'uppercase',
         fontFamily: theme.fontFamily.heading,
-        fontSize: ['35px', '', '50px'],
-        fontWeight: theme.fontWeights.bold,
         color: theme.colours.black,
       }}
     >

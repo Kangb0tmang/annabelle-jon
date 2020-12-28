@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { Box, Flex, Text } from 'rebass';
 import { Label, Input, Textarea } from '@rebass/forms';
 import { theme } from '../styles/theme';
@@ -45,27 +43,8 @@ const RSVPForm = () => {
     }
   };
 
-  const data = useStaticQuery(graphql`
-    query rsvpImgQuery {
-      file(relativePath: { eq: "rsvp.jpg" }) {
-        childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <ContentWrapper>
-      <ImageWrapper>
-        <Img fluid={data.file.childImageSharp.fluid} />
-      </ImageWrapper>
       {isSubmitSuccessful ? (
         <>
           <Flex

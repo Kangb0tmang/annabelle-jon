@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Box } from 'rebass';
 import Page from '../components/Page';
-import PreLaunchPage from '../components/PreLaunchPage';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import { ImageWrapper } from '../components/Container';
@@ -27,10 +27,30 @@ const Registry = () => {
   return (
     <Page>
       <SEO title="Registry" />
-      <PageHeading>Gift Registry</PageHeading>
-      <ImageWrapper>
-        <Img fluid={data.file.childImageSharp.fluid} />
-      </ImageWrapper>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: ['column', '', 'row'],
+          justifyContent: 'center',
+          width: '100%',
+          mb: '50px',
+        }}
+      >
+        <Box
+          sx={{
+            alignSelf: ['flex-start', '', 'center'],
+            width: ['540px', '', 'auto'],
+            mx: ['auto', '', 0],
+            mb: ['50px', '', 0],
+            pl: ['20px', '', 0],
+          }}
+        >
+          <PageHeading>Gift Registry</PageHeading>
+        </Box>
+        <ImageWrapper>
+          <Img fluid={data.file.childImageSharp.fluid} />
+        </ImageWrapper>
+      </Box>
     </Page>
   );
 };

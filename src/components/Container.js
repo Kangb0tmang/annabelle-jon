@@ -1,13 +1,16 @@
 import React from 'react';
 import { Box, Flex } from 'rebass';
+import { theme } from '../styles/theme';
 
 export const ImageWrapper = ({ ...props }) => (
   <Box
     sx={{
-      maxWidth: '1000px',
+      position: 'relative',
+      alignSelf: ['center', '', 'flex-start'],
+      px: ['20px', '', 0],
+      maxWidth: ['540px', '', '500px'],
       width: '100%',
-      mx: 'auto',
-      my: ['30px', '', '50px', '80px'],
+      boxShadow: ['none', '', `30px 30px 0px ${theme.colours.lightblue}`],
     }}
     {...props}
   />

@@ -10,7 +10,7 @@ export const navItems = [
     url: '/the-day',
   },
   {
-    title: 'FAQ',
+    title: 'FAQS',
     url: '/faq',
   },
   {

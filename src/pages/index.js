@@ -1,13 +1,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Box, Text } from 'rebass';
 import Img from 'gatsby-image';
+import { Box, Text } from 'rebass';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import { theme } from '../styles/theme';
-import { ContentWrapper } from '../components/Container';
-import Countdown from '../components/Countdown';
+import PageHeading from '../components/PageHeading';
 import RSVPButton from '../components/RSVPButton';
+import { ImageWrapper } from '../components/Container';
+import Countdown from '../components/Countdown';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -58,31 +59,23 @@ const Home = () => {
             pl: ['20px', '', 0],
           }}
         >
-          <Text as="h1" sx={{ mb: '10px' }}>
-            The Kangs
-          </Text>
+          <PageHeading>The Kangs</PageHeading>
           <Text
             as="p"
             sx={{
-              width: ['auto', '', '65%'],
+              mr: '20px',
               lineHeight: '18px',
+              br: {
+                display: ['none', '', 'block'],
+              },
             }}
           >
-            You&apos;re invited to our wedding!
+            You&apos;re invited to <br /> our wedding!
           </Text>
         </Box>
-        <Box
-          sx={{
-            position: 'relative',
-            alignSelf: ['center', '', 'flex-start'],
-            px: ['20px', '', 0],
-            maxWidth: ['540px', '', '500px'],
-            width: '100%',
-            boxShadow: ['none', '', `30px 30px 0px ${theme.colours.lightblue}`],
-          }}
-        >
+        <ImageWrapper>
           <Img fluid={data.file.childImageSharp.fluid} />
-        </Box>
+        </ImageWrapper>
       </Box>
       <Countdown />
       <Box
