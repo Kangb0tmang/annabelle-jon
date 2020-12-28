@@ -3,6 +3,10 @@ import { Box, Flex, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import { ContentWrapper } from './Container';
 import { faqs } from '../content/faq-content';
+// import Plus from '../assets/plus.svg';
+// import Minus from '../assets/minus.svg';
+import Plus from '../assets/add.svg'; //temporary
+import Minus from '../assets/remove.svg'; //temporary
 
 const Accordion = () => {
   const [open, setOpen] = useState(false);
@@ -24,15 +28,20 @@ const Accordion = () => {
               <Box
                 as="button"
                 sx={{
+                  position: 'relative',
                   width: '100%',
-                  p: '15px',
+                  py: '15px',
+                  pr: ['60px', '', '15px'],
+                  pl: '15px',
                   border: `1px solid ${theme.colours.grey}`,
                   borderRadius: '4px',
                   textAlign: 'left',
                   fontSize: ['18px', '', '24px'],
                   fontWeight: theme.fontWeights.bold,
+                  transition: 'background 0.2s ease',
                   '&:hover': {
                     cursor: 'pointer',
+                    bg: theme.colours.lightgreyHover,
                   },
                 }}
                 onClick={() => {
@@ -41,6 +50,17 @@ const Accordion = () => {
                 }}
               >
                 {faq.question}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    display: 'inline-block',
+                    width: '30px',
+                    height: '30px',
+                    right: '20px',
+                  }}
+                >
+                  {activeItem === index ? <Minus /> : <Plus />}
+                </Box>
               </Box>
               <Box
                 activeItem={activeItem}

@@ -7,6 +7,7 @@ export const theme = {
     black: '#000',
     grey: '#B4B6B9',
     lightgrey: '#E1DDDD',
+    lightgreyHover: 'rgba(196, 196, 196, 0.2)',
     navy: '#122B58',
     lightblue: '#42C5E4',
     pink: '#ffd1dc',
