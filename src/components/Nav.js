@@ -186,7 +186,7 @@ const RSVPNavItem = () => {
           fontSize: ['20px', '', '24px'],
           fontWeight: theme.fontWeights.bold,
           color: theme.colours.navy, // Temporary
-          transition: 'background 0.3s linear',
+          transition: 'background 0.3s ease',
           '&:after': {
             content: '""',
             position: 'absolute',
@@ -200,6 +200,7 @@ const RSVPNavItem = () => {
             color: theme.colours.white, // Temporary
           },
           '&:focus': {
+            bg: theme.colours.navy, // Temporary
             color: theme.colours.white, // Temporary
           },
         }}
