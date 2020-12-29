@@ -18,7 +18,8 @@ const Accordion = () => {
         sx={{
           flexDirection: 'column',
           width: '100%',
-          mb: ['30px', '', '100px'],
+          mt: ['', '', '50px'],
+          mb: ['100px', '', '150px'],
           px: '20px',
         }}
       >
