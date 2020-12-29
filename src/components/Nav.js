@@ -14,10 +14,6 @@ export const navItems = [
     url: '/faq',
   },
   {
-    title: 'Registry',
-    url: '/registry',
-  },
-  {
     title: 'RSVP',
     url: '/rsvp',
   },
@@ -116,7 +112,7 @@ const NavItem = ({ item }) => {
         alignItems: 'center',
         justifyContent: 'center',
         width: 'auto',
-        '&:nth-of-type(4)': {
+        '&:nth-of-type(3)': {
           display: ['flex', '', 'none'],
         },
       }}
@@ -168,7 +164,7 @@ const RSVPNavItem = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        mr: '20px',
+        mx: '20px',
       }}
     >
       <Text
