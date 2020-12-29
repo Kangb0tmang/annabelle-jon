@@ -3,13 +3,16 @@ import { useForm } from 'react-hook-form';
 import { Box, Flex, Text } from 'rebass';
 import { Label, Input, Textarea } from '@rebass/forms';
 import { theme } from '../styles/theme';
-import { ContentWrapper, ImageWrapper } from './Container';
+import { ContentWrapper } from './Container';
+import Yes from '../assets/yes.svg';
+import No from '../assets/no.svg';
 
 const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const [rsvp, setRSVP] = useState('');
   const { isSubmitSuccessful } = formState;
   const functionURL = `${process.env.GATSBY_TWILIO_FUNCTION_URL}`;
+
   const onSubmit = async (form) => {
     console.log(form);
     const rsvp = `${form.rsvp}`;
@@ -46,38 +49,67 @@ const RSVPForm = () => {
   return (
     <ContentWrapper>
       {isSubmitSuccessful ? (
-        <>
-          <Flex
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '100%',
+            maxWidth: '560px',
+            m: '0 auto',
+            px: '20px',
+          }}
+        >
+          <Box
             sx={{
+              display: 'flex',
               alignItems: 'center',
-              width: '100%',
-              maxWidth: '600px',
-              m: '0 auto',
-              px: '20px',
+              justifyContent: 'center',
+              zIndex: '1',
+              width: '70px',
+              height: '70px',
+              mb: '-25px',
+              border: `1px solid ${theme.colours.black}`,
+              borderRadius: '100%',
+              bg: theme.colours.white,
             }}
           >
-            <Box sx={{ mt: ['25px', '', '40px'] }}>
-              <Text
-                as="p"
-                sx={{
-                  lineHeight: ['30px', '40px'],
-                  textAlign: 'center',
-                  fontSize: ['30px', '', '40px'],
-                }}
-              >
-                {rsvp === 'Yes'
-                  ? 'Thank you for your RSVP. We look forward to celebrating with you!'
-                  : "We're sorry to hear you can't make it. We'll be sharing the day with our friends, family and loved ones by email and through social media."}
-              </Text>
-            </Box>
-          </Flex>
-        </>
+            {rsvp === 'Yes' ? (
+              <Yes fill={`${theme.colours.darknavy}`} />
+            ) : (
+              <No fill={`${theme.colours.darknavy}`} />
+            )}
+          </Box>
+          <Text
+            as="p"
+            sx={{
+              mb: ['100px', '', '150px'],
+              p: '40px 30px',
+              lineHeight: ['20px', '30px'],
+              textAlign: 'center',
+              border: `1px solid ${theme.colours.black}`,
+              fontSize: ['20px', '', '30px'],
+            }}
+          >
+            {rsvp === 'Yes'
+              ? 'Thank you for your RSVP. We look forward to celebrating with you!'
+              : "We're sorry to hear you can't make it. We'll be sharing the day with our friends, family and loved ones by email and through social media."}
+          </Text>
+        </Flex>
       ) : (
         <Box
           as="form"
           onSubmit={handleSubmit(onSubmit)}
           method="post"
           action={functionURL}
+          sx={{
+            mt: ['', '', '50px'],
+            mb: [
+              rsvp === 'Yes' || rsvp === 'No' ? '100px' : 0,
+              '',
+              rsvp === 'Yes' || rsvp === 'No' ? '150px' : 0,
+            ],
+            height: ['691px', '', '725px'],
+          }}
         >
           <Flex
             sx={{
@@ -99,8 +131,8 @@ const RSVPForm = () => {
               Attending?
             </Text>
             {/* Radio buttons: https://codepen.io/gabrielferreira/pen/oYxNVy/ */}
-            <Flex sx={{ width: '100%', mb: '30px' }}>
-              <Box sx={{ mr: '20px' }}>
+            <Flex sx={{ width: '100%' }}>
+              <Box sx={{ mr: '20px', mb: '20px' }}>
                 <Label>
                   <Input
                     type="radio"
@@ -114,8 +146,9 @@ const RSVPForm = () => {
                       display: 'none',
                       '&:checked': {
                         '+ div': {
-                          bg: theme.colours.gold,
-                          span: { color: theme.colours.purple },
+                          borderColor: theme.colours.navy,
+                          bg: theme.colours.navy,
+                          span: { color: theme.colours.white },
                         },
                       },
                     }}
@@ -127,19 +160,29 @@ const RSVPForm = () => {
                       flexDirection: 'column',
                       justifyContent: 'center',
                       cursor: 'pointer',
-                      width: '50px',
-                      height: '50px',
+                      p: ['20px 30px', '', '30px 40px'],
+                      border: `1px solid ${theme.colours.black}`,
+                      borderRadius: '4px',
                       textAlign: 'center',
-                      bg: theme.colours.navy,
                       willChange: 'transition',
                       transition: 'all, 250ms ease',
                     }}
                   >
+                    {/* https://dev.to/abachi/how-to-change-svg-s-color-in-react-42g2 */}
+                    <Box sx={{ mb: '15px' }}>
+                      <Yes
+                        fill={
+                          rsvp === 'Yes'
+                            ? `${theme.colours.white}`
+                            : `${theme.colours.darknavy}`
+                        }
+                      />
+                    </Box>
                     <Text
                       as="span"
                       sx={{
+                        fontSize: ['18px', '', '20px'],
                         fontWeight: theme.fontWeights.bold,
-                        color: theme.colours.white,
                       }}
                     >
                       Yes
@@ -161,7 +204,8 @@ const RSVPForm = () => {
                       display: 'none',
                       '&:checked': {
                         '+ div': {
-                          bg: theme.colours.formError,
+                          borderColor: theme.colours.pink,
+                          bg: theme.colours.pink,
                           span: { color: theme.colours.navy },
                         },
                       },
@@ -174,19 +218,28 @@ const RSVPForm = () => {
                       flexDirection: 'column',
                       justifyContent: 'center',
                       cursor: 'pointer',
-                      width: '50px',
-                      height: '50px',
+                      p: ['20px 30px', '', '30px 40px'],
+                      border: `1px solid ${theme.colours.black}`,
+                      borderRadius: '4px',
                       textAlign: 'center',
-                      bg: theme.colours.navy,
                       willChange: 'transition',
                       transition: 'all, 250ms ease',
                     }}
                   >
+                    <Box sx={{ mb: '15px' }}>
+                      <No
+                        fill={
+                          rsvp === 'No'
+                            ? `${theme.colours.navy}`
+                            : `${theme.colours.darknavy}`
+                        }
+                      />
+                    </Box>
                     <Text
                       as="span"
                       sx={{
+                        fontSize: ['18px', '', '20px'],
                         fontWeight: theme.fontWeights.bold,
-                        color: theme.colours.white,
                       }}
                     >
                       No
@@ -206,13 +259,16 @@ const RSVPForm = () => {
                       fontWeight: theme.fontWeights.bold,
                     }}
                   >
-                    Name
+                    Name*
                   </Label>
                   <Input
                     type="text"
                     id="name"
                     name="name"
-                    sx={{ fontSize: ['18px', '', '22px'] }}
+                    sx={{
+                      p: '8px 15px',
+                      fontSize: ['18px', '', '22px'],
+                    }}
                     ref={register({
                       required: 'Please enter your name',
                     })}
@@ -237,7 +293,7 @@ const RSVPForm = () => {
                       fontWeight: theme.fontWeights.bold,
                     }}
                   >
-                    Email
+                    Email*
                   </Label>
                   {/* https://react-hook-form.com/ */}
                   <Input
@@ -275,7 +331,7 @@ const RSVPForm = () => {
                           fontWeight: theme.fontWeights.bold,
                         }}
                       >
-                        Contact Number
+                        Contact Number*
                       </Label>
                       {/* https://www.etl-tools.com/regular-expressions/is-australian-mobile-number.html */}
                       <Input
@@ -330,15 +386,26 @@ const RSVPForm = () => {
                   as="button"
                   sx={{
                     alignSelf: 'flex-start',
-                    p: '10px',
+                    width: '100%',
+                    p: '15px 10px',
                     mt: ['10px', '', '20px'],
                     border: `1px solid ${theme.colours.black}`,
-                    borderRadius: '2px',
                     lineHeight: ['16px', '', '20px'],
+                    textDecoration: 'underline',
+                    bg: theme.colours.white,
+                    fontFamily: theme.fontFamily.cormorant,
                     fontSize: ['18px', '', '22px'],
-                    fontWeight: theme.fontWeights.bold,
+                    color: theme.colours.black,
+                    transition: 'background 0.3s ease',
                     '&:hover': {
+                      bg: theme.colours.navy,
                       cursor: 'pointer',
+                      color: theme.colours.white,
+                    },
+                    '&:focus': {
+                      bg: theme.colours.navy,
+                      cursor: 'pointer',
+                      color: theme.colours.white,
                     },
                   }}
                 >
