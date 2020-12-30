@@ -42,9 +42,7 @@ const Home = () => {
         <Box
           sx={{
             display: ['block', '', 'none'],
-            mt: '50px',
-            mb: '80px',
-            mx: 'auto',
+            m: '60px auto',
             textAlign: 'center',
           }}
         >
