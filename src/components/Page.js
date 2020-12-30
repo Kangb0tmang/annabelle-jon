@@ -4,7 +4,7 @@ import Container from './Container';
 import Layout from './Layout';
 import Nav from './Nav';
 import Footer from './Footer';
-import backgroundImage from '../images/background-flipped.jpg';
+import backgroundImage from '../images/background.jpg';
 
 const Page = ({ children }) => {
   return (

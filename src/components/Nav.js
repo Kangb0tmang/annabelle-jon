@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import Logo from '../assets/logo.svg';
+import Leaf from '../assets/leaf.svg';
 
 export const navItems = [
   {
@@ -47,8 +48,8 @@ const SiteLogo = () => {
         zIndex: '190',
         height: 'auto',
         width: 'auto',
-        mt: ['10px', '', '20px'],
-        ml: [0, 0, '20px'],
+        mt: ['20px', '', '', '40px'],
+        ml: ['20px', '', '', '40px'],
         svg: {
           width: ['200px', '', '', 'auto'],
         },
@@ -62,13 +63,19 @@ const SiteLogo = () => {
   );
 };
 
-const HeaderLeaf = () => {
-  return (
-    <Box sx={{ display: ['none', '', 'block'] }}>
-      <LargeLeaf />
-    </Box>
-  );
-};
+const HeaderLeaf = () => (
+  <Box
+    sx={{
+      display: ['none', '', 'block'],
+      width: ['', '', '125px', '200px'],
+      height: 'auto',
+      m: ['', '', '30px 0 -40px 50px', '30px 0 -75px 100px'],
+      transform: 'rotate(-115deg)',
+    }}
+  >
+    <Leaf />
+  </Box>
+);
 
 // Transition: https://codepen.io/shieldsma91/pen/zLpbLX
 const NavBar = ({ mobileMenuOpen, ...props }) => {
@@ -81,7 +88,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
         transform: [mobileMenuOpen ? 'none' : 'translateX(-100%)', '', 'none'],
         width: ['100vw', '', 'auto'],
         height: ['100vh', '', 'auto'],
-        mt: ['20px', '', '60px'],
+        mt: ['20px', '', '40px', '60px'],
         bg: [theme.colours.white, '', 'transparent'], // Temporary
         transition: 'transform 0.5s ease-in-out 0.5s',
       }}
@@ -123,10 +130,10 @@ const NavItem = ({ item }) => {
         sx={{
           position: 'relative',
           alignSelf: 'center',
-          p: ['15px', '', '15px 30px'],
+          p: ['15px', '', '15px 20px', '15px 30px'],
           textDecoration: 'none',
           lineHeight: ['18px', '', '22px'],
-          fontSize: ['20px', '', '24px'],
+          fontSize: ['20px', '', '', '24px'],
           fontWeight: theme.fontWeights.bold,
           color: theme.colours.navy, // Temporary
           '&:after': {
@@ -174,12 +181,12 @@ const RSVPNavItem = () => {
           display: ['none', '', 'block'],
           position: 'relative',
           width: 'auto',
-          p: ['15px', '', '15px 20px'],
+          p: ['15px', '', '', '15px 20px'],
           textDecoration: 'none',
           lineHeight: ['18px', '', '22px'],
           border: `1px solid ${theme.colours.black}`,
           borderRadius: '5px',
-          fontSize: ['20px', '', '24px'],
+          fontSize: ['20px', '', '', '24px'],
           fontWeight: theme.fontWeights.bold,
           color: theme.colours.navy, // Temporary
           transition: 'background 0.3s ease',
@@ -245,7 +252,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
               transitionTimingFunction: 'ease-in-out',
               transitionDelay: mobileMenuOpen ? '0s' : '0.5s',
             }}
-          ></Box>
+          />
           <Box
             sx={{
               position: 'relative',
@@ -258,7 +265,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
               transitionTimingFunction: 'ease-in-out',
               transitionDelay: mobileMenuOpen ? '0.125s' : '0.625s',
             }}
-          ></Box>
+          />
           <Box
             sx={{
               position: 'relative',
@@ -271,7 +278,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => {
               transitionTimingFunction: 'ease-in-out',
               transitionDelay: mobileMenuOpen ? '0.25s' : '0.75s',
             }}
-          ></Box>
+          />
         </Box>
         {/* Cross */}
         <Box
@@ -329,6 +336,7 @@ const Nav = () => {
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
+      <HeaderLeaf />
       <NavBar mobileMenuOpen={mobileMenuOpen}>
         {navItems.map((item, index) => {
           return <NavItem key={index} index={index} item={item}></NavItem>;
