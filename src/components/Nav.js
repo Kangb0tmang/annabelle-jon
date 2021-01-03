@@ -4,7 +4,7 @@ import { Box, Text } from 'rebass';
 import { RemoveScroll } from 'react-remove-scroll';
 import { theme } from '../styles/theme';
 import Logo from '../assets/logo.svg';
-import BranchLeaf from '../assets/branch.svg';
+import Branch from '../assets/branch.svg';
 import Leaf from '../assets/leaf.svg';
 
 export const navItems = [
@@ -63,13 +63,15 @@ const HeaderLeaf = () => (
   <Box
     sx={{
       display: ['none', '', 'block'],
-      width: ['', '', '125px', '200px'],
       height: 'auto',
-      m: ['', '', '30px 0 -40px 50px', '30px 0 -75px 100px'],
-      transform: 'rotate(-115deg)',
+      m: ['', '', '30px 0 -40px', '30px 0 -25px'],
+      svg: {
+        width: ['', '', '172px', '302px'],
+        height: ['', '', '172px', '272px'],
+      },
     }}
   >
-    <BranchLeaf />
+    <Branch />
   </Box>
 );
 
@@ -98,7 +100,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => (
       transform: [mobileMenuOpen ? 'none' : 'translateX(-100%)', '', 'none'],
       width: ['100vw', '', 'auto'],
       height: ['100vh', '', 'auto'],
-      mt: ['20px', '', '40px', '60px'],
+      mt: ['20px', '', 0],
       bg: [theme.colours.white, '', 'transparent'], // Temporary
       transition: 'transform 0.5s ease-in-out 0.5s',
     }}
