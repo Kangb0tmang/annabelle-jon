@@ -4,6 +4,7 @@ import { Box, Text } from 'rebass';
 import { RemoveScroll } from 'react-remove-scroll';
 import { theme } from '../styles/theme';
 import Logo from '../assets/logo.svg';
+import BranchLeaf from '../assets/branch.svg';
 import Leaf from '../assets/leaf.svg';
 
 export const navItems = [
@@ -51,15 +52,13 @@ const SiteLogo = () => (
       svg: {
         width: ['200px', '', '', 'auto'],
       },
-      '@media only screen and (max-width: 450px)': {
-        ml: '10px',
-      },
     }}
   >
     <Logo />
   </Box>
 );
 
+// Leaf for header
 const HeaderLeaf = () => (
   <Box
     sx={{
@@ -68,6 +67,21 @@ const HeaderLeaf = () => (
       height: 'auto',
       m: ['', '', '30px 0 -40px 50px', '30px 0 -75px 100px'],
       transform: 'rotate(-115deg)',
+    }}
+  >
+    <BranchLeaf />
+  </Box>
+);
+
+// Leafs for mobile menu
+const MobileMenuLeaf = ({ styles }) => (
+  <Box
+    sx={{
+      display: ['block', '', 'none'],
+      alignSelf: styles.alignSelf,
+      width: '50px',
+      height: 'auto',
+      transform: styles.transform,
     }}
   >
     <Leaf />
@@ -101,7 +115,25 @@ const NavBar = ({ mobileMenuOpen, ...props }) => (
           transform: ['translateY(100%)', '', 0],
         }}
       >
+        <MobileMenuLeaf
+          styles={{
+            alignSelf: 'flex-start',
+            transform: [
+              'translate(50%, -50px) rotate(-111deg)',
+              'translate(100%, -75px) rotate(-111deg)',
+            ],
+          }}
+        />
         {props.children}
+        <MobileMenuLeaf
+          styles={{
+            alignSelf: 'flex-end',
+            transform: [
+              'translate(-50%, 50px) rotate(70deg)',
+              'translate(-100%, 75px) rotate(70deg)',
+            ],
+          }}
+        />
       </Box>
     </RemoveScroll>
   </Box>
