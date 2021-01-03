@@ -40,7 +40,8 @@ const RSVP = () => {
         <Box
           sx={{
             alignSelf: ['flex-start', '', 'center'],
-            width: ['540px', '', 'auto'],
+            maxWidth: ['540px', '', 'none'],
+            width: ['100%', '', 'auto'],
             m: ['30px auto 50px', '', 0],
             pl: ['20px', '', 0],
           }}
