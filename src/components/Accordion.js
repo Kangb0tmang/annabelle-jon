@@ -55,9 +55,11 @@ const Accordion = () => {
                   sx={{
                     position: 'absolute',
                     display: 'inline-block',
+                    top: '50%',
+                    right: '20px',
+                    transform: 'translateY(-50%)',
                     width: '30px',
                     height: '30px',
-                    right: '20px',
                   }}
                 >
                   {activeItem === index ? <Minus /> : <Plus />}
@@ -77,6 +79,7 @@ const Accordion = () => {
                     fontSize: ['16px', '', '18px'],
                     py: '10px',
                     pr: '20px',
+                    pl: '15px',
                     transition: 'opacity 0.3s 0s ease-in-out',
                     opacity: activeItem === index ? '1' : '0',
                   }}
