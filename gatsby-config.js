@@ -34,7 +34,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /assets/,
@@ -42,35 +42,16 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
+            policy: [{ userAgent: `*`, disallow: [`/`] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }],
+            policy: [{ userAgent: `*`, allow: `/` }],
           },
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Montserrat',
-            variants: '500',
-          },
-          {
-            family: 'Lato',
-            variants: ['400', '700'],
-          },
-          {
-            family: 'Cormorant Garamond',
-            variants: ['400', '700'],
-          },
-        ],
       },
     },
 
