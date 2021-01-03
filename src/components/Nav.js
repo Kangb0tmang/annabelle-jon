@@ -105,7 +105,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => (
       transition: 'transform 0.5s ease-in-out 0.5s',
     }}
   >
-    <RemoveScroll enabled={mobileMenuOpen}>
+    <RemoveScroll enabled={mobileMenuOpen} style={{ height: 0 }}>
       <Box
         as="ul"
         sx={{
@@ -114,7 +114,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => (
           flex: '1 0 auto',
           justifyContent: ['flex-start', '', 'center'],
           height: 'auto',
-          transform: ['translateY(100%)', '', 0],
+          transform: ['translateY(70%)', '', 0],
         }}
       >
         <MobileMenuLeaf
@@ -373,7 +373,7 @@ const Nav = () => {
       <HeaderLeaf />
       <NavBar mobileMenuOpen={mobileMenuOpen}>
         {navItems.map((item, index) => {
-          return <NavItem key={index} index={index} item={item}></NavItem>;
+          return <NavItem key={index} index={index} item={item} />;
         })}
         <RSVPNavItem />
       </NavBar>
