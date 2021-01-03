@@ -86,6 +86,7 @@ const RSVPForm = () => {
               p: '40px 30px',
               lineHeight: ['20px', '30px'],
               textAlign: 'center',
+              borderRadius: '4px',
               border: `1px solid ${theme.colours.black}`,
               fontSize: ['20px', '', '30px'],
             }}
