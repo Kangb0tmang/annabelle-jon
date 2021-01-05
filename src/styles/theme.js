@@ -17,7 +17,6 @@ export const theme = {
     formError: '#F08080',
   },
   fontFamily: {
-    heading: "'Montserrat', sans-serif",
     cormorant: "'Cormorant Garamond, sans-serif'",
   },
   fontWeights: {
