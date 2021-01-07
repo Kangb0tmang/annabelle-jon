@@ -35,22 +35,9 @@ export default function Map({ options, onMount }) {
 
 const venue = { lat: -37.74678130874577, lng: 145.23648631767588 };
 
-function openInfoWindow(map) {
-  const placeId = 'ChIJpROjVcUw1moRLAIKJX6bC1M';
-  const service = new google.maps.places.PlacesService(map);
-  service.getDetails({ placeId: placeId }, (place, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      console.log(place);
-      // service.infowindow.setPosition(place.geometry.location);
-      service.infowindow.open();
-    }
-  });
-}
-
 Map.defaultProps = {
   options: {
     center: venue,
     zoom: 16,
   },
-  onMount: openInfoWindow,
 };
