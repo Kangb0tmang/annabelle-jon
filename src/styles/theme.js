@@ -17,11 +17,10 @@ export const theme = {
     formError: '#F08080',
   },
   fontFamily: {
-    cormorant: "'Cormorant Garamond, sans-serif'",
+    cormorant: "'Cormorant Garamond', sans-serif",
   },
   fontWeights: {
     regular: 400,
-    medium: 500,
     bold: 700,
   },
 };

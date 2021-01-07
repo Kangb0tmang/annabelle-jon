@@ -396,6 +396,7 @@ const RSVPForm = () => {
                     bg: theme.colours.white,
                     fontFamily: theme.fontFamily.cormorant,
                     fontSize: ['18px', '', '22px'],
+                    fontWeight: theme.fontWeights.bold,
                     color: theme.colours.black,
                     transition: 'background 0.3s ease',
                     '&:hover': {

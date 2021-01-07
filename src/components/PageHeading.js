@@ -10,7 +10,6 @@ const PageHeading = ({ ...props }) => {
         mb: '15px',
         mr: '20px',
         textTransform: 'uppercase',
-        fontFamily: theme.fontFamily.heading,
         color: theme.colours.black,
       }}
     >
