@@ -8,8 +8,8 @@ const Footer = () => {
     <Box
       as="footer"
       sx={{
-        mt: ['30px', '', '30px'],
-        mb: ['80px', '', '150px', '200px'],
+        mt: ['40px', '', '30px'],
+        mb: ['120px', '', '150px', '200px'],
         width: '100%',
       }}
     >
