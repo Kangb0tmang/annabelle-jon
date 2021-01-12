@@ -11,8 +11,7 @@ const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const [rsvp, setRSVP] = useState('');
   const { isSubmitSuccessful } = formState;
-  // const functionURL = `${process.env.GATSBY_TWILIO_FUNCTION_URL}`;
-  const functionURL = ``;
+  const functionURL = `${process.env.GATSBY_TWILIO_FUNCTION_URL}`;
 
   const onSubmit = async (form) => {
     console.log(form);
@@ -106,11 +105,11 @@ const RSVPForm = () => {
           sx={{
             mt: ['', '', '50px'],
             mb: [
-              rsvp === 'Yes' || rsvp === 'No' ? '100px' : 0,
+              rsvp === 'Yes' || rsvp === 'No' ? '50px' : 0,
               '',
-              rsvp === 'Yes' || rsvp === 'No' ? '150px' : 0,
+              rsvp === 'Yes' || rsvp === 'No' ? '100px' : 0,
             ],
-            height: ['691px', '', '725px'],
+            height: ['725px', '', '775px'],
           }}
         >
           <Flex

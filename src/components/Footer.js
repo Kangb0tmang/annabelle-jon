@@ -9,7 +9,7 @@ const Footer = () => {
       as="footer"
       sx={{
         mt: ['40px', '', '30px'],
-        mb: ['120px', '', '150px', '200px'],
+        mb: ['120px', '', '150px', '220px'],
         width: '100%',
       }}
     >
