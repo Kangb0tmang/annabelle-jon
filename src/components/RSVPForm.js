@@ -124,12 +124,13 @@ const RSVPForm = () => {
             <Text
               as="p"
               sx={{
-                mb: '10px',
-                fontSize: ['20px', '', '24px'],
+                mb: ['30px', '', '40px'],
+                fontFamily: theme.fontFamily.cormorant,
+                fontSize: ['30px', '', '40px'],
                 fontWeight: theme.fontWeights.bold,
               }}
             >
-              Attending?
+              Will you be attending?
             </Text>
             {/* Radio buttons: https://codepen.io/gabrielferreira/pen/oYxNVy/ */}
             <Flex sx={{ width: '100%' }}>
@@ -392,9 +393,7 @@ const RSVPForm = () => {
                     mt: ['10px', '', '20px'],
                     border: `1px solid ${theme.colours.black}`,
                     lineHeight: ['16px', '', '20px'],
-                    textDecoration: 'underline',
                     bg: theme.colours.white,
-                    fontFamily: theme.fontFamily.cormorant,
                     fontSize: ['18px', '', '22px'],
                     fontWeight: theme.fontWeights.bold,
                     color: theme.colours.black,
