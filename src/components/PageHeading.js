@@ -8,7 +8,7 @@ const PageHeading = ({ ...props }) => {
       as="h1"
       sx={{
         mb: '15px',
-        mr: '20px',
+        mr: [0, '', '40px'],
         textTransform: 'uppercase',
         color: theme.colours.black,
       }}

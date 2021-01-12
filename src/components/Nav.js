@@ -162,7 +162,7 @@ const NavItem = ({ item }) => (
       sx={{
         position: 'relative',
         alignSelf: 'center',
-        p: ['15px', '', '15px 20px', '15px 30px'],
+        p: ['15px', '', '', '15px 30px'],
         textDecoration: 'none',
         lineHeight: ['18px', '', '22px'],
         fontSize: ['20px', '', '', '24px'],
@@ -201,7 +201,8 @@ const RSVPNavItem = () => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      mx: '20px',
+      mr: '40px',
+      ml: '20px',
     }}
   >
     <Text
