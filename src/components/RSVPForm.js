@@ -109,7 +109,7 @@ const RSVPForm = () => {
               '',
               rsvp === 'Yes' || rsvp === 'No' ? '100px' : 0,
             ],
-            height: ['725px', '', '775px'],
+            height: ['730px', '', '780px'],
           }}
         >
           <Flex
@@ -133,8 +133,8 @@ const RSVPForm = () => {
               Will you be attending?
             </Text>
             {/* Radio buttons: https://codepen.io/gabrielferreira/pen/oYxNVy/ */}
-            <Flex sx={{ width: '100%' }}>
-              <Box sx={{ mr: '20px', mb: '20px' }}>
+            <Flex sx={{ width: '100%', mb: '30px' }}>
+              <Box sx={{ mr: '20px' }}>
                 <Label>
                   <Input
                     type="radio"
