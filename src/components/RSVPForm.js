@@ -11,7 +11,8 @@ const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const [rsvp, setRSVP] = useState('');
   const { isSubmitSuccessful } = formState;
-  const functionURL = `${process.env.GATSBY_TWILIO_FUNCTION_URL}`;
+  // const functionURL = `${process.env.GATSBY_TWILIO_FUNCTION_URL}`;
+  const functionURL = ``;
 
   const onSubmit = async (form) => {
     console.log(form);
@@ -68,7 +69,7 @@ const RSVPForm = () => {
               width: '70px',
               height: '70px',
               mb: '-25px',
-              border: `1px solid ${theme.colours.black}`,
+              border: `1px solid ${theme.colours.grey}`,
               borderRadius: '100%',
               bg: theme.colours.white,
             }}
@@ -87,7 +88,7 @@ const RSVPForm = () => {
               lineHeight: ['20px', '30px'],
               textAlign: 'center',
               borderRadius: '4px',
-              border: `1px solid ${theme.colours.black}`,
+              border: `1px solid ${theme.colours.grey}`,
               fontSize: ['20px', '', '30px'],
             }}
           >
