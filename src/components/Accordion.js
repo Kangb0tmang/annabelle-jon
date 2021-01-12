@@ -3,10 +3,8 @@ import { Box, Flex, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import { ContentWrapper } from './Container';
 import { faqs } from '../content/faq-content';
-// import Plus from '../assets/plus.svg';
-// import Minus from '../assets/minus.svg';
-import Plus from '../assets/add.svg'; //temporary
-import Minus from '../assets/remove.svg'; //temporary
+import Plus from '../assets/plus.svg';
+import Minus from '../assets/minus.svg';
 
 const Accordion = () => {
   const [open, setOpen] = useState(false);
