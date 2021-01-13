@@ -3,8 +3,6 @@ import { Box, Flex, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import { ContentWrapper } from './Container';
 import { faqs } from '../content/faq-content';
-import Plus from '../assets/plus.svg';
-import Minus from '../assets/minus.svg';
 
 const AccordionItem = ({ faq, index }) => {
   const [isActive, setIsActive] = useState(false);
@@ -12,7 +10,7 @@ const AccordionItem = ({ faq, index }) => {
   const contentRef = useRef();
 
   return (
-    <Box key={index} sx={{ mb: '20px', '&:last-child': { mb: 0 } }}>
+    <Box sx={{ mb: '20px', '&:last-child': { mb: 0 } }}>
       <Box
         as="button"
         sx={{
@@ -40,19 +38,41 @@ const AccordionItem = ({ faq, index }) => {
         }}
       >
         {faq.question}
+        {/* Inspired by https://codepen.io/christeldesign/pen/mxdjMo */}
         <Box
           sx={{
             position: 'absolute',
             display: 'inline-block',
-            top: '50%',
+            top: isActive ? '50%' : '47%',
             right: '20px',
             transform: 'translateY(-50%)',
             width: '30px',
             height: '30px',
+            '&:before': {
+              content: '""',
+              position: 'absolute',
+              display: 'block',
+              top: '50%',
+              width: '100%',
+              height: '4px',
+              bg: isActive ? theme.colours.lightblue : theme.colours.navy,
+              transform: isActive ? 'rotate(180deg)' : 'rotate(90deg)',
+              transition: 'transform 300ms, opacity 200ms, background 600ms',
+            },
+            '&:after': {
+              content: '""',
+              position: 'absolute',
+              display: 'block',
+              top: '50%',
+              width: '100%',
+              height: '4px',
+              opacity: isActive ? '0' : '1',
+              bg: isActive ? theme.colours.lightblue : theme.colours.navy,
+              transform: isActive ? 'rotate(360deg)' : 'rotate(0deg)',
+              transition: 'transform 300ms, opacity 200ms, background 600ms',
+            },
           }}
-        >
-          {isActive ? <Minus /> : <Plus />}
-        </Box>
+        />
       </Box>
       <Box
         index={index}
@@ -89,12 +109,18 @@ const Accordion = () => {
           flexDirection: 'column',
           width: '100%',
           mt: ['', '', '50px'],
-          mb: ['100px', '', '150px'],
+          mb: ['50px', '100px', '', '150px'],
           px: '20px',
+          '@media only screen and (min-width: 850px) and (max-width: 999px)': {
+            mb: '150px',
+          },
+          '@media only screen and (min-width: 1000px) and (max-width: 1139px)': {
+            mb: '180px',
+          },
         }}
       >
         {faqs.map((faq, index) => (
-          <AccordionItem faq={faq} index={index} />
+          <AccordionItem key={index} faq={faq} index={index} />
         ))}
       </Flex>
     </ContentWrapper>
