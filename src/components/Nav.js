@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
 import { RemoveScroll } from 'react-remove-scroll';
+import { useMediaQuery } from 'react-responsive';
 import { theme } from '../styles/theme';
 import Logo from '../assets/logo.svg';
 import Branch from '../assets/branch.svg';
@@ -91,17 +92,70 @@ const MobileMenuLeaf = ({ styles }) => (
 );
 
 // Transition: https://codepen.io/shieldsma91/pen/zLpbLX
-const NavBar = ({ mobileMenuOpen, ...props }) => (
+const NavBar = ({ mobileMenuOpen, ...props }) => {
+  const isDesktop = useMediaQuery({ query: '(min-width: 740px)' });
+
+  return isDesktop ? (
+    <MainNav>{props.children}</MainNav>
+  ) : (
+    <MobileNav mobileMenuOpen={mobileMenuOpen}>{props.children}</MobileNav>
+  );
+};
+
+const MainNav = ({ ...props }) => (
   <Box
     as="nav"
     sx={{
-      position: ['fixed', '', 'relative'],
+      position: 'relative',
+      width: 'auto',
+      height: 'auto',
+    }}
+  >
+    <Box
+      as="ul"
+      sx={{
+        display: 'flex',
+        flexDirection: ['column', '', 'row'],
+        flex: '1 0 auto',
+        justifyContent: ['flex-start', '', 'center'],
+        height: 'auto',
+        transform: ['translateY(70%)', '', 0],
+      }}
+    >
+      <MobileMenuLeaf
+        styles={{
+          alignSelf: 'flex-start',
+          transform: [
+            'translate(50%, -50px) rotate(-111deg)',
+            'translate(100%, -75px) rotate(-111deg)',
+          ],
+        }}
+      />
+      {props.children}
+      <MobileMenuLeaf
+        styles={{
+          alignSelf: 'flex-end',
+          transform: [
+            'translate(-50%, 50px) rotate(70deg)',
+            'translate(-100%, 75px) rotate(70deg)',
+          ],
+        }}
+      />
+    </Box>
+  </Box>
+);
+
+const MobileNav = ({ mobileMenuOpen, ...props }) => (
+  <Box
+    as="nav"
+    sx={{
+      position: 'fixed',
       zIndex: '100',
-      transform: [mobileMenuOpen ? 'none' : 'translateX(-100%)', '', 'none'],
-      width: ['100vw', '', 'auto'],
-      height: ['100vh', '', 'auto'],
-      mt: ['20px', '', 0],
-      bg: [theme.colours.white, '', 'transparent'], // Temporary
+      transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
+      width: '100vw',
+      height: '100vh',
+      mt: '20px',
+      bg: theme.colours.white, // Temporary
       transition: 'transform 0.5s ease-in-out 0.5s',
     }}
   >
@@ -110,11 +164,11 @@ const NavBar = ({ mobileMenuOpen, ...props }) => (
         as="ul"
         sx={{
           display: 'flex',
-          flexDirection: ['column', '', 'row'],
+          flexDirection: 'column',
           flex: '1 0 auto',
-          justifyContent: ['flex-start', '', 'center'],
+          justifyContent: 'flex-start',
           height: 'auto',
-          transform: ['translateY(70%)', '', 0],
+          transform: 'translateY(70%)',
         }}
       >
         <MobileMenuLeaf

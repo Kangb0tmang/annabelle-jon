@@ -44,6 +44,7 @@ const useEventListener = (eventName, handler, element = window) => {
 // General helper functions
 const debounce = (func, wait = 5, immediate = false) => {
   let timeout;
+
   return (...rest) => {
     const context = this;
     const args = rest;
