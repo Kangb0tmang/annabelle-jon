@@ -1,4 +1,10 @@
 import { useRef, useEffect } from 'react';
+import { window } from 'browser-monads';
+
+// Use browser-monads to fix the "window" is not available during server side rendering error
+// https://medium.com/@Jense5_/use-document-and-window-with-gatsby-e9a92ee31f36
+// https://www.interglobalmedianetwork.com/blog/2019-12-29-the-window-object-react-hooks-and-gatsbyjs/
+
 // useEventListener - solved eventListeners not being removed on unmount/return
 // Reference: https://usehooks.com/useEventListener/
 const useEventListener = (eventName, handler, element = window) => {
