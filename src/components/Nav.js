@@ -106,6 +106,7 @@ const MainNav = ({ ...props }) => (
   <Box
     as="nav"
     sx={{
+      display: ['none', '', 'block'],
       position: 'relative',
       width: 'auto',
       height: 'auto',
@@ -131,6 +132,7 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
   <Box
     as="nav"
     sx={{
+      display: ['', '', 'none'],
       position: 'fixed',
       zIndex: '100',
       transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
