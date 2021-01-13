@@ -102,7 +102,7 @@ const NavBar = ({ mobileMenuOpen, ...props }) => {
   );
 };
 
-const MainNav = ({ mobileMenuOpen, ...props }) => (
+const MainNav = ({ ...props }) => (
   <Box
     as="nav"
     sx={{
@@ -111,39 +111,19 @@ const MainNav = ({ mobileMenuOpen, ...props }) => (
       height: 'auto',
     }}
   >
-    <RemoveScroll enabled={mobileMenuOpen} style={{ height: 0 }}>
-      <Box
-        as="ul"
-        sx={{
-          display: 'flex',
-          flexDirection: ['column', '', 'row'],
-          flex: '1 0 auto',
-          justifyContent: ['flex-start', '', 'center'],
-          height: 'auto',
-          transform: ['translateY(70%)', '', 0],
-        }}
-      >
-        <MobileMenuLeaf
-          styles={{
-            alignSelf: 'flex-start',
-            transform: [
-              'translate(50%, -50px) rotate(-111deg)',
-              'translate(100%, -75px) rotate(-111deg)',
-            ],
-          }}
-        />
-        {props.children}
-        <MobileMenuLeaf
-          styles={{
-            alignSelf: 'flex-end',
-            transform: [
-              'translate(-50%, 50px) rotate(70deg)',
-              'translate(-100%, 75px) rotate(70deg)',
-            ],
-          }}
-        />
-      </Box>
-    </RemoveScroll>
+    <Box
+      as="ul"
+      sx={{
+        display: 'flex',
+        flexDirection: ['column', '', 'row'],
+        flex: '1 0 auto',
+        justifyContent: ['flex-start', '', 'center'],
+        height: 'auto',
+        transform: ['translateY(70%)', '', 0],
+      }}
+    >
+      {props.children}
+    </Box>
   </Box>
 );
 
