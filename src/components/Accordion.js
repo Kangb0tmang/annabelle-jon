@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Box, Flex, Text } from 'rebass';
 import { theme } from '../styles/theme';
+import { useEventListener, debounce } from '../scripts/helpers';
 import { ContentWrapper } from './Container';
 import { faqs } from '../content/faq-content';
 
@@ -8,6 +9,12 @@ const AccordionItem = ({ faq, index }) => {
   const [isActive, setIsActive] = useState(false);
   const [setHeight, setHeightState] = useState('0px');
   const contentRef = useRef();
+
+  const handleResize = () => {
+    setHeightState(isActive && `${contentRef.current.scrollHeight}px`);
+  };
+
+  useEventListener('resize', debounce(handleResize, 100));
 
   return (
     <Box sx={{ mb: '20px', '&:last-child': { mb: 0 } }}>
