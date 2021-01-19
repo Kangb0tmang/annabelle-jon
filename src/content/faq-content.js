@@ -43,7 +43,7 @@ export const faqs = [
       'Please bring your own face mask, however there will be emergency masks available if needed. Hand sanitisers will be available at the venue.',
   },
   {
-    question: 'What should I do if I can’t make it?’',
+    question: 'What should I do if I can’t make it?',
     response:
       "Please RSVP as soon as you know you can't make it. We'll miss you! :(",
   },

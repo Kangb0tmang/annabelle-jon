@@ -2,16 +2,13 @@ import React from 'react';
 import { Text } from 'rebass';
 import { theme } from '../styles/theme';
 
-const PageHeading = ({ ...props }) => {
+const PageTagline = ({ ...props }) => {
   return (
     <Text
-      as="h1"
+      as="p"
       sx={{
-        mb: '15px',
-        minWidth: [0, '', '150px'],
-        lineHeight: '32px',
-        textTransform: 'uppercase',
-        color: theme.colours.black,
+        mr: '20px',
+        lineHeight: '18px',
         br: {
           display: ['none', '', 'block'],
         },
@@ -22,4 +19,4 @@ const PageHeading = ({ ...props }) => {
   );
 };
 
-export default PageHeading;
+export default PageTagline;

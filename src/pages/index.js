@@ -1,11 +1,12 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box, Text } from 'rebass';
+import { Box } from 'rebass';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import { theme } from '../styles/theme';
 import PageHeading from '../components/PageHeading';
+import PageTagline from '../components/PageTagline';
 import RSVPButton from '../components/RSVPButton';
 import { ImageWrapper } from '../components/Container';
 import Countdown from '../components/Countdown';
@@ -58,19 +59,12 @@ const Home = () => {
             pl: ['20px', '', 0],
           }}
         >
-          <PageHeading>The Kangs</PageHeading>
-          <Text
-            as="p"
-            sx={{
-              mr: '20px',
-              lineHeight: '18px',
-              br: {
-                display: ['none', '', 'block'],
-              },
-            }}
-          >
+          <PageHeading>
+            The <br /> Kangs
+          </PageHeading>
+          <PageTagline>
             You&apos;re invited to <br /> our wedding!
-          </Text>
+          </PageTagline>
         </Box>
         <ImageWrapper>
           <Img fluid={data.file.childImageSharp.fluid} />

@@ -6,6 +6,7 @@ import Page from '../components/Page';
 import SEO from '../components/SEO';
 import Map from '../components/Map';
 import PageHeading from '../components/PageHeading';
+import PageTagline from '../components/PageTagline';
 import { ContentWrapper, ImageWrapper } from '../components/Container';
 
 const OnTheDay = () => {
@@ -46,7 +47,12 @@ const OnTheDay = () => {
             pl: ['20px', '', 0],
           }}
         >
-          <PageHeading>The Day</PageHeading>
+          <PageHeading>
+            The <br /> Day
+          </PageHeading>
+          <PageTagline>
+            What happens <br /> on the big day?
+          </PageTagline>
         </Box>
         <ImageWrapper>
           <Img fluid={data.file.childImageSharp.fluid} />
