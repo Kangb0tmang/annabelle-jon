@@ -21,7 +21,7 @@ export const faqs = [
   {
     question: 'What time should I arrive?',
     response:
-      'Please arrive at least 15 minutes prior to the wedding start time.',
+      'Please arrive at least 30 minutes prior to the wedding start time.',
   },
   {
     question: 'Is there parking available on site?',

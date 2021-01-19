@@ -4,9 +4,10 @@ import Img from 'gatsby-image';
 import { Box } from 'rebass';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
-import Map from '../components/Map';
 import PageHeading from '../components/PageHeading';
 import PageTagline from '../components/PageTagline';
+import Map from '../components/Map';
+import Schedule from '../components/Schedule';
 import { ContentWrapper, ImageWrapper } from '../components/Container';
 
 const OnTheDay = () => {
@@ -60,6 +61,7 @@ const OnTheDay = () => {
       </Box>
       <ContentWrapper>
         <Map />
+        <Schedule />
       </ContentWrapper>
     </Page>
   );
