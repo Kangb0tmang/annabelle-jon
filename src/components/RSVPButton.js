@@ -14,28 +14,28 @@ const RSVPButton = () => {
         textDecoration: 'none',
         fontFamily: theme.fontFamily.cormorant,
         fontSize: '100px',
-        color: theme.colours.black, // Temporary
+        color: theme.colours.black,
         '&:after': {
           content: '""',
           position: 'absolute',
           left: '0',
           bottom: '3px',
-          width: '0px',
+          width: '100%',
           height: '2px',
+          bg: theme.colours.navy,
         },
         '&:hover': {
-          color: theme.colours.navy, // Temporary
+          color: theme.colours.navy,
           '&:after': {
-            width: '100%',
+            width: '0px',
             transition: 'width 0.2s ease',
-            bg: theme.colours.purple, // Temporary
           },
         },
         '&:focus': {
-          color: theme.colours.navy, // Temporary
+          color: theme.colours.navy,
           '&:after': {
-            width: '100%',
-            bg: theme.colours.purple, // Temporary
+            width: '0px',
+            transition: 'width 0.2s ease',
           },
         },
       }}

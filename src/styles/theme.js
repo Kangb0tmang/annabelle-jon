@@ -12,8 +12,6 @@ export const theme = {
     darknavy: '#050514',
     lightblue: '#42C5E4',
     pink: '#ffd1dc',
-    gold: '#fdb927',
-    purple: '#552583',
     formError: '#F08080',
   },
   fontFamily: {

@@ -143,7 +143,7 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
       width: '100vw',
       height: '100vh',
       mt: '20px',
-      bg: theme.colours.white, // Temporary
+      bg: theme.colours.white,
       transition: 'transform 0.5s ease-in-out 0.5s',
     }}
   >
@@ -209,7 +209,7 @@ const NavItem = ({ item }) => (
         lineHeight: ['18px', '', '22px'],
         fontSize: ['20px', '', '', '24px'],
         fontWeight: theme.fontWeights.bold,
-        color: theme.colours.navy, // Temporary
+        color: theme.colours.navy,
         '&:after': {
           content: '""',
           position: 'absolute',
@@ -219,15 +219,15 @@ const NavItem = ({ item }) => (
           height: '2px',
         },
         '&:hover': {
-          color: theme.colours.black, // Temporary
+          color: theme.colours.black,
           '&:after': {
             width: 'calc(100% - 40px)',
             transition: 'width 0.2s ease',
-            bg: theme.colours.purple, // Temporary
+            bg: theme.colours.navy,
           },
         },
         '&:focus': {
-          color: theme.colours.black, // Temporary
+          color: theme.colours.black,
         },
       }}
     >
@@ -261,7 +261,7 @@ const RSVPNavItem = () => (
         borderRadius: '5px',
         fontSize: ['20px', '', '', '24px'],
         fontWeight: theme.fontWeights.bold,
-        color: theme.colours.navy, // Temporary
+        color: theme.colours.navy,
         transition: 'background 0.3s ease',
         '&:after': {
           content: '""',
@@ -272,12 +272,12 @@ const RSVPNavItem = () => (
           height: '2px',
         },
         '&:hover': {
-          bg: theme.colours.navy, // Temporary
-          color: theme.colours.white, // Temporary
+          bg: theme.colours.navy,
+          color: theme.colours.white,
         },
         '&:focus': {
-          bg: theme.colours.navy, // Temporary
-          color: theme.colours.white, // Temporary
+          bg: theme.colours.navy,
+          color: theme.colours.white,
         },
       }}
     >
@@ -324,7 +324,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             width: mobileMenuOpen ? 0 : '40px',
             height: '4px',
             m: '7px 0',
-            bg: theme.colours.navy, // Temporary
+            bg: theme.colours.navy,
             transitionProperty: 'all',
             transitionDuration: '0.25s',
             transitionTimingFunction: 'ease-in-out',
@@ -337,7 +337,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             width: mobileMenuOpen ? 0 : '40px',
             height: '4px',
             m: '7px 0',
-            bg: theme.colours.navy, // Temporary
+            bg: theme.colours.navy,
             transitionProperty: 'all',
             transitionDuration: '0.25s',
             transitionTimingFunction: 'ease-in-out',
@@ -350,7 +350,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             width: mobileMenuOpen ? 0 : '40px',
             height: '4px',
             m: '7px 0',
-            bg: theme.colours.navy, // Temporary
+            bg: theme.colours.navy,
             transitionProperty: 'all',
             transitionDuration: '0.25s',
             transitionTimingFunction: 'ease-in-out',
@@ -376,7 +376,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             width: '4px',
             height: mobileMenuOpen ? '100%' : 0,
             borderRadius: '5px',
-            bg: theme.colours.navy, // Temporary
+            bg: theme.colours.navy,
             transitionProperty: 'all',
             transitionDuration: '0.25s',
             transitionTimingFunction: 'ease-in-out',
@@ -391,7 +391,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             width: mobileMenuOpen ? '100%' : 0,
             height: '4px',
             borderRadius: '5px',
-            bg: theme.colours.navy, // Temporary
+            bg: theme.colours.navy,
             transitionProperty: 'all',
             transitionDuration: '0.25s',
             transitionTimingFunction: 'ease-in-out',
