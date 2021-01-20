@@ -16,7 +16,10 @@ const Schedule = () => {
           <Box
             sx={{
               width: '100px',
-              p: '20px',
+              p: '20px 20px 20px 0',
+              svg: {
+                width: '80px',
+              },
             }}
           >
             {event.icon}
@@ -27,7 +30,7 @@ const Schedule = () => {
               bg: theme.colours.black,
             }}
           />
-          <Box sx={{ width: '200px', p: '20px 0 20px 20px' }}>
+          <Box sx={{ width: '210px', p: '20px 0 20px 20px' }}>
             <Text sx={{ mb: '10px', fontSize: '24px' }}>
               {event.description}
             </Text>

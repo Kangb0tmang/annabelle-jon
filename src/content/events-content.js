@@ -1,32 +1,40 @@
+import React from 'react';
+import Car from '../assets/car.svg';
+import Chapel from '../assets/chapel.svg';
+import Camera from '../assets/camera.svg';
+import Drinks from '../assets/drinks.svg';
+import Reception from '../assets/reception.svg';
+import Sparklers from '../assets/sparklers.svg';
+
 export const events = [
   {
-    icon: 'car',
+    icon: <Car />,
     description: 'Guests arrive',
     time: '2.30pm',
   },
   {
-    icon: 'chapel',
+    icon: <Chapel />,
     description: 'Ceremony starts',
     time: '3pm',
   },
   {
-    icon: 'camera',
+    icon: <Camera />,
     description: 'Photos',
     time: '3.45pm',
   },
   {
-    icon: 'drink-glasses',
+    icon: <Drinks />,
     description: 'Canapes',
     time: '5.30pm',
   },
   {
-    icon: 'dinner-plate',
+    icon: <Reception />,
     description: 'Reception begins',
     time: '6pm',
   },
   {
-    icon: 'sparkles',
-    description: 'Sparkles send off',
+    icon: <Sparklers />,
+    description: 'Sparklers send off',
     time: '10.30pm',
   },
 ];
