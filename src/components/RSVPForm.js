@@ -15,11 +15,12 @@ const RSVPForm = () => {
 
   const onSubmit = async (form) => {
     console.log(form);
+
     const rsvp = `${form.rsvp}`;
     const name = `${form.name}`;
     const fromEmail = `${form.email}`;
     const number = form.number ? `${form.number}` : '';
-    const subject = `Wedding RSVP from ${form.name}`;
+    const subject = `The Kang's Wedding RSVP confirmation`;
     const body = form.dietary ? `${form.dietary}` : '';
 
     const response = await fetch(functionURL, {
