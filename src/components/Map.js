@@ -23,32 +23,39 @@ const Map = () => {
   };
 
   const mapStyles = {
-    height: '400px',
+    height: '100%',
     width: '100%',
   };
 
   return (
     <LoadScript googleMapsApiKey={`${process.env.GATSBY_GOOGLE_MAPS_API_KEY}`}>
-      <GoogleMap
-        mapContainerStyle={mapStyles}
-        zoom={16}
-        center={venue.location}
+      <Box
+        sx={{
+          height: ['350px', '', '500px'],
+          m: ['20px', '', '', '20px 0'],
+        }}
       >
-        <Marker
-          key={'My Marker'}
-          position={venue.location}
-          onClick={() => onSelect(venue)}
-        />
-        {selected.location && (
-          <InfoWindow
-            position={selected.location}
-            clickable={true}
-            onCloseClick={() => setSelected({})}
-          >
-            <p>{selected.title}</p>
-          </InfoWindow>
-        )}
-      </GoogleMap>
+        <GoogleMap
+          mapContainerStyle={mapStyles}
+          zoom={16}
+          center={venue.location}
+        >
+          <Marker
+            key={'My Marker'}
+            position={venue.location}
+            onClick={() => onSelect(venue)}
+          />
+          {selected.location && (
+            <InfoWindow
+              position={selected.location}
+              clickable={true}
+              onCloseClick={() => setSelected({})}
+            >
+              <p>{selected.title}</p>
+            </InfoWindow>
+          )}
+        </GoogleMap>
+      </Box>
     </LoadScript>
   );
 };
