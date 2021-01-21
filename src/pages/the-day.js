@@ -6,7 +6,7 @@ import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import PageTagline from '../components/PageTagline';
-import MapContainer from '../components/Map';
+import Map from '../components/Map';
 import Schedule from '../components/Schedule';
 import { ContentWrapper, ImageWrapper } from '../components/Container';
 
@@ -60,7 +60,7 @@ const OnTheDay = () => {
         </ImageWrapper>
       </Box>
       <ContentWrapper>
-        <MapContainer />
+        <Map />
         <Schedule />
       </ContentWrapper>
     </Page>
