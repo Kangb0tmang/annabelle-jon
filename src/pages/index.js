@@ -98,6 +98,15 @@ const Home = () => {
       >
         <RSVPButton />
       </Box>
+      <Box
+        sx={{
+          display: ['none', '', 'block'],
+          width: '2px',
+          height: '100px',
+          mt: '50px',
+          bg: theme.colours.black,
+        }}
+      />
     </Page>
   );
 };

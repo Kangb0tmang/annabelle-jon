@@ -3,7 +3,6 @@ import { Box } from 'rebass';
 import Container from './Container';
 import Layout from './Layout';
 import Nav from './Nav';
-import Footer from './Footer';
 import backgroundImage from '../images/background.jpg';
 
 const Page = ({ children }) => {
@@ -26,7 +25,13 @@ const Page = ({ children }) => {
         >
           <Nav />
           {children}
-          <Footer />
+          <Box
+            sx={{
+              mt: ['40px', '', '30px'],
+              mb: ['120px', '', '150px', '220px'],
+              width: '100%',
+            }}
+          />
         </Box>
       </Container>
     </Layout>
