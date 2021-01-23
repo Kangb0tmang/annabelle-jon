@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box } from 'rebass';
+import { Box, Text } from 'rebass';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import { theme } from '../styles/theme';
@@ -69,6 +69,23 @@ const Home = () => {
         <ImageWrapper>
           <Img fluid={data.file.childImageSharp.fluid} />
         </ImageWrapper>
+      </Box>
+      <Box sx={{ mx: '20px', mt: [0, '', '20px'], mb: ['40px', '', 0] }}>
+        <Text
+          sx={{
+            lineHeight: ['36px', '', '50px'],
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['36px', '', '50px'],
+            fontWeight: theme.fontWeights.bold,
+            color: theme.colours.navy,
+            '@media only screen and (min-width: 500px) and (max-width: 739px)': {
+              lineHeight: '50px',
+              fontSize: '50px',
+            },
+          }}
+        >
+          Saturday, June 5, 2021
+        </Text>
       </Box>
       <Countdown />
       <Box

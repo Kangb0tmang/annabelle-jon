@@ -105,7 +105,7 @@ const Countdown = () => {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        m: ['0 auto 100px', '', '70px auto 0'],
+        m: ['0 auto 100px', '', '50px auto 0'],
         px: '20px',
         '@media only screen and (max-width: 500px)': {
           px: '10px',
