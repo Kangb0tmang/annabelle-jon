@@ -38,6 +38,7 @@ const Home = () => {
           justifyContent: 'center',
           width: '100%',
           mb: '50px',
+          px: [0, '', '20px'],
         }}
       >
         <Box
@@ -52,7 +53,6 @@ const Home = () => {
         <Box
           sx={{
             alignSelf: ['flex-start', '', 'center'],
-            maxWidth: ['540px', '', 'none'],
             width: ['100%', '', 'auto'],
             mx: ['auto', '', 0],
             mb: ['50px', '', 0],
@@ -63,7 +63,7 @@ const Home = () => {
             The <br /> Kangs
           </PageHeading>
           <PageTagline>
-            You&apos;re invited to <br /> our wedding!
+            You&apos;re invited <br /> to our <br /> wedding!
           </PageTagline>
         </Box>
         <ImageWrapper>
@@ -98,15 +98,6 @@ const Home = () => {
       >
         <RSVPButton />
       </Box>
-      <Box
-        sx={{
-          display: ['none', '', 'block'],
-          width: '2px',
-          height: '100px',
-          m: '50px 0',
-          bg: theme.colours.black,
-        }}
-      />
     </Page>
   );
 };

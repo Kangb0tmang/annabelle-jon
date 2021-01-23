@@ -35,12 +35,12 @@ const RSVP = () => {
           justifyContent: 'center',
           width: '100%',
           mb: '50px',
+          px: [0, '', '20px'],
         }}
       >
         <Box
           sx={{
             alignSelf: ['flex-start', '', 'center'],
-            maxWidth: ['540px', '', 'none'],
             width: ['100%', '', 'auto'],
             m: ['30px auto 50px', '', 0],
             pl: ['20px', '', 0],

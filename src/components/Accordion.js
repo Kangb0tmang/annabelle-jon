@@ -117,6 +117,7 @@ const Accordion = () => {
           width: '100%',
           mt: ['', '', '50px'],
           mb: ['50px', '100px', '', '150px'],
+          ml: ['', '', '', '15px'],
           px: '20px',
           '@media only screen and (min-width: 850px) and (max-width: 999px)': {
             mb: '150px',
