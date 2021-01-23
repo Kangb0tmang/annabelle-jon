@@ -74,7 +74,7 @@ const Countdown = () => {
             fontWeight: theme.fontWeights.bold,
             color: theme.colours.navy,
             '@media only screen and (max-width: 500px)': {
-              fontSize: '40px',
+              fontSize: '38px',
             },
           }}
         >
