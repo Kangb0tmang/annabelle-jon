@@ -44,9 +44,7 @@ const Countdown = () => {
           px: '40px',
           textAlign: 'center',
           '@media only screen and (max-width: 500px)': {
-            mx: '0',
-            flex: '1 1 50%',
-            p: '10px',
+            px: '10px',
           },
           '&:after': {
             content: '""',
@@ -57,9 +55,6 @@ const Countdown = () => {
             width: '1px',
             height: ['30px', '', '50px'],
             bg: theme.colours.lightblue,
-            '@media only screen and (max-width: 500px)': {
-              display: 'none',
-            },
           },
           '&:last-child': {
             mr: ['', '', '0'],
@@ -78,6 +73,9 @@ const Countdown = () => {
             fontSize: ['50px', '', '70px'],
             fontWeight: theme.fontWeights.bold,
             color: theme.colours.navy,
+            '@media only screen and (max-width: 500px)': {
+              fontSize: '40px',
+            },
           }}
         >
           {timeLeft[interval]}
@@ -90,6 +88,9 @@ const Countdown = () => {
             textTransform: 'uppercase',
             fontSize: ['16px', '', '18px'],
             fontWeight: theme.fontWeights.bold,
+            '@media only screen and (max-width: 500px)': {
+              fontSize: '14px',
+            },
           }}
         >
           {interval}
@@ -107,7 +108,7 @@ const Countdown = () => {
         m: ['0 auto 100px', '', '70px auto 0'],
         px: '20px',
         '@media only screen and (max-width: 500px)': {
-          flexWrap: 'wrap',
+          px: '10px',
         },
       }}
     >
