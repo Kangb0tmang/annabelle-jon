@@ -20,7 +20,6 @@ const RSVPForm = () => {
     const name = `${form.name}`;
     const fromEmail = `${form.email}`;
     const number = form.number ? `${form.number}` : '';
-    const subject = ``;
     const dietary = form.dietary ? `${form.dietary}` : '';
 
     const response = await fetch(functionURL, {
@@ -33,7 +32,6 @@ const RSVPForm = () => {
         fromEmail,
         name,
         number,
-        subject,
         dietary,
       }).toString(),
     });
