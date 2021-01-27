@@ -13,12 +13,8 @@ const RSVP = () => {
     query rsvpImgQuery {
       file(relativePath: { eq: "rsvp.jpg" }) {
         childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

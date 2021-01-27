@@ -15,12 +15,8 @@ const OnTheDay = () => {
     query theDayImgQuery {
       file(relativePath: { eq: "the-day.jpg" }) {
         childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

@@ -13,12 +13,8 @@ const FAQ = () => {
     query faqImgQuery {
       file(relativePath: { eq: "faq.jpg" }) {
         childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

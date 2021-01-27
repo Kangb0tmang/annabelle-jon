@@ -16,12 +16,8 @@ const Home = () => {
     query homeImgQuery {
       file(relativePath: { eq: "home.jpg" }) {
         childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
