@@ -18,7 +18,7 @@ const Page = ({ children }) => {
             width: '100%',
             height: '100%',
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: ['100% 250px', '', '100%'],
+            backgroundSize: ['100% 250px', '', '', '100%'],
             backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat',
           }}
@@ -27,8 +27,8 @@ const Page = ({ children }) => {
           {children}
           <Box
             sx={{
-              mt: ['40px', '', '30px'],
-              mb: ['120px', '', '150px', '220px'],
+              mt: ['40px', '', '', '30px'],
+              mb: ['120px', '', '150px', '', '220px'],
               width: '100%',
             }}
           />

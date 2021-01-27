@@ -1,4 +1,4 @@
-const breakpoints = ['360px', '740px', '1140px', '1440px'];
+const breakpoints = ['360px', '740px', '850px', '1140px', '1440px'];
 
 export const theme = {
   breakpoints,
@@ -8,6 +8,7 @@ export const theme = {
     grey: '#B4B6B9',
     lightgrey: '#E1DDDD',
     lightgreyHover: 'rgba(196, 196, 196, 0.2)',
+    lightnavy: '#253E86',
     navy: '#122B58',
     darknavy: '#050514',
     lightblue: '#42C5E4',
@@ -15,6 +16,7 @@ export const theme = {
     formError: '#F08080',
   },
   fontFamily: {
+    baskervville: "'Baskervville', serif",
     cormorant: "'Cormorant Garamond', sans-serif",
   },
   fontWeights: {

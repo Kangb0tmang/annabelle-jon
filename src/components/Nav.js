@@ -4,7 +4,6 @@ import { Box, Text } from 'rebass';
 import { RemoveScroll } from 'react-remove-scroll';
 import { useMediaQuery } from 'react-responsive';
 import { theme } from '../styles/theme';
-import Logo from '../assets/logo.svg';
 import Branch from '../assets/branch.svg';
 import Leaf from '../assets/leaf.svg';
 
@@ -29,7 +28,7 @@ const Header = ({ ...props }) => (
     sx={{
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: ['center', '', 'space-between'],
+      justifyContent: ['center', '', '', 'space-between'],
       width: '100%',
       '@media only screen and (max-width: 450px)': {
         justifyContent: 'space-between',
@@ -42,20 +41,39 @@ const Header = ({ ...props }) => (
 
 const SiteLogo = () => (
   <Box
-    as={Link}
-    to="/"
     sx={{
       zIndex: '190',
       height: 'auto',
       width: 'auto',
-      mt: ['20px', '', '', '40px'],
-      ml: ['20px', '', '', '40px'],
-      svg: {
-        width: ['200px', '', '', 'auto'],
-      },
+      mt: ['20px', '', '', '', '40px'],
+      ml: ['20px', '', '', '', '40px'],
+      textAlign: 'center',
     }}
   >
-    <Logo />
+    <Text
+      as={Link}
+      to="/"
+      sx={{
+        lineHeight: ['30px', '', '35px'],
+        textTransform: 'uppercase',
+        letterSpacing: '10px',
+        textDecoration: 'none',
+        fontFamily: theme.fontFamily.baskervville,
+        fontSize: ['27px', '', '30px', '', '35px'],
+        color: theme.colours.lightnavy,
+      }}
+    >
+      Annabelle
+      <br />
+      <Text
+        as="span"
+        sx={{ textAlign: 'center', fontSize: ['20px', '', '', '25px'] }}
+      >
+        &amp;
+      </Text>
+      <br />
+      Jonathan
+    </Text>
   </Box>
 );
 
@@ -63,12 +81,15 @@ const SiteLogo = () => (
 const HeaderLeaf = () => (
   <Box
     sx={{
-      display: ['none', '', 'block'],
+      display: ['none', '', '', 'block'],
       height: 'auto',
-      m: ['', '', '30px 0 -40px', '30px 0 -25px'],
+      m: ['', '', '30px 0 -40px', '', '30px 0 -25px'],
       svg: {
-        width: ['', '', '172px', '302px'],
-        height: ['', '', '172px', '272px'],
+        width: ['', '', '175px', '', '302px'],
+        height: ['', '', '175px', '', '272px'],
+      },
+      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
+        display: 'none',
       },
     }}
   >
@@ -80,7 +101,7 @@ const HeaderLeaf = () => (
 const MobileMenuLeaf = ({ styles }) => (
   <Box
     sx={{
-      display: ['block', '', 'none'],
+      display: ['block', '', '', 'none'],
       alignSelf: styles.alignSelf,
       width: '50px',
       height: 'auto',
@@ -93,8 +114,8 @@ const MobileMenuLeaf = ({ styles }) => (
 
 // Transition: https://codepen.io/shieldsma91/pen/zLpbLX
 const NavBar = ({ mobileMenuOpen, ...props }) => {
-  const isDesktop = useMediaQuery({ query: '(min-width: 740px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 739px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 850px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 849px)' });
 
   return (
     <>
@@ -110,21 +131,24 @@ const MainNav = ({ ...props }) => (
   <Box
     as="nav"
     sx={{
-      display: ['none', '', 'block'],
+      display: ['none', '', '', 'block'],
       position: 'relative',
       width: 'auto',
       height: 'auto',
+      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
+        display: 'none',
+      },
     }}
   >
     <Box
       as="ul"
       sx={{
         display: 'flex',
-        flexDirection: ['column', '', 'row'],
+        flexDirection: ['column', '', '', 'row'],
         flex: '1 0 auto',
-        justifyContent: ['flex-start', '', 'center'],
+        justifyContent: ['flex-start', '', '', 'center'],
         height: 'auto',
-        transform: ['translateY(70%)', '', 0],
+        transform: ['translateY(70%)', '', '', 0],
       }}
     >
       {props.children}
@@ -145,6 +169,9 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
       mt: '20px',
       bg: theme.colours.white,
       transition: 'transform 0.5s ease-in-out 0.5s',
+      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
+        display: 'block',
+      },
     }}
   >
     <RemoveScroll enabled={mobileMenuOpen} style={{ height: 0 }}>
@@ -191,9 +218,9 @@ const NavItem = ({ item }) => (
       alignItems: 'center',
       justifyContent: 'center',
       width: 'auto',
-      mb: ['40px', '', 0],
+      mb: ['40px', '', '', 0],
       '&:nth-of-type(3)': {
-        display: ['flex', '', 'none'],
+        display: ['flex', '', '', 'none'],
         mb: 0,
       },
     }}
@@ -204,10 +231,10 @@ const NavItem = ({ item }) => (
       sx={{
         position: 'relative',
         alignSelf: 'center',
-        p: ['15px', '', '', '15px 30px'],
+        p: ['15px', '', '', '', '15px 30px'],
         textDecoration: 'none',
-        lineHeight: ['18px', '', '22px'],
-        fontSize: ['20px', '', '', '24px'],
+        lineHeight: ['18px', '', '', '22px'],
+        fontSize: ['20px', '', '', '', '24px'],
         fontWeight: theme.fontWeights.bold,
         color: theme.colours.navy,
         '&:after': {
@@ -295,6 +322,9 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
       top: '20px',
       right: '30px',
       zIndex: 200,
+      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
+        display: 'block',
+      },
     }}
   >
     <Box

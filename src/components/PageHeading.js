@@ -8,12 +8,12 @@ const PageHeading = ({ ...props }) => {
       as="h1"
       sx={{
         mb: '15px',
-        minWidth: [0, '', '150px'],
+        minWidth: [0, '', '', '150px'],
         lineHeight: '32px',
         textTransform: 'uppercase',
         color: theme.colours.black,
         br: {
-          display: ['none', '', 'block'],
+          display: ['none', '', '', 'block'],
         },
       }}
     >

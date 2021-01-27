@@ -14,9 +14,14 @@ const Layout = ({ children }) => {
         <title>Annabelle Jon</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lato:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Baskervville&family=Cormorant+Garamond:wght@400;700&family=Lato:wght@400;700&display=swap"
           rel="stylesheet"
         />
+
+        {/* <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lato:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+          rel="stylesheet"
+        /> */}
       </Helmet>
       <Box sx={{ position: 'relative' }}>{children}</Box>
     </ThemeProvider>

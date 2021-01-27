@@ -50,14 +50,14 @@ const Countdown = () => {
             content: '""',
             position: 'absolute',
             display: ['none', 'inline-block'],
-            top: ['10px', '', '20px'],
+            top: ['10px', '', '', '20px'],
             right: 0,
             width: '1px',
-            height: ['30px', '', '50px'],
+            height: ['30px', '', '', '50px'],
             bg: theme.colours.lightblue,
           },
           '&:last-child': {
-            mr: ['', '', '0'],
+            mr: ['', '', '', '0'],
             '&:after': {
               content: 'none',
             },
@@ -68,9 +68,9 @@ const Countdown = () => {
           as="p"
           sx={{
             pb: '20px',
-            lineHeight: ['28px', '', '48px'],
+            lineHeight: ['28px', '', '', '48px'],
             fontFamily: theme.fontFamily.cormorant,
-            fontSize: ['50px', '', '70px'],
+            fontSize: ['50px', '', '', '70px'],
             fontWeight: theme.fontWeights.bold,
             color: theme.colours.navy,
             '@media only screen and (max-width: 500px)': {
@@ -84,9 +84,9 @@ const Countdown = () => {
           as="p"
           sx={{
             p: '10px',
-            lineHeight: ['18px', '', '28px'],
+            lineHeight: ['18px', '', '', '28px'],
             textTransform: 'uppercase',
-            fontSize: ['16px', '', '18px'],
+            fontSize: ['16px', '', '', '18px'],
             fontWeight: theme.fontWeights.bold,
             '@media only screen and (max-width: 500px)': {
               fontSize: '14px',
@@ -105,7 +105,7 @@ const Countdown = () => {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        m: ['0 auto 100px', '', '50px auto 0'],
+        m: ['0 auto 100px', '', '', '50px auto 0'],
         px: '20px',
         '@media only screen and (max-width: 500px)': {
           px: '10px',

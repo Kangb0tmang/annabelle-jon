@@ -30,16 +30,16 @@ const Home = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: ['column', '', 'row'],
+          flexDirection: ['column', '', '', 'row'],
           justifyContent: 'center',
           width: '100%',
           mb: '50px',
-          px: [0, '', '20px'],
+          px: [0, '', '', '20px'],
         }}
       >
         <Box
           sx={{
-            display: ['block', '', 'none'],
+            display: ['block', '', '', 'none'],
             m: '60px auto',
             textAlign: 'center',
           }}
@@ -48,11 +48,11 @@ const Home = () => {
         </Box>
         <Box
           sx={{
-            alignSelf: ['flex-start', '', 'center'],
-            width: ['100%', '', 'auto'],
-            mx: ['auto', '', 0],
-            mb: ['50px', '', 0],
-            pl: ['20px', '', 0],
+            alignSelf: ['flex-start', '', '', 'center'],
+            width: ['100%', '', '', 'auto'],
+            mx: ['auto', '', '', 0],
+            mb: ['50px', '', '', 0],
+            pl: ['20px', '', '', 0],
           }}
         >
           <PageHeading>
@@ -66,15 +66,17 @@ const Home = () => {
           <Img fluid={data.file.childImageSharp.fluid} />
         </ImageWrapper>
       </Box>
-      <Box sx={{ mx: '20px', mt: [0, '', '20px'], mb: ['40px', '', 0] }}>
+      <Box
+        sx={{ mx: '20px', mt: [0, '', '', '20px'], mb: ['40px', '', '', 0] }}
+      >
         <Text
           sx={{
-            lineHeight: ['36px', '', '50px'],
+            lineHeight: ['36px', '', '', '50px'],
             fontFamily: theme.fontFamily.cormorant,
-            fontSize: ['36px', '', '50px'],
+            fontSize: ['36px', '', '', '50px'],
             fontWeight: theme.fontWeights.bold,
             color: theme.colours.navy,
-            '@media only screen and (min-width: 500px) and (max-width: 739px)': {
+            '@media only screen and (min-width: 500px) and (max-width: 849px)': {
               lineHeight: '50px',
               fontSize: '50px',
             },
@@ -86,9 +88,9 @@ const Home = () => {
       <Countdown />
       <Box
         sx={{
-          display: ['none', '', 'block'],
+          display: ['none', '', '', 'block'],
           mt: ['50px', '', '80px'],
-          padding: ['15px', '', '25px'],
+          padding: ['15px', '', '', '25px'],
           textAlign: 'center',
         }}
       >
@@ -96,7 +98,7 @@ const Home = () => {
       </Box>
       <Box
         sx={{
-          display: ['none', '', 'block'],
+          display: ['none', '', '', 'block'],
           width: '2px',
           height: '100px',
           mt: '50px',

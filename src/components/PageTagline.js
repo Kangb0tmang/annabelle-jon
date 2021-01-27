@@ -8,7 +8,7 @@ const PageTagline = ({ ...props }) => {
       sx={{
         lineHeight: '18px',
         br: {
-          display: ['none', '', 'block'],
+          display: ['none', '', '', 'block'],
         },
       }}
     >
