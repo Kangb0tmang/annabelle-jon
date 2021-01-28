@@ -21,6 +21,7 @@ const RSVPForm = () => {
     const fromEmail = `${form.email}`;
     const number = form.number ? `${form.number}` : '';
     const dietary = form.dietary ? `${form.dietary}` : '';
+    const formName = 'the-kangs-rsvp';
 
     const response = await fetch(functionURL, {
       method: 'post',
@@ -33,6 +34,7 @@ const RSVPForm = () => {
         name,
         number,
         dietary,
+        formName,
       }).toString(),
     });
 
@@ -104,7 +106,7 @@ const RSVPForm = () => {
           method="post"
           action={functionURL}
           onSubmit={handleSubmit(onSubmit)}
-          data-netlify={true}
+          data-netlify="true"
           data-netlify-honeypot="bot-field"
           sx={{
             mt: ['', '', '', '50px'],
