@@ -54,7 +54,7 @@ const Countdown = () => {
             right: 0,
             width: '1px',
             height: ['30px', '', '', '50px'],
-            bg: theme.colours.lightblue,
+            bg: theme.colours.grey,
           },
           '&:last-child': {
             mr: ['', '', '', '0'],

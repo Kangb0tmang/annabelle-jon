@@ -14,7 +14,7 @@ const RSVPButton = () => {
         textDecoration: 'none',
         fontFamily: theme.fontFamily.cormorant,
         fontSize: ['75px', '', '', '100px'],
-        color: theme.colours.black,
+        color: theme.colours.navy,
         '&:after': {
           content: '""',
           position: 'absolute',
@@ -25,14 +25,12 @@ const RSVPButton = () => {
           bg: theme.colours.navy,
         },
         '&:hover': {
-          color: theme.colours.navy,
           '&:after': {
             width: '0px',
             transition: 'width 0.2s ease',
           },
         },
         '&:focus': {
-          color: theme.colours.navy,
           '&:after': {
             width: '0px',
             transition: 'width 0.2s ease',
