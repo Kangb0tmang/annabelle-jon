@@ -1,4 +1,4 @@
-const breakpoints = ['360px', '740px', '850px', '1140px', '1440px'];
+const breakpoints = ['360px', '740px', '900px', '1140px', '1440px'];
 
 export const theme = {
   breakpoints,

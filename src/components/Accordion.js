@@ -24,12 +24,12 @@ const AccordionItem = ({ faq, index }) => {
           position: 'relative',
           width: '100%',
           py: '15px',
-          pr: ['60px', '', '15px'],
+          pr: ['60px', '', '', '15px'],
           pl: '15px',
           border: `1px solid ${theme.colours.grey}`,
           borderRadius: '4px',
           textAlign: 'left',
-          fontSize: ['18px', '', '24px'],
+          fontSize: ['18px', '', '', '24px'],
           fontWeight: theme.fontWeights.bold,
           transition: 'background 0.2s ease',
           '&:hover': {
@@ -93,7 +93,7 @@ const AccordionItem = ({ faq, index }) => {
           ref={contentRef}
           as="p"
           sx={{
-            fontSize: ['16px', '', '18px'],
+            fontSize: ['16px', '', '', '18px'],
             py: '10px',
             pr: '20px',
             pl: '15px',
@@ -115,15 +115,12 @@ const Accordion = () => {
         sx={{
           flexDirection: 'column',
           width: '100%',
-          mt: ['', '', '50px'],
-          mb: ['50px', '100px', '', '150px'],
-          ml: ['', '', '', '15px'],
+          mt: ['', '', '', '50px'],
+          mb: ['50px', '80px', '', '200px'],
+          ml: ['', '', '', '', '15px'],
           px: '20px',
-          '@media only screen and (min-width: 850px) and (max-width: 999px)': {
-            mb: '150px',
-          },
           '@media only screen and (min-width: 1000px) and (max-width: 1139px)': {
-            mb: '180px',
+            mb: '220px',
           },
         }}
       >

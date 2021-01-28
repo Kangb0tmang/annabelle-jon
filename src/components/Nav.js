@@ -30,52 +30,74 @@ const Header = ({ ...props }) => (
       flexDirection: 'row',
       justifyContent: ['center', '', '', 'space-between'],
       width: '100%',
-      '@media only screen and (max-width: 450px)': {
-        justifyContent: 'space-between',
-      },
     }}
   >
     {props.children}
   </Box>
 );
 
-const SiteLogo = () => (
-  <Box
-    sx={{
-      zIndex: '190',
-      height: 'auto',
-      width: 'auto',
-      mt: ['20px', '', '', '', '40px'],
-      ml: ['20px', '', '', '', '40px'],
-      textAlign: 'center',
-    }}
-  >
-    <Text
+const SiteLogo = () => {
+  const isDesktop = useMediaQuery({ query: '(min-width: 900px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 899px)' });
+
+  return (
+    <Box
       as={Link}
       to="/"
       sx={{
-        lineHeight: ['30px', '', '35px'],
-        textTransform: 'uppercase',
-        letterSpacing: '10px',
+        zIndex: '190',
+        height: 'auto',
+        width: 'auto',
+        mt: ['40px', '', '', '', '40px'],
+        ml: [0, '', '', '20px', '40px'],
+        textAlign: 'center',
         textDecoration: 'none',
-        fontFamily: theme.fontFamily.baskervville,
-        fontSize: ['27px', '', '30px', '', '35px'],
-        color: theme.colours.lightnavy,
       }}
     >
-      Annabelle
-      <br />
-      <Text
-        as="span"
-        sx={{ textAlign: 'center', fontSize: ['20px', '', '', '25px'] }}
-      >
-        &amp;
-      </Text>
-      <br />
-      Jonathan
-    </Text>
-  </Box>
-);
+      {isDesktop && (
+        <Text
+          sx={{
+            lineHeight: ['', '', '', '35px'],
+            textTransform: 'uppercase',
+            letterSpacing: '10px',
+            fontFamily: theme.fontFamily.baskervville,
+            fontSize: ['', '', '', '35px'],
+            color: theme.colours.lightnavy,
+          }}
+        >
+          Annabelle
+          <br />
+          <Text
+            as="span"
+            sx={{ textAlign: 'center', fontSize: ['20px', '', '', '25px'] }}
+          >
+            &amp;
+          </Text>
+          <br />
+          Jonathan
+        </Text>
+      )}
+      {isMobile && (
+        <Text
+          sx={{
+            lineHeight: '60px',
+            textTransform: 'uppercase',
+            letterSpacing: '10px',
+            fontFamily: theme.fontFamily.baskervville,
+            fontSize: '70px',
+            color: theme.colours.lightnavy,
+          }}
+        >
+          A
+          <Text as="span" sx={{ textAlign: 'center', fontSize: '40px' }}>
+            &amp;
+          </Text>
+          J
+        </Text>
+      )}
+    </Box>
+  );
+};
 
 // Leaf for header
 const HeaderLeaf = () => (
@@ -87,9 +109,6 @@ const HeaderLeaf = () => (
       svg: {
         width: ['', '', '175px', '', '302px'],
         height: ['', '', '175px', '', '272px'],
-      },
-      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
-        display: 'none',
       },
     }}
   >
@@ -114,8 +133,8 @@ const MobileMenuLeaf = ({ styles }) => (
 
 // Transition: https://codepen.io/shieldsma91/pen/zLpbLX
 const NavBar = ({ mobileMenuOpen, ...props }) => {
-  const isDesktop = useMediaQuery({ query: '(min-width: 850px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 849px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 900px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 899px)' });
 
   return (
     <>
@@ -135,9 +154,6 @@ const MainNav = ({ ...props }) => (
       position: 'relative',
       width: 'auto',
       height: 'auto',
-      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
-        display: 'none',
-      },
     }}
   >
     <Box
@@ -160,7 +176,7 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
   <Box
     as="nav"
     sx={{
-      display: ['', '', 'none'],
+      display: ['', '', '', 'none'],
       position: 'fixed',
       zIndex: '100',
       transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
@@ -169,9 +185,6 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
       mt: '20px',
       bg: theme.colours.white,
       transition: 'transform 0.5s ease-in-out 0.5s',
-      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
-        display: 'block',
-      },
     }}
   >
     <RemoveScroll enabled={mobileMenuOpen} style={{ height: 0 }}>
@@ -278,7 +291,7 @@ const RSVPNavItem = () => (
       as={Link}
       to="/rsvp"
       sx={{
-        display: ['none', '', 'block'],
+        display: ['none', '', '', 'block'],
         position: 'relative',
         width: 'auto',
         p: ['15px', '', '', '15px 20px'],
@@ -317,14 +330,11 @@ const RSVPNavItem = () => (
 const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
   <Box
     sx={{
-      display: ['block', '', 'none'],
+      display: ['block', '', '', 'none'],
       position: 'absolute',
-      top: '20px',
+      top: '10px',
       right: '30px',
       zIndex: 200,
-      '@media only screen and (min-width: 740px) and (max-width: 850px)': {
-        display: 'block',
-      },
     }}
   >
     <Box
@@ -412,7 +422,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             transitionTimingFunction: 'ease-in-out',
             transitionDelay: mobileMenuOpen ? '0.625s' : '0s',
           }}
-        ></Box>
+        />
         <Box
           sx={{
             position: 'absolute',
@@ -427,7 +437,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
             transitionTimingFunction: 'ease-in-out',
             transitionDelay: mobileMenuOpen ? '0.375s' : '0.25s',
           }}
-        ></Box>
+        />
       </Box>
     </Box>
   </Box>

@@ -81,13 +81,13 @@ const RSVPForm = () => {
           <Text
             as="p"
             sx={{
-              mb: ['100px', '', '150px'],
+              mb: ['100px', '', '', '150px'],
               p: '40px 30px',
               lineHeight: ['20px', '30px'],
               textAlign: 'center',
               borderRadius: '4px',
               border: `1px solid ${theme.colours.grey}`,
-              fontSize: ['20px', '', '30px'],
+              fontSize: ['20px', '', '', '30px'],
             }}
           >
             {rsvp === 'Yes'
@@ -102,7 +102,7 @@ const RSVPForm = () => {
           method="post"
           action={functionURL}
           sx={{
-            mt: ['', '', '50px'],
+            mt: ['', '', '', '50px'],
             mb: [
               rsvp === 'Yes' || rsvp === 'No' ? '50px' : 0,
               '',
@@ -123,9 +123,9 @@ const RSVPForm = () => {
             <Text
               as="p"
               sx={{
-                mb: ['30px', '', '40px'],
+                mb: ['30px', '', '', '40px'],
                 fontFamily: theme.fontFamily.cormorant,
-                fontSize: ['30px', '', '40px'],
+                fontSize: ['30px', '', '', '40px'],
                 fontWeight: theme.fontWeights.bold,
               }}
             >
@@ -161,7 +161,7 @@ const RSVPForm = () => {
                       flexDirection: 'column',
                       justifyContent: 'center',
                       cursor: 'pointer',
-                      p: ['20px 30px', '', '30px 40px'],
+                      p: ['20px 30px', '', '', '30px 40px'],
                       border: `1px solid ${theme.colours.black}`,
                       borderRadius: '4px',
                       textAlign: 'center',
@@ -182,7 +182,7 @@ const RSVPForm = () => {
                     <Text
                       as="span"
                       sx={{
-                        fontSize: ['18px', '', '20px'],
+                        fontSize: ['18px', '', '', '20px'],
                         fontWeight: theme.fontWeights.bold,
                       }}
                     >
@@ -219,7 +219,7 @@ const RSVPForm = () => {
                       flexDirection: 'column',
                       justifyContent: 'center',
                       cursor: 'pointer',
-                      p: ['20px 30px', '', '30px 40px'],
+                      p: ['20px 30px', '', '', '30px 40px'],
                       border: `1px solid ${theme.colours.black}`,
                       borderRadius: '4px',
                       textAlign: 'center',
@@ -239,7 +239,7 @@ const RSVPForm = () => {
                     <Text
                       as="span"
                       sx={{
-                        fontSize: ['18px', '', '20px'],
+                        fontSize: ['18px', '', '', '20px'],
                         fontWeight: theme.fontWeights.bold,
                       }}
                     >
@@ -256,7 +256,7 @@ const RSVPForm = () => {
                     htmlFor="name"
                     sx={{
                       mb: '5px',
-                      fontSize: ['20px', '', '24px'],
+                      fontSize: ['20px', '', '', '24px'],
                       fontWeight: theme.fontWeights.bold,
                     }}
                   >
@@ -268,7 +268,7 @@ const RSVPForm = () => {
                     name="name"
                     sx={{
                       p: '8px 15px',
-                      fontSize: ['18px', '', '22px'],
+                      fontSize: ['18px', '', '', '22px'],
                     }}
                     ref={register({
                       required: 'Please enter your name',
@@ -290,7 +290,7 @@ const RSVPForm = () => {
                     htmlFor="email"
                     sx={{
                       mb: '5px',
-                      fontSize: ['20px', '', '24px'],
+                      fontSize: ['20px', '', '', '24px'],
                       fontWeight: theme.fontWeights.bold,
                     }}
                   >
@@ -301,7 +301,7 @@ const RSVPForm = () => {
                     type="email"
                     id="email"
                     name="email"
-                    sx={{ fontSize: ['18px', '', '22px'] }}
+                    sx={{ fontSize: ['18px', '', '', '22px'] }}
                     ref={register({
                       required: 'Please enter your email',
                       pattern: {
@@ -328,7 +328,7 @@ const RSVPForm = () => {
                         htmlFor="number"
                         sx={{
                           mb: '5px',
-                          fontSize: ['20px', '', '24px'],
+                          fontSize: ['20px', '', '', '24px'],
                           fontWeight: theme.fontWeights.bold,
                         }}
                       >
@@ -340,7 +340,7 @@ const RSVPForm = () => {
                         id="number"
                         name="number"
                         size="10"
-                        sx={{ fontSize: ['18px', '', '22px'] }}
+                        sx={{ fontSize: ['18px', '', '', '22px'] }}
                         ref={register({
                           required: 'Please enter your contact number',
                           pattern: {
@@ -365,7 +365,7 @@ const RSVPForm = () => {
                         htmlFor="dietary"
                         sx={{
                           mb: '5px',
-                          fontSize: ['20px', '', '24px'],
+                          fontSize: ['20px', '', '', '24px'],
                           fontWeight: theme.fontWeights.bold,
                         }}
                       >
@@ -375,7 +375,7 @@ const RSVPForm = () => {
                         id="dietary"
                         name="dietary"
                         rows="5"
-                        sx={{ fontSize: ['18px', '', '22px'] }}
+                        sx={{ fontSize: ['18px', '', '', '22px'] }}
                         ref={register}
                       />
                     </Box>
@@ -391,9 +391,9 @@ const RSVPForm = () => {
                     p: '15px 10px',
                     mt: ['10px', '', '20px'],
                     border: `1px solid ${theme.colours.black}`,
-                    lineHeight: ['16px', '', '20px'],
+                    lineHeight: ['16px', '', '', '20px'],
                     bg: theme.colours.white,
-                    fontSize: ['18px', '', '22px'],
+                    fontSize: ['18px', '', '', '22px'],
                     fontWeight: theme.fontWeights.bold,
                     color: theme.colours.black,
                     transition: 'background 0.3s ease',

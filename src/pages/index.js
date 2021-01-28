@@ -33,26 +33,18 @@ const Home = () => {
           flexDirection: ['column', '', '', 'row'],
           justifyContent: 'center',
           width: '100%',
+          mt: ['50px', '', '', 0],
           mb: '50px',
           px: [0, '', '', '20px'],
         }}
       >
         <Box
           sx={{
-            display: ['block', '', '', 'none'],
-            m: '60px auto',
-            textAlign: 'center',
-          }}
-        >
-          <RSVPButton />
-        </Box>
-        <Box
-          sx={{
-            alignSelf: ['flex-start', '', '', 'center'],
+            alignSelf: ['', '', '', 'center'],
             width: ['100%', '', '', 'auto'],
             mx: ['auto', '', '', 0],
             mb: ['50px', '', '', 0],
-            pl: ['20px', '', '', 0],
+            textAlign: ['center', '', '', 'left'],
           }}
         >
           <PageHeading>
@@ -67,13 +59,17 @@ const Home = () => {
         </ImageWrapper>
       </Box>
       <Box
-        sx={{ mx: '20px', mt: [0, '', '', '20px'], mb: ['40px', '', '', 0] }}
+        sx={{
+          mx: '20px',
+          mt: [0, '', '', '20px'],
+          mb: ['40px', '', '', 0],
+        }}
       >
         <Text
           sx={{
-            lineHeight: ['36px', '', '', '50px'],
+            lineHeight: ['36px', '', '50px'],
             fontFamily: theme.fontFamily.cormorant,
-            fontSize: ['36px', '', '', '50px'],
+            fontSize: ['36px', '', '50px'],
             fontWeight: theme.fontWeights.bold,
             color: theme.colours.navy,
             '@media only screen and (min-width: 500px) and (max-width: 849px)': {
@@ -88,8 +84,8 @@ const Home = () => {
       <Countdown />
       <Box
         sx={{
-          display: ['none', '', '', 'block'],
-          mt: ['50px', '', '80px'],
+          display: ['', '', '', 'block'],
+          mt: [0, '', '', '80px'],
           padding: ['15px', '', '', '25px'],
           textAlign: 'center',
         }}

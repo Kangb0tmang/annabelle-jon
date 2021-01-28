@@ -18,7 +18,7 @@ const Page = ({ children }) => {
             width: '100%',
             height: '100%',
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: ['100% 250px', '', '', '100%'],
+            backgroundSize: ['auto 25%', '', '100% 250px', '100%'],
             backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat',
           }}

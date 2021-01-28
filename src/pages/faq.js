@@ -27,19 +27,20 @@ const FAQ = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: ['column', '', 'row'],
+          flexDirection: ['column', '', '', 'row'],
           justifyContent: 'center',
           width: '100%',
           mb: '50px',
-          px: [0, '', '20px'],
+          px: [0, '', '', '20px'],
+          textAlign: ['center', '', '', 'left'],
         }}
       >
         <Box
           sx={{
-            alignSelf: ['flex-start', '', 'center'],
-            width: ['100%', '', 'auto'],
-            m: ['30px auto 50px', '', 0],
-            pl: ['20px', '', 0],
+            alignSelf: ['flex-start', '', '', 'center'],
+            width: ['100%', '', '', 'auto'],
+            m: ['50px auto 30px', '', '', 0],
+            pl: ['20px', '', '', 0],
           }}
         >
           <PageHeading>FAQS</PageHeading>

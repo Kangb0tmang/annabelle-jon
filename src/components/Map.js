@@ -35,7 +35,7 @@ const Map = () => {
       <Box
         sx={{
           height: ['350px', '', '500px'],
-          m: ['20px', '', '', '20px 0 20px 35px'],
+          m: ['0 20px 20px', '', '', '', '20px 0 20px 35px'],
         }}
       >
         <GoogleMap
@@ -60,7 +60,7 @@ const Map = () => {
                 sx={{
                   h2: {
                     mb: '8px',
-                    fontSize: ['15px', '', '17px'],
+                    fontSize: ['15px', '', '', '17px'],
                   },
                   p: {
                     lineHeight: '16px',

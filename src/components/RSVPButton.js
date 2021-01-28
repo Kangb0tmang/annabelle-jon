@@ -10,10 +10,10 @@ const RSVPButton = () => {
       to="/rsvp"
       sx={{
         position: 'relative',
-        lineHeight: ['28px', '', '38px'],
+        lineHeight: ['60px', '', '38px'],
         textDecoration: 'none',
         fontFamily: theme.fontFamily.cormorant,
-        fontSize: ['85px', '', '', '100px'],
+        fontSize: ['75px', '', '', '100px'],
         color: theme.colours.black,
         '&:after': {
           content: '""',
