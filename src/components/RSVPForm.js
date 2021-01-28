@@ -100,6 +100,7 @@ const RSVPForm = () => {
           as="form"
           onSubmit={handleSubmit(onSubmit)}
           method="post"
+          data-netlify={true}
           action={functionURL}
           sx={{
             mt: ['', '', '', '50px'],
