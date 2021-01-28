@@ -104,8 +104,8 @@ const RSVPForm = () => {
           method="post"
           action={functionURL}
           onSubmit={handleSubmit(onSubmit)}
-          netlify-honeypot="bot-field"
-          netlify
+          data-netlify={true}
+          data-netlify-honeypot="bot-field"
           sx={{
             mt: ['', '', '', '50px'],
             mb: [
