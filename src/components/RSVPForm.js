@@ -103,9 +103,9 @@ const RSVPForm = () => {
           name="the-kangs-rsvp"
           method="post"
           action={functionURL}
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit(onSubmit)}
+          netlify-honeypot="bot-field"
+          netlify
           sx={{
             mt: ['', '', '', '50px'],
             mb: [
@@ -391,6 +391,8 @@ const RSVPForm = () => {
                 )}
                 <Box
                   as="button"
+                  name="submit"
+                  type="submit"
                   sx={{
                     alignSelf: 'flex-start',
                     width: '100%',
