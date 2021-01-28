@@ -45,6 +45,8 @@ const RSVPForm = () => {
     }
   };
 
+  // https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/?_ga=2.108103426.1247306375.1611640096-1259089272.1600833667
+
   return (
     <ContentWrapper>
       {isSubmitSuccessful ? (
@@ -98,10 +100,12 @@ const RSVPForm = () => {
       ) : (
         <Box
           as="form"
-          onSubmit={handleSubmit(onSubmit)}
+          name="the-kangs-rsvp"
           method="post"
           action={functionURL}
-          netlify
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit(onSubmit)}
           sx={{
             mt: ['', '', '', '50px'],
             mb: [
@@ -112,6 +116,7 @@ const RSVPForm = () => {
             height: ['730px', '', '780px'],
           }}
         >
+          <Input type="hidden" name="form-name" value="the-kangs-rsvp" />
           <Flex
             sx={{
               flexDirection: 'column',
