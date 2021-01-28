@@ -332,7 +332,7 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
     sx={{
       display: ['block', '', '', 'none'],
       position: 'absolute',
-      top: '10px',
+      top: '20px',
       right: '30px',
       zIndex: 200,
     }}
