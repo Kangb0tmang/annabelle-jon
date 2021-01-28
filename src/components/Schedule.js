@@ -26,7 +26,7 @@ const Schedule = () => {
           </Box>
           <Box
             sx={{
-              width: '5px',
+              width: '2px',
               bg: theme.colours.black,
             }}
           />
