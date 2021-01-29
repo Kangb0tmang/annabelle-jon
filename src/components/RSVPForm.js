@@ -10,7 +10,7 @@ const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const { isSubmitSuccessful } = formState;
 
-  const onSubmit = async (form) => {
+  const onSubmit = async (form, event) => {
     console.log(form);
 
     function encode(data) {
@@ -21,24 +21,20 @@ const RSVPForm = () => {
         .join('&');
     }
 
-    const response = (event) => {
-      event.preventDefault();
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': event.target.getAttribute('name'),
-          ...form,
-        }),
-      });
-    };
+    let formData = ``;
+    formData = encode({
+      'form-name': 'the-kangs-rsvp',
+      ...form,
+    });
 
-    // Testing only
-    if (response.status === 200) {
-      console.log('success', response);
-    } else {
-      console.log('error', response);
-    }
+    console.log('encode form data', formData);
+
+    event.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData,
+    });
   };
 
   // https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/?_ga=2.108103426.1247306375.1611640096-1259089272.1600833667
