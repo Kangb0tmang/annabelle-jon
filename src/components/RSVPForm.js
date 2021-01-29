@@ -28,17 +28,16 @@ const RSVPForm = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': event.target.getAttribute('name'),
-          ...name,
+          ...form,
         }),
       });
     };
 
     // Testing only
     if (response.status === 200) {
-      console.log(response);
+      console.log('success', response);
     } else {
-      const json = await response;
-      console.log(json);
+      console.log('error', response);
     }
   };
 
