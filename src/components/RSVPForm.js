@@ -16,33 +16,14 @@ const RSVPForm = () => {
     const name = `${form.name}`;
     const fromEmail = `${form.email}`;
 
-    function encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
-        .join('&');
-    }
-
-    let netlifyData,
-      sendgridData = '';
-    netlifyData = encode({
-      'form-name': 'the-kangs-rsvp',
-      ...form,
-    });
-
-    sendgridData = new URLSearchParams({ name, fromEmail }).toString();
-
-    // console.log('encode form data', netlifyData);
-    console.log('sendGrid data', sendgridData);
-
     event.preventDefault();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      // body: netlifyData,
-      body: sendgridData,
-      // sendGridData: sendGridData,
+      body: new URLSearchParams({
+        fromEmail,
+        name,
+      }).toString(),
     });
   };
 
