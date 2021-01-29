@@ -21,19 +21,20 @@ const RSVPForm = () => {
         .join('&');
     }
 
-    let formData = ``;
-    formData = encode({
+    let netlifyData = '';
+
+    netlifyData = encode({
       'form-name': 'the-kangs-rsvp',
       ...form,
     });
 
-    console.log('encode form data', formData);
+    console.log('encode form data', netlifyData);
 
     event.preventDefault();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData,
+      body: netlifyData,
     });
   };
 
