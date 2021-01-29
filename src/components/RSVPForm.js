@@ -9,38 +9,35 @@ import Yes from '../assets/yes.svg';
 const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
   const { isSubmitSuccessful } = formState;
-  const functionURL = 'https://sand-wildebeest-1919.twil.io/netlify-form';
 
   const onSubmit = async (form) => {
     console.log(form);
 
-    const rsvp = `${form.rsvp}`;
-    const name = `${form.name}`;
-    const fromEmail = `${form.email}`;
-    const number = form.number ? `${form.number}` : '';
-    const dietary = form.dietary ? `${form.dietary}` : '';
-    const formName = 'the-kangs-rsvp';
+    function encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+    }
 
-    const response = await fetch(functionURL, {
-      method: 'post',
-      headers: {
-        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      },
-      body: new URLSearchParams({
-        rsvp,
-        fromEmail,
-        name,
-        number,
-        dietary,
-        formName,
-      }).toString(),
-    });
+    const response = (event) => {
+      event.preventDefault();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': event.target.getAttribute('name'),
+          ...name,
+        }),
+      });
+    };
 
     // Testing only
     if (response.status === 200) {
-      console.log(response.json());
+      console.log(response);
     } else {
-      const json = await response.json();
+      const json = await response;
       console.log(json);
     }
   };
@@ -96,7 +93,7 @@ const RSVPForm = () => {
           as="form"
           name="the-kangs-rsvp"
           method="post"
-          action={functionURL}
+          action="/"
           onSubmit={handleSubmit(onSubmit)}
           data-netlify="true"
           data-netlify-honeypot="bot-field"
