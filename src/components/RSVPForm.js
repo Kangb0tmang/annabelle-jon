@@ -15,28 +15,28 @@ const RSVPForm = () => {
   const onSubmit = async (form, event) => {
     console.log(form);
 
-    // function encode(data) {
-    //   return Object.keys(data)
-    //     .map(
-    //       (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-    //     )
-    //     .join('&');
-    // }
+    function encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+    }
 
-    // let netlifyData = '';
+    let netlifyData = '';
 
-    // netlifyData = encode({
-    //   'form-name': 'the-kangs-rsvp',
-    //   ...form,
-    // });
+    netlifyData = encode({
+      'form-name': 'the-kangs-rsvp',
+      ...form,
+    });
 
-    // console.log('encode form data', netlifyData);
+    console.log('encode form data', netlifyData);
 
     event.preventDefault();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: { ...form },
+      body: netlifyData,
     });
   };
 
