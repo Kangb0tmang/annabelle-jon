@@ -13,8 +13,6 @@ const RSVPForm = () => {
   const { isSubmitSuccessful } = formState;
 
   const onSubmit = async (form, event) => {
-    console.log(form);
-
     function encode(data) {
       return Object.keys(data)
         .map(
@@ -29,8 +27,6 @@ const RSVPForm = () => {
       'form-name': 'the-kangs-rsvp',
       ...form,
     });
-
-    console.log('encode form data', netlifyData);
 
     event.preventDefault();
     fetch('/', {
@@ -150,6 +146,7 @@ const RSVPForm = () => {
                 Will you be attending?
               </Text>
               {/* Radio buttons: https://codepen.io/gabrielferreira/pen/oYxNVy/ */}
+              {/* https://community.netlify.com/t/checkboxes-and-radio-buttons-in-forms/1486/2 */}
               <Box
                 as="fieldset"
                 sx={{
