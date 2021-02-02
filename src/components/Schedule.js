@@ -6,7 +6,11 @@ import { events } from '../content/events-content';
 const Schedule = () => {
   return (
     <Flex
-      sx={{ flexDirection: 'column', mt: '50px', mb: ['50px', '', '100px'] }}
+      sx={{
+        flexDirection: 'column',
+        mt: '50px',
+        mb: ['70px', '', '', '100px'],
+      }}
     >
       {events.map((event, index) => (
         <Flex

@@ -16,11 +16,11 @@ export const theme = {
     formError: '#F08080',
   },
   fontFamily: {
-    baskervville: "'Baskervville', serif",
     cormorant: "'Cormorant Garamond', sans-serif",
   },
   fontWeights: {
     regular: 400,
+    semiBold: 600,
     bold: 700,
   },
 };

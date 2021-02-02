@@ -60,7 +60,7 @@ const SiteLogo = () => {
             lineHeight: ['', '', '', '35px'],
             textTransform: 'uppercase',
             letterSpacing: '10px',
-            fontFamily: theme.fontFamily.baskervville,
+            fontFamily: theme.fontFamily.cormorant,
             fontSize: ['', '', '', '35px'],
             color: theme.colours.lightnavy,
           }}
@@ -83,7 +83,7 @@ const SiteLogo = () => {
             lineHeight: '60px',
             textTransform: 'uppercase',
             letterSpacing: '10px',
-            fontFamily: theme.fontFamily.baskervville,
+            fontFamily: theme.fontFamily.cormorant,
             fontSize: '70px',
             color: theme.colours.lightnavy,
           }}

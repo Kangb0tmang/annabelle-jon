@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import { ImageWrapper } from '../components/Container';
 import RSVPForm from '../components/RSVPForm';
+import Countdown from '../components/Countdown';
 
 const RSVP = () => {
   const data = useStaticQuery(graphql`

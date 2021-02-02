@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
 import { ImageWrapper } from '../components/Container';
 import Accordion from '../components/Accordion';
+import Footer from '../components/Footer';
 
 const FAQ = () => {
   const data = useStaticQuery(graphql`
@@ -50,6 +51,7 @@ const FAQ = () => {
         </ImageWrapper>
       </Box>
       <Accordion />
+      <Footer />
     </Page>
   );
 };

@@ -9,6 +9,7 @@ import PageTagline from '../components/PageTagline';
 import Map from '../components/Map';
 import Schedule from '../components/Schedule';
 import { ContentWrapper, ImageWrapper } from '../components/Container';
+import Footer from '../components/Footer';
 
 const OnTheDay = () => {
   const data = useStaticQuery(graphql`
@@ -59,6 +60,7 @@ const OnTheDay = () => {
         <Map />
         <Schedule />
       </ContentWrapper>
+      <Footer />
     </Page>
   );
 };

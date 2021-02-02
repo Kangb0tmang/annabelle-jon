@@ -10,29 +10,31 @@ const RSVPButton = () => {
       to="/rsvp"
       sx={{
         position: 'relative',
-        lineHeight: ['60px', '', '38px'],
+        lineHeight: ['35px', '', '50px'],
         textDecoration: 'none',
         fontFamily: theme.fontFamily.cormorant,
-        fontSize: ['75px', '', '', '100px'],
+        fontSize: ['50px', '', '65px'],
+        fontWeight: theme.fontWeights.semiBold,
         color: theme.colours.navy,
         '&:after': {
           content: '""',
           position: 'absolute',
           left: '0',
           bottom: '3px',
-          width: '100%',
           height: '2px',
-          bg: theme.colours.navy,
+          width: '0px',
         },
         '&:hover': {
           '&:after': {
-            width: '0px',
+            width: '100%',
+            bg: theme.colours.navy,
             transition: 'width 0.2s ease',
           },
         },
         '&:focus': {
           '&:after': {
-            width: '0px',
+            width: '100%',
+            bg: theme.colours.navy,
             transition: 'width 0.2s ease',
           },
         },

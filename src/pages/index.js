@@ -1,15 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box, Text } from 'rebass';
-import Page from '../components/Page';
+import { Box } from 'rebass';
 import SEO from '../components/SEO';
-import { theme } from '../styles/theme';
+import Page from '../components/Page';
 import PageHeading from '../components/PageHeading';
 import PageTagline from '../components/PageTagline';
-import RSVPButton from '../components/RSVPButton';
 import { ImageWrapper } from '../components/Container';
-import Countdown from '../components/Countdown';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -34,7 +32,7 @@ const Home = () => {
           justifyContent: 'center',
           width: '100%',
           mt: ['50px', '', '', 0],
-          mb: '50px',
+          mb: ['100px', '', '', '150px'],
           px: [0, '', '', '20px'],
         }}
       >
@@ -58,49 +56,7 @@ const Home = () => {
           <Img fluid={data.file.childImageSharp.fluid} />
         </ImageWrapper>
       </Box>
-      <Box
-        sx={{
-          mx: '20px',
-          mt: [0, '', '', '20px'],
-          mb: ['40px', '', '', 0],
-        }}
-      >
-        <Text
-          sx={{
-            lineHeight: ['36px', '', '50px'],
-            fontFamily: theme.fontFamily.cormorant,
-            fontSize: ['36px', '', '50px'],
-            fontWeight: theme.fontWeights.bold,
-            color: theme.colours.navy,
-            '@media only screen and (min-width: 500px) and (max-width: 849px)': {
-              lineHeight: '50px',
-              fontSize: '50px',
-            },
-          }}
-        >
-          Saturday, June 5, 2021
-        </Text>
-      </Box>
-      <Countdown />
-      <Box
-        sx={{
-          display: ['', '', '', 'block'],
-          mt: [0, '', '', '80px'],
-          padding: ['15px', '', '', '25px'],
-          textAlign: 'center',
-        }}
-      >
-        <RSVPButton />
-      </Box>
-      <Box
-        sx={{
-          display: ['none', '', '', 'block'],
-          width: '2px',
-          height: '100px',
-          mt: '50px',
-          bg: theme.colours.black,
-        }}
-      />
+      <Footer />
     </Page>
   );
 };

@@ -27,9 +27,12 @@ const Page = ({ children }) => {
           {children}
           <Box
             sx={{
-              mt: ['40px', '', '', '30px'],
-              mb: ['120px', '', '150px', '', '220px'],
+              mt: ['40px', '', '', '50px'],
+              mb: ['100px', '', '', '', '220px'],
               width: '100%',
+              '@media only screen and (max-width: 500px)': {
+                mb: '40px',
+              },
             }}
           />
         </Box>
