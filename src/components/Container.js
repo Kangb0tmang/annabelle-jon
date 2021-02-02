@@ -5,10 +5,10 @@ export const ImageWrapper = ({ ...props }) => (
   <Box
     sx={{
       position: 'relative',
-      alignSelf: ['center', '', '', 'flex-start'],
-      px: ['20px', '', '', 0],
-      maxWidth: ['none', '', '1040px'],
+      alignSelf: 'center',
+      maxWidth: ['none', '', '1120px'],
       width: '100%',
+      px: ['', '', '', '', '20px'],
     }}
     {...props}
   />

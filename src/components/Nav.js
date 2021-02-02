@@ -4,7 +4,6 @@ import { Box, Text } from 'rebass';
 import { RemoveScroll } from 'react-remove-scroll';
 import { useMediaQuery } from 'react-responsive';
 import { theme } from '../styles/theme';
-import Branch from '../assets/branch.svg';
 import Leaf from '../assets/leaf.svg';
 
 export const navItems = [
@@ -28,8 +27,11 @@ const Header = ({ ...props }) => (
     sx={{
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: ['center', '', '', 'space-between'],
+      justifyContent: 'space-between',
+      alignItems: ['', '', '', 'center'],
       width: '100%',
+      mt: ['30px', '', '', '40px'],
+      mb: ['70px', '', '', '100px'],
     }}
   >
     {props.children}
@@ -48,8 +50,7 @@ const SiteLogo = () => {
         zIndex: '190',
         height: 'auto',
         width: 'auto',
-        mt: ['40px', '', '', '', '40px'],
-        ml: [0, '', '', '20px', '40px'],
+        ml: ['20px', '', '', '', '40px'],
         textAlign: 'center',
         textDecoration: 'none',
       }}
@@ -59,38 +60,29 @@ const SiteLogo = () => {
           sx={{
             lineHeight: ['', '', '', '35px'],
             textTransform: 'uppercase',
-            letterSpacing: '10px',
+            letterSpacing: '3px',
             fontFamily: theme.fontFamily.cormorant,
             fontSize: ['', '', '', '35px'],
             color: theme.colours.lightnavy,
           }}
         >
-          Annabelle
-          <br />
-          <Text
-            as="span"
-            sx={{ textAlign: 'center', fontSize: ['20px', '', '', '25px'] }}
-          >
-            &amp;
-          </Text>
-          <br />
-          Jonathan
+          Annabelle &amp; Jonathan
         </Text>
       )}
       {isMobile && (
         <Text
           sx={{
-            lineHeight: '60px',
+            lineHeight: '30px',
             textTransform: 'uppercase',
-            letterSpacing: '10px',
+            letterSpacing: '3px',
             fontFamily: theme.fontFamily.cormorant,
-            fontSize: '70px',
+            fontSize: '40px',
             color: theme.colours.lightnavy,
           }}
         >
           A
-          <Text as="span" sx={{ textAlign: 'center', fontSize: '40px' }}>
-            &amp;
+          <Text as="span" sx={{ textAlign: 'center', fontSize: '20px' }}>
+            &nbsp;&amp;&nbsp;
           </Text>
           J
         </Text>
@@ -98,23 +90,6 @@ const SiteLogo = () => {
     </Box>
   );
 };
-
-// Leaf for header
-const HeaderLeaf = () => (
-  <Box
-    sx={{
-      display: ['none', '', '', 'block'],
-      height: 'auto',
-      m: ['', '', '30px 0 -40px', '', '30px 0 -25px'],
-      svg: {
-        width: ['', '', '175px', '', '302px'],
-        height: ['', '', '175px', '', '272px'],
-      },
-    }}
-  >
-    <Branch />
-  </Box>
-);
 
 // Leafs for mobile menu
 const MobileMenuLeaf = ({ styles }) => (
@@ -153,7 +128,7 @@ const MainNav = ({ ...props }) => (
       display: ['none', '', '', 'block'],
       position: 'relative',
       width: 'auto',
-      height: 'auto',
+      height: '100%',
     }}
   >
     <Box
@@ -164,7 +139,6 @@ const MainNav = ({ ...props }) => (
         flex: '1 0 auto',
         justifyContent: ['flex-start', '', '', 'center'],
         height: 'auto',
-        transform: ['translateY(70%)', '', '', 0],
       }}
     >
       {props.children}
@@ -196,7 +170,7 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
           flex: '1 0 auto',
           justifyContent: 'flex-start',
           height: 'auto',
-          transform: 'translateY(70%)',
+          transform: 'translateY(50%)',
         }}
       >
         <MobileMenuLeaf
@@ -204,7 +178,7 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
             alignSelf: 'flex-start',
             transform: [
               'translate(50%, -50px) rotate(-111deg)',
-              'translate(100%, -75px) rotate(-111deg)',
+              'translate(70%, -75px) rotate(-111deg)',
             ],
           }}
         />
@@ -214,7 +188,7 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
             alignSelf: 'flex-end',
             transform: [
               'translate(-50%, 50px) rotate(70deg)',
-              'translate(-100%, 75px) rotate(70deg)',
+              'translate(-70%, 75px) rotate(70deg)',
             ],
           }}
         />
@@ -332,8 +306,8 @@ const MobileTrigger = ({ mobileMenuOpen, setMobileMenuOpen }) => (
     sx={{
       display: ['block', '', '', 'none'],
       position: 'absolute',
-      top: '20px',
-      right: '30px',
+      top: 0,
+      right: '20px',
       zIndex: 200,
     }}
   >
@@ -453,7 +427,6 @@ const Nav = () => {
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
-      <HeaderLeaf />
       <NavBar mobileMenuOpen={mobileMenuOpen}>
         {navItems.map((item, index) => {
           return <NavItem key={index} index={index} item={item} />;
