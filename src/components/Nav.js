@@ -100,9 +100,9 @@ const MobileMenuLeaf = ({ styles }) => (
     sx={{
       display: ['block', '', '', 'none'],
       alignSelf: styles.alignSelf,
+      transform: styles.transform,
       width: '50px',
       height: 'auto',
-      transform: styles.transform,
     }}
   >
     <Leaf />

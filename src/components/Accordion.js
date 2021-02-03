@@ -4,6 +4,22 @@ import { theme } from '../styles/theme';
 import { useEventListener, debounce } from '../scripts/helpers';
 import { ContentWrapper } from './Container';
 import { faqs } from '../content/faq-content';
+import Leaf from '../assets/leaf.svg';
+
+const FAQLeaf = () => (
+  <Box
+    sx={{
+      position: 'absolute',
+      top: '50%',
+      left: '10px',
+      transform: 'translateY(-50%) rotate(-130deg)',
+      width: '35px',
+      height: 'auto',
+    }}
+  >
+    <Leaf />
+  </Box>
+);
 
 const AccordionItem = ({ faq, index }) => {
   const [isActive, setIsActive] = useState(false);
@@ -17,20 +33,18 @@ const AccordionItem = ({ faq, index }) => {
   useEventListener('resize', debounce(handleResize, 100));
 
   return (
-    <Box sx={{ mb: '20px', '&:last-child': { mb: 0 } }}>
+    <Box sx={{ mb: '25px', '&:last-child': { mb: 0 } }}>
       <Box
         as="button"
         sx={{
           position: 'relative',
           width: '100%',
-          py: '15px',
-          pr: ['60px', '', '', '15px'],
-          pl: '15px',
-          border: `1px solid ${theme.colours.grey}`,
+          p: '15px 70px',
           borderRadius: '4px',
           textAlign: 'left',
+          fontFamily: theme.fontFamily.cormorant,
           fontSize: ['18px', '', '', '24px'],
-          fontWeight: theme.fontWeights.bold,
+          fontWeight: theme.fontWeights.semiBold,
           transition: 'background 0.2s ease',
           '&:hover': {
             cursor: 'pointer',
@@ -44,6 +58,7 @@ const AccordionItem = ({ faq, index }) => {
           );
         }}
       >
+        <FAQLeaf />
         {faq.question}
         {/* Inspired by https://codepen.io/christeldesign/pen/mxdjMo */}
         <Box
@@ -62,7 +77,7 @@ const AccordionItem = ({ faq, index }) => {
               top: '50%',
               width: '100%',
               height: '4px',
-              bg: isActive ? theme.colours.lightblue : theme.colours.navy,
+              bg: isActive ? theme.colours.lightgrey : theme.colours.navy,
               transform: isActive ? 'rotate(180deg)' : 'rotate(90deg)',
               transition: 'transform 300ms, opacity 200ms, background 600ms',
             },
@@ -74,7 +89,7 @@ const AccordionItem = ({ faq, index }) => {
               width: '100%',
               height: '4px',
               opacity: isActive ? '0' : '1',
-              bg: isActive ? theme.colours.lightblue : theme.colours.navy,
+              bg: isActive ? theme.colours.lightgrey : theme.colours.navy,
               transform: isActive ? 'rotate(360deg)' : 'rotate(0deg)',
               transition: 'transform 300ms, opacity 200ms, background 600ms',
             },
@@ -93,12 +108,13 @@ const AccordionItem = ({ faq, index }) => {
           ref={contentRef}
           as="p"
           sx={{
-            fontSize: ['16px', '', '', '18px'],
             py: '10px',
-            pr: '20px',
-            pl: '15px',
+            pr: '80px',
+            pl: '70px',
             transition: 'opacity 0.3s 0s ease-in-out',
             opacity: isActive ? '1' : '0',
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['16px', '', '', '18px'],
           }}
         >
           {faq.response}
@@ -115,7 +131,7 @@ const Accordion = () => {
         sx={{
           flexDirection: 'column',
           width: '100%',
-          mt: ['', '', '', '50px'],
+          mt: ['50px', '', '', '80px'],
           mb: ['100px', '', '', '120px', '', '150px'],
           ml: ['', '', '', '', '15px'],
           px: '20px',
