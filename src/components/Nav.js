@@ -31,7 +31,7 @@ const Header = ({ ...props }) => (
       alignItems: ['', '', '', 'center'],
       width: '100%',
       mt: ['30px', '', '', '40px'],
-      mb: ['70px', '', '', '100px'],
+      mb: ['60px', '', '', '80px'],
     }}
   >
     {props.children}
@@ -53,6 +53,9 @@ const SiteLogo = () => {
         ml: ['20px', '', '', '', '40px'],
         textAlign: 'center',
         textDecoration: 'none',
+        '@media only screen and (min-width: 1140px) and (max-width: 1270px)': {
+          ml: '20px',
+        },
       }}
     >
       {isDesktop && (
@@ -259,6 +262,9 @@ const RSVPNavItem = () => (
       justifyContent: 'center',
       mr: ['20px', '', '', '', '40px'],
       ml: '20px',
+      '@media only screen and (min-width: 1140px) and (max-width: 1270px)': {
+        mr: '20px',
+      },
     }}
   >
     <Text

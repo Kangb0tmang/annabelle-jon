@@ -29,7 +29,7 @@ const Home = () => {
     query homeImgQuery {
       file(relativePath: { eq: "home.jpg" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -52,11 +52,13 @@ const Home = () => {
         <Flex
           sx={{
             justifyContent: 'space-between',
-            width: ['100%', '', '', '', '1120px'],
+            width: ['100%', '', '', '', '1240px'],
             mx: 'auto',
             mb: '50px',
-            // pl: ['20px', '', '', '', 0],
-            px: '20px',
+            px: ['20px', '', '', '20px'],
+            '@media only screen and (min-width: 1140px) and (max-width: 1270px)': {
+              width: '100%',
+            },
           }}
         >
           <Box>

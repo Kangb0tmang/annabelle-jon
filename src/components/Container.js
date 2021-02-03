@@ -6,7 +6,7 @@ export const ImageWrapper = ({ ...props }) => (
     sx={{
       position: 'relative',
       alignSelf: 'center',
-      maxWidth: ['none', '', '1120px'],
+      maxWidth: ['none', '', '1240px'],
       width: '100%',
       px: ['', '', '', '', '20px'],
     }}
