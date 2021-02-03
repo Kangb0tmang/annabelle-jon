@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Box, Text } from 'rebass';
-import HeaderText from '../components/HeaderText';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import { theme } from '../styles/theme';
@@ -10,9 +9,9 @@ const NotFoundPage = () => (
   <Page>
     <SEO title="Page Not Found" />
     <Box sx={{ my: ['50px', '', '100px'] }}>
-      <HeaderText
+      <Text
         as="h1"
-        styles={{
+        sx={{
           mb: ['30px', '', '', '40px'],
           lineHeight: ['45px', '', '', '55px'],
           fontFamily: theme.fontFamily.cormorant,
@@ -22,7 +21,7 @@ const NotFoundPage = () => (
         }}
       >
         Page not found
-      </HeaderText>
+      </Text>
       <Text
         as={Link}
         to="/"

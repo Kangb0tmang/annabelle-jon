@@ -1,11 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Text } from 'rebass';
 import { theme } from '../styles/theme';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageIntro from '../components/PageIntro';
-import HeaderText from '../components/HeaderText';
 import { ImageWrapper } from '../components/Container';
 import RSVPForm from '../components/RSVPForm';
 
@@ -26,9 +26,9 @@ const RSVP = () => {
     <Page>
       <SEO title="RSVP" />
       <PageIntro>
-        <HeaderText
+        <Text
           as="h1"
-          styles={{
+          sx={{
             mb: ['30px', '', '', '40px'],
             lineHeight: ['45px', '', '', '55px'],
             fontFamily: theme.fontFamily.cormorant,
@@ -38,11 +38,10 @@ const RSVP = () => {
           }}
         >
           RSVP
-        </HeaderText>
-        <HeaderText
+        </Text>
+        <Text
           as="p"
-          styles={{
-            mb: '10px',
+          sx={{
             lineHeight: ['20px', '', '', '30px'],
             fontFamily: theme.fontFamily.cormorant,
             fontSize: ['25px', '', '', '35px'],
@@ -51,7 +50,7 @@ const RSVP = () => {
           }}
         >
           We hope you can celebrate with us!
-        </HeaderText>
+        </Text>
       </PageIntro>
       <ImageWrapper>
         <Img fluid={data.file.childImageSharp.fluid} />

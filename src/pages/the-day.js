@@ -1,11 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Text } from 'rebass';
 import { theme } from '../styles/theme';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageIntro from '../components/PageIntro';
-import HeaderText from '../components/HeaderText';
 import Map from '../components/Map';
 import Schedule from '../components/Schedule';
 import { ContentWrapper, ImageWrapper } from '../components/Container';
@@ -28,9 +28,9 @@ const OnTheDay = () => {
     <Page>
       <SEO title="The Day" />
       <PageIntro>
-        <HeaderText
+        <Text
           as="h1"
-          styles={{
+          sx={{
             mb: ['30px', '', '', '40px'],
             lineHeight: ['45px', '', '', '55px'],
             textTransform: 'uppercase',
@@ -41,11 +41,10 @@ const OnTheDay = () => {
           }}
         >
           The Day
-        </HeaderText>
-        <HeaderText
+        </Text>
+        <Text
           as="p"
-          styles={{
-            mb: '10px',
+          sx={{
             lineHeight: ['20px', '', '', '30px'],
             fontFamily: theme.fontFamily.cormorant,
             fontSize: ['25px', '', '', '35px'],
@@ -54,7 +53,7 @@ const OnTheDay = () => {
           }}
         >
           What happens on the day?
-        </HeaderText>
+        </Text>
       </PageIntro>
       <ImageWrapper>
         <Img fluid={data.file.childImageSharp.fluid} />

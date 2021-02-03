@@ -1,12 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box } from 'rebass';
+import { Box, Text } from 'rebass';
 import { theme } from '../styles/theme';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import PageIntro from '../components/PageIntro';
-import HeaderText from '../components/HeaderText';
 import { ImageWrapper } from '../components/Container';
 import Footer from '../components/Footer';
 
@@ -35,10 +34,10 @@ const Home = () => {
           mb: ['50px', '', '', '80px'],
         }}
       >
-        <PageIntro leafDimensions={{ width: '300px', height: '250px' }}>
-          <HeaderText
+        <PageIntro>
+          <Text
             as="h1"
-            styles={{
+            sx={{
               mb: ['30px', '', '', '40px'],
               lineHeight: ['45px', '', '', '55px'],
               textTransform: 'uppercase',
@@ -49,10 +48,10 @@ const Home = () => {
             }}
           >
             The Kangs
-          </HeaderText>
-          <HeaderText
+          </Text>
+          <Text
             as="p"
-            styles={{
+            sx={{
               mb: '10px',
               lineHeight: ['20px', '', '', '30px'],
               fontFamily: theme.fontFamily.cormorant,
@@ -62,10 +61,10 @@ const Home = () => {
             }}
           >
             You&apos;re invited to our wedding
-          </HeaderText>
-          <HeaderText
+          </Text>
+          <Text
             as="p"
-            styles={{
+            sx={{
               lineHeight: ['20px', '', '', '30px'],
               fontFamily: theme.fontFamily.cormorant,
               fontSize: ['25px', '', '', '35px'],
@@ -74,7 +73,7 @@ const Home = () => {
             }}
           >
             Saturday, June 5th 2021
-          </HeaderText>
+          </Text>
         </PageIntro>
         <ImageWrapper>
           <Img fluid={data.file.childImageSharp.fluid} />
