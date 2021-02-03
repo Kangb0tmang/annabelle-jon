@@ -1,28 +1,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Flex, Box } from 'rebass';
+import { Box } from 'rebass';
 import { theme } from '../styles/theme';
-import SEO from '../components/SEO';
 import Page from '../components/Page';
+import SEO from '../components/SEO';
+import PageIntro from '../components/PageIntro';
 import HeaderText from '../components/HeaderText';
 import { ImageWrapper } from '../components/Container';
 import Footer from '../components/Footer';
-import Branch from '../assets/branch.svg';
-
-// Leaf for header
-const HeaderLeaf = () => (
-  <Box
-    sx={{
-      display: ['none', '', '', 'block'],
-      width: 'auto',
-      mt: '-35px',
-      mr: ['20px', '', '', 0],
-    }}
-  >
-    <Branch />
-  </Box>
-);
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -49,61 +35,47 @@ const Home = () => {
           mb: ['50px', '', '', '80px'],
         }}
       >
-        <Flex
-          sx={{
-            justifyContent: 'space-between',
-            width: ['100%', '', '', '', '1240px'],
-            mx: 'auto',
-            mb: '50px',
-            px: ['20px', '', '', '20px'],
-            '@media only screen and (min-width: 1140px) and (max-width: 1270px)': {
-              width: '100%',
-            },
-          }}
-        >
-          <Box>
-            <HeaderText
-              as="h1"
-              styles={{
-                mb: ['30px', '', '', '40px'],
-                lineHeight: ['45px', '', '', '55px'],
-                textTransform: 'uppercase',
-                fontFamily: theme.fontFamily.cormorant,
-                fontSize: ['55px', '', '', '70px'],
-                fontWeight: theme.fontWeights.regular,
-                color: theme.colours.black,
-              }}
-            >
-              The Kangs
-            </HeaderText>
-            <HeaderText
-              as="p"
-              styles={{
-                mb: '10px',
-                lineHeight: ['20px', '', '', '30px'],
-                fontFamily: theme.fontFamily.cormorant,
-                fontSize: ['25px', '', '', '35px'],
-                fontWeight: theme.fontWeights.regular,
-                color: theme.colours.black,
-              }}
-            >
-              You&apos;re invited to our wedding
-            </HeaderText>
-            <HeaderText
-              as="p"
-              styles={{
-                lineHeight: ['20px', '', '', '30px'],
-                fontFamily: theme.fontFamily.cormorant,
-                fontSize: ['25px', '', '', '35px'],
-                fontWeight: theme.fontWeights.bold,
-                color: theme.colours.black,
-              }}
-            >
-              Saturday, June 5th 2021
-            </HeaderText>
-          </Box>
-          <HeaderLeaf />
-        </Flex>
+        <PageIntro leafDimensions={{ width: '300px', height: '250px' }}>
+          <HeaderText
+            as="h1"
+            styles={{
+              mb: ['30px', '', '', '40px'],
+              lineHeight: ['45px', '', '', '55px'],
+              textTransform: 'uppercase',
+              fontFamily: theme.fontFamily.cormorant,
+              fontSize: ['55px', '', '', '70px'],
+              fontWeight: theme.fontWeights.regular,
+              color: theme.colours.black,
+            }}
+          >
+            The Kangs
+          </HeaderText>
+          <HeaderText
+            as="p"
+            styles={{
+              mb: '10px',
+              lineHeight: ['20px', '', '', '30px'],
+              fontFamily: theme.fontFamily.cormorant,
+              fontSize: ['25px', '', '', '35px'],
+              fontWeight: theme.fontWeights.regular,
+              color: theme.colours.black,
+            }}
+          >
+            You&apos;re invited to our wedding
+          </HeaderText>
+          <HeaderText
+            as="p"
+            styles={{
+              lineHeight: ['20px', '', '', '30px'],
+              fontFamily: theme.fontFamily.cormorant,
+              fontSize: ['25px', '', '', '35px'],
+              fontWeight: theme.fontWeights.bold,
+              color: theme.colours.black,
+            }}
+          >
+            Saturday, June 5th 2021
+          </HeaderText>
+        </PageIntro>
         <ImageWrapper>
           <Img fluid={data.file.childImageSharp.fluid} />
         </ImageWrapper>

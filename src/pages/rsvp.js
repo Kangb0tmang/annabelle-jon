@@ -1,13 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box } from 'rebass';
+import { theme } from '../styles/theme';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
-import PageHeading from '../components/PageHeading';
+import PageIntro from '../components/PageIntro';
+import HeaderText from '../components/HeaderText';
 import { ImageWrapper } from '../components/Container';
 import RSVPForm from '../components/RSVPForm';
-import Countdown from '../components/Countdown';
 
 const RSVP = () => {
   const data = useStaticQuery(graphql`
@@ -25,31 +25,37 @@ const RSVP = () => {
   return (
     <Page>
       <SEO title="RSVP" />
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: ['column', '', '', 'row'],
-          justifyContent: 'center',
-          width: '100%',
-          mb: '50px',
-          px: [0, '', '20px'],
-        }}
-      >
-        <Box
-          sx={{
-            alignSelf: ['flex-start', '', '', 'center'],
-            width: ['100%', '', '', 'auto'],
-            m: ['50px auto 30px', '', '', 0],
-            pl: ['20px', '', '', 0],
-            textAlign: ['center', '', '', 'left'],
+      <PageIntro>
+        <HeaderText
+          as="h1"
+          styles={{
+            mb: ['30px', '', '', '40px'],
+            lineHeight: ['45px', '', '', '55px'],
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['55px', '', '', '70px'],
+            fontWeight: theme.fontWeights.regular,
+            color: theme.colours.black,
           }}
         >
-          <PageHeading>RSVP</PageHeading>
-        </Box>
-        <ImageWrapper>
-          <Img fluid={data.file.childImageSharp.fluid} />
-        </ImageWrapper>
-      </Box>
+          RSVP
+        </HeaderText>
+        <HeaderText
+          as="p"
+          styles={{
+            mb: '10px',
+            lineHeight: ['20px', '', '', '30px'],
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['25px', '', '', '35px'],
+            fontWeight: theme.fontWeights.regular,
+            color: theme.colours.black,
+          }}
+        >
+          We hope you can celebrate with us!
+        </HeaderText>
+      </PageIntro>
+      <ImageWrapper>
+        <Img fluid={data.file.childImageSharp.fluid} />
+      </ImageWrapper>
       <RSVPForm />
     </Page>
   );

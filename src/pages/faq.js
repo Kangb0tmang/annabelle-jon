@@ -1,10 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box } from 'rebass';
+import { theme } from '../styles/theme';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
-import PageHeading from '../components/PageHeading';
+import PageIntro from '../components/PageIntro';
+import HeaderText from '../components/HeaderText';
 import { ImageWrapper } from '../components/Container';
 import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
@@ -24,32 +25,38 @@ const FAQ = () => {
 
   return (
     <Page>
-      <SEO title="FAQS" />
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: ['column', '', '', 'row'],
-          justifyContent: 'center',
-          width: '100%',
-          mb: '50px',
-          px: [0, '', '', '20px'],
-          textAlign: ['center', '', '', 'left'],
-        }}
-      >
-        <Box
-          sx={{
-            alignSelf: ['flex-start', '', '', 'center'],
-            width: ['100%', '', '', 'auto'],
-            m: ['50px auto 30px', '', '', 0],
-            pl: ['20px', '', '', 0],
+      <SEO title="FAQs" />
+      <PageIntro>
+        <HeaderText
+          as="h1"
+          styles={{
+            mb: ['30px', '', '', '40px'],
+            lineHeight: ['45px', '', '', '55px'],
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['55px', '', '', '70px'],
+            fontWeight: theme.fontWeights.regular,
+            color: theme.colours.black,
           }}
         >
-          <PageHeading>FAQS</PageHeading>
-        </Box>
-        <ImageWrapper>
-          <Img fluid={data.file.childImageSharp.fluid} />
-        </ImageWrapper>
-      </Box>
+          FAQs
+        </HeaderText>
+        <HeaderText
+          as="p"
+          styles={{
+            mb: '10px',
+            lineHeight: ['20px', '', '', '30px'],
+            fontFamily: theme.fontFamily.cormorant,
+            fontSize: ['25px', '', '', '35px'],
+            fontWeight: theme.fontWeights.regular,
+            color: theme.colours.black,
+          }}
+        >
+          Answers to questions you might have
+        </HeaderText>
+      </PageIntro>
+      <ImageWrapper>
+        <Img fluid={data.file.childImageSharp.fluid} />
+      </ImageWrapper>
       <Accordion />
       <Footer />
     </Page>
