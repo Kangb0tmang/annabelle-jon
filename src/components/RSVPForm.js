@@ -47,7 +47,7 @@ const RSVPForm = () => {
             alignItems: 'center',
             width: '100%',
             maxWidth: '560px',
-            m: '0 auto',
+            m: ['30px auto 0', '', '', '50px auto 0'],
             px: '20px',
           }}
         >
@@ -115,7 +115,7 @@ const RSVPForm = () => {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             sx={{
-              mt: ['', '', '', '50px'],
+              mt: ['50px', '', '', '100px'],
               mb: [
                 rsvp === 'Yes' || rsvp === 'No' ? '50px' : 0,
                 '',
