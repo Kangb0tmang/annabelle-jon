@@ -1,10 +1,10 @@
 export const faqs = [
   {
     question: 'When’s the RSVP deadline?',
-    response: 'Friday 2 April 2021',
+    response: 'If you could respond by Friday 2nd of April 2021',
   },
   {
-    question: 'Can I bring a plus 1?',
+    question: 'Can I bring a plus one?',
     response:
       'Unfortunately due to venue restrictions, we are unable to accommodate plus ones. We appreciate your understanding.',
   },
@@ -43,7 +43,7 @@ export const faqs = [
       'Please bring your own face mask, however there will be emergency masks available if needed. Hand sanitisers will be available at the venue.',
   },
   {
-    question: 'What should I do if I can’t make it?',
+    question: 'What should I do if I am unable to make it?',
     response:
       "Please RSVP as soon as you know you can't make it. We'll miss you! :(",
   },

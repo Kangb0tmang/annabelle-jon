@@ -42,8 +42,7 @@ const AccordionItem = ({ faq, index }) => {
           p: '15px 70px',
           borderRadius: '4px',
           textAlign: 'left',
-
-          fontSize: ['18px', '', '', '24px'],
+          fontSize: ['22px', '', '', '28px'],
           fontWeight: theme.fontWeights.semiBold,
           transition: 'background 0.2s ease',
           '&:hover': {
@@ -113,8 +112,7 @@ const AccordionItem = ({ faq, index }) => {
             pl: '70px',
             transition: 'opacity 0.3s 0s ease-in-out',
             opacity: isActive ? '1' : '0',
-
-            fontSize: ['16px', '', '', '18px'],
+            fontSize: ['18px', '', '', '22px'],
           }}
         >
           {faq.response}
