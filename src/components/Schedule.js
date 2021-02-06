@@ -17,27 +17,18 @@ const Schedule = () => {
           key={index}
           sx={{ flexDirection: 'row', justifyContent: 'center' }}
         >
-          <Box
+          <Flex
             sx={{
-              width: '100px',
-              p: '20px 20px 20px 0',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '225px',
+              p: '20px 40px 20px 0',
               svg: {
                 width: '80px',
               },
             }}
           >
             {event.icon}
-          </Box>
-          <Box
-            sx={{
-              width: '2px',
-              bg: theme.colours.black,
-            }}
-          />
-          <Box sx={{ width: '210px', p: '20px 0 20px 20px' }}>
-            <Text sx={{ mb: '10px', fontSize: '24px' }}>
-              {event.description}
-            </Text>
             <Text
               sx={{
                 fontSize: '24px',
@@ -45,6 +36,24 @@ const Schedule = () => {
               }}
             >
               {event.time}
+            </Text>
+          </Flex>
+          <Box
+            sx={{
+              width: '1px',
+              bg: theme.colours.black,
+            }}
+          />
+          <Box
+            sx={{ alignSelf: 'center', width: '210px', p: '20px 0 20px 20px' }}
+          >
+            <Text
+              sx={{
+                fontSize: '24px',
+                fontWeight: theme.fontWeights.semiBold,
+              }}
+            >
+              {event.description}
             </Text>
           </Box>
         </Flex>
