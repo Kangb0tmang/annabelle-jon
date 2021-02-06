@@ -42,7 +42,7 @@ const AccordionItem = ({ faq, index }) => {
           p: '15px 70px',
           borderRadius: '4px',
           textAlign: 'left',
-          fontFamily: theme.fontFamily.cormorant,
+
           fontSize: ['18px', '', '', '24px'],
           fontWeight: theme.fontWeights.semiBold,
           transition: 'background 0.2s ease',
@@ -113,7 +113,7 @@ const AccordionItem = ({ faq, index }) => {
             pl: '70px',
             transition: 'opacity 0.3s 0s ease-in-out',
             opacity: isActive ? '1' : '0',
-            fontFamily: theme.fontFamily.cormorant,
+
             fontSize: ['16px', '', '', '18px'],
           }}
         >

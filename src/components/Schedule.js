@@ -40,9 +40,8 @@ const Schedule = () => {
             </Text>
             <Text
               sx={{
-                fontFamily: theme.fontFamily.cormorant,
                 fontSize: '24px',
-                fontWeight: theme.fontWeights.bold,
+                fontWeight: theme.fontWeights.semiBold,
               }}
             >
               {event.time}

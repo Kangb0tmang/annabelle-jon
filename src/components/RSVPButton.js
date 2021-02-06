@@ -12,7 +12,7 @@ const RSVPButton = () => {
         position: 'relative',
         lineHeight: ['35px', '', '50px'],
         textDecoration: 'none',
-        fontFamily: theme.fontFamily.cormorant,
+
         fontSize: ['50px', '', '65px'],
         fontWeight: theme.fontWeights.semiBold,
         color: theme.colours.navy,

@@ -15,12 +15,8 @@ export const theme = {
     pink: '#ffd1dc',
     formError: '#F08080',
   },
-  fontFamily: {
-    cormorant: "'Cormorant Garamond', sans-serif",
-  },
   fontWeights: {
     regular: 400,
     semiBold: 600,
-    bold: 700,
   },
 };

@@ -14,7 +14,7 @@ const NotFoundPage = () => (
         sx={{
           mb: ['30px', '', '', '40px'],
           lineHeight: ['45px', '', '', '55px'],
-          fontFamily: theme.fontFamily.cormorant,
+
           fontSize: ['55px', '', '', '70px'],
           fontWeight: theme.fontWeights.regular,
           color: theme.colours.black,

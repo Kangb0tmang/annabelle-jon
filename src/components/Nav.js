@@ -64,7 +64,7 @@ const SiteLogo = () => {
             lineHeight: ['', '', '', '35px'],
             textTransform: 'uppercase',
             letterSpacing: '3px',
-            fontFamily: theme.fontFamily.cormorant,
+
             fontSize: ['', '', '', '35px'],
             color: theme.colours.lightnavy,
           }}
@@ -78,7 +78,7 @@ const SiteLogo = () => {
             lineHeight: '30px',
             textTransform: 'uppercase',
             letterSpacing: '3px',
-            fontFamily: theme.fontFamily.cormorant,
+
             fontSize: '40px',
             color: theme.colours.lightnavy,
           }}
@@ -224,8 +224,9 @@ const NavItem = ({ item }) => (
         p: ['15px', '', '', '', '15px 30px'],
         textDecoration: 'none',
         lineHeight: '22px',
-        fontFamily: theme.fontFamily.cormorant,
+
         fontSize: '24px',
+        fontWeight: theme.fontWeights.semiBold,
         color: theme.colours.navy,
         '&:after': {
           content: '""',
@@ -279,7 +280,7 @@ const RSVPNavItem = () => (
         lineHeight: '22px',
         border: `2px solid ${theme.colours.black}`,
         borderRadius: '5px',
-        fontFamily: theme.fontFamily.cormorant,
+        fontWeight: theme.fontWeights.semiBold,
         fontSize: '24px',
         color: theme.colours.navy,
         transition: 'background 0.3s ease',

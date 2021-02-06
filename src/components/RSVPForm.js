@@ -138,9 +138,9 @@ const RSVPForm = () => {
                 as="p"
                 sx={{
                   mb: ['30px', '', '', '40px'],
-                  fontFamily: theme.fontFamily.cormorant,
+
                   fontSize: ['30px', '', '', '40px'],
-                  fontWeight: theme.fontWeights.bold,
+                  fontWeight: theme.fontWeights.semiBold,
                 }}
               >
                 Will you be attending?
@@ -206,7 +206,7 @@ const RSVPForm = () => {
                         as="span"
                         sx={{
                           fontSize: ['18px', '', '', '20px'],
-                          fontWeight: theme.fontWeights.bold,
+                          fontWeight: theme.fontWeights.semiBold,
                         }}
                       >
                         Yes
@@ -263,7 +263,7 @@ const RSVPForm = () => {
                         as="span"
                         sx={{
                           fontSize: ['18px', '', '', '20px'],
-                          fontWeight: theme.fontWeights.bold,
+                          fontWeight: theme.fontWeights.semiBold,
                         }}
                       >
                         No
@@ -280,7 +280,7 @@ const RSVPForm = () => {
                       sx={{
                         mb: '5px',
                         fontSize: ['20px', '', '', '24px'],
-                        fontWeight: theme.fontWeights.bold,
+                        fontWeight: theme.fontWeights.semiBold,
                       }}
                     >
                       Name*
@@ -301,7 +301,7 @@ const RSVPForm = () => {
                       as="p"
                       sx={{
                         fontSize: ['16px'],
-                        fontWeight: theme.fontWeights.bold,
+                        fontWeight: theme.fontWeights.semiBold,
                         color: theme.colours.formError,
                       }}
                     >
@@ -314,7 +314,7 @@ const RSVPForm = () => {
                       sx={{
                         mb: '5px',
                         fontSize: ['20px', '', '', '24px'],
-                        fontWeight: theme.fontWeights.bold,
+                        fontWeight: theme.fontWeights.semiBold,
                       }}
                     >
                       Email*
@@ -324,7 +324,7 @@ const RSVPForm = () => {
                       type="email"
                       id="email"
                       name="email"
-                      sx={{ fontSize: ['18px', '', '', '22px'] }}
+                      sx={{ p: '8px 15px', fontSize: ['18px', '', '', '22px'] }}
                       ref={register({
                         required: 'Please enter your email',
                         pattern: {
@@ -337,7 +337,7 @@ const RSVPForm = () => {
                       as="p"
                       sx={{
                         fontSize: ['16px'],
-                        fontWeight: theme.fontWeights.bold,
+                        fontWeight: theme.fontWeights.semiBold,
                         color: theme.colours.formError,
                       }}
                     >
@@ -352,7 +352,7 @@ const RSVPForm = () => {
                           sx={{
                             mb: '5px',
                             fontSize: ['20px', '', '', '24px'],
-                            fontWeight: theme.fontWeights.bold,
+                            fontWeight: theme.fontWeights.semiBold,
                           }}
                         >
                           Contact Number*
@@ -363,7 +363,10 @@ const RSVPForm = () => {
                           id="number"
                           name="number"
                           size="10"
-                          sx={{ fontSize: ['18px', '', '', '22px'] }}
+                          sx={{
+                            p: '8px 15px',
+                            fontSize: ['18px', '', '', '22px'],
+                          }}
                           ref={register({
                             required: 'Please enter your contact number',
                             pattern: {
@@ -376,7 +379,7 @@ const RSVPForm = () => {
                           as="p"
                           sx={{
                             fontSize: ['16px'],
-                            fontWeight: theme.fontWeights.bold,
+                            fontWeight: theme.fontWeights.semiBold,
                             color: theme.colours.formError,
                           }}
                         >
@@ -389,7 +392,7 @@ const RSVPForm = () => {
                           sx={{
                             mb: '5px',
                             fontSize: ['20px', '', '', '24px'],
-                            fontWeight: theme.fontWeights.bold,
+                            fontWeight: theme.fontWeights.semiBold,
                           }}
                         >
                           Dietary Requirements
@@ -398,7 +401,10 @@ const RSVPForm = () => {
                           id="dietary"
                           name="dietary"
                           rows="5"
-                          sx={{ fontSize: ['18px', '', '', '22px'] }}
+                          sx={{
+                            p: '8px 15px',
+                            fontSize: ['18px', '', '', '22px'],
+                          }}
                           ref={register}
                         />
                       </Box>
@@ -417,7 +423,7 @@ const RSVPForm = () => {
                       lineHeight: ['16px', '', '', '20px'],
                       bg: theme.colours.white,
                       fontSize: ['18px', '', '', '22px'],
-                      fontWeight: theme.fontWeights.bold,
+                      fontWeight: theme.fontWeights.semiBold,
                       color: theme.colours.black,
                       transition: 'background 0.3s ease',
                       '&:hover': {

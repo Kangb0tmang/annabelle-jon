@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         <title>Annabelle Jon</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap"
           rel="stylesheet"
         />
       </Helmet>
