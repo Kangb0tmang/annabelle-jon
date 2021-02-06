@@ -41,7 +41,6 @@ const PreLaunchPage = () => {
                 sx={{
                   mb: ['20px', '', '', '30px'],
                   lineHeight: ['45px', '', '', '55px'],
-
                   fontSize: ['55px', '', '', '70px'],
                   fontWeight: theme.fontWeights.regular,
                   color: theme.colours.black,

@@ -138,7 +138,6 @@ const RSVPForm = () => {
                 as="p"
                 sx={{
                   mb: ['30px', '', '', '40px'],
-
                   fontSize: ['30px', '', '', '40px'],
                   fontWeight: theme.fontWeights.semiBold,
                 }}

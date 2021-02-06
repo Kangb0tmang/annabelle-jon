@@ -64,7 +64,6 @@ const SiteLogo = () => {
             lineHeight: ['', '', '', '35px'],
             textTransform: 'uppercase',
             letterSpacing: '3px',
-
             fontSize: ['', '', '', '35px'],
             color: theme.colours.lightnavy,
           }}
@@ -78,7 +77,6 @@ const SiteLogo = () => {
             lineHeight: '30px',
             textTransform: 'uppercase',
             letterSpacing: '3px',
-
             fontSize: '40px',
             color: theme.colours.lightnavy,
           }}

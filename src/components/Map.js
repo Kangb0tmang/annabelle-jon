@@ -34,8 +34,10 @@ const Map = () => {
     <LoadScript googleMapsApiKey={`${process.env.GATSBY_GOOGLE_MAPS_API_KEY}`}>
       <Box
         sx={{
+          width: '100%',
           height: ['350px', '', '500px'],
-          m: ['0 20px 20px', '', '', '', '20px 0 20px 35px'],
+          mb: ['20px', '', '', '30px'],
+          px: ['20px', '', '', 0],
         }}
       >
         <GoogleMap
@@ -74,11 +76,9 @@ const Map = () => {
                     textDecoration: 'none',
                     color: theme.colours.lightblue,
                     '&:hover': {
-                      textDecoration: 'underline',
                       color: theme.colours.navy,
                     },
                     '&:focus': {
-                      textDecoration: 'underline',
                       color: theme.colours.navy,
                     },
                   },

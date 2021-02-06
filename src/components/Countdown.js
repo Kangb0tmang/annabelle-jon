@@ -53,7 +53,6 @@ const Countdown = () => {
           sx={{
             pb: '20px',
             lineHeight: ['35px', '', '50px'],
-
             fontSize: ['50px', '', '65px'],
             fontWeight: theme.fontWeights.semiBold,
             color: theme.colours.navy,
@@ -67,7 +66,6 @@ const Countdown = () => {
             p: '10px',
             lineHeight: ['18px', '', '', '28px'],
             textTransform: 'capitalize',
-
             fontSize: ['18px', '', '24px'],
             fontWeight: theme.fontWeights.semiBold,
           }}
