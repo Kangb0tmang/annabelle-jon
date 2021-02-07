@@ -157,7 +157,6 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
       transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
       width: '100vw',
       height: '100vh',
-      mt: '20px',
       bg: theme.colours.white,
       transition: 'transform 0.5s ease-in-out 0.5s',
     }}
@@ -171,15 +170,15 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
           flex: '1 0 auto',
           justifyContent: 'flex-start',
           height: 'auto',
-          transform: 'translateY(50%)',
+          transform: 'translateY(35%)',
         }}
       >
         <MobileMenuLeaf
           styles={{
             alignSelf: 'flex-start',
             transform: [
-              'translate(50%, -50px) rotate(-111deg)',
-              'translate(70%, -75px) rotate(-111deg)',
+              'translate(50%, -25px) rotate(-111deg)',
+              'translate(70%, -25px) rotate(-111deg)',
             ],
           }}
         />
@@ -188,8 +187,8 @@ const MobileNav = ({ mobileMenuOpen, ...props }) => (
           styles={{
             alignSelf: 'flex-end',
             transform: [
-              'translate(-50%, 50px) rotate(70deg)',
-              'translate(-70%, 75px) rotate(70deg)',
+              'translate(-50%, 25px) rotate(70deg)',
+              'translate(-70%, 25px) rotate(70deg)',
             ],
           }}
         />
