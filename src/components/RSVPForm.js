@@ -121,7 +121,7 @@ const RSVPForm = () => {
                 '',
                 rsvp === 'Yes' || rsvp === 'No' ? '100px' : 0,
               ],
-              height: ['750px', '', '', '780px'],
+              height: ['815px', '', '', '850px'],
             }}
           >
             <Input type="hidden" name="form-name" value="the-kangs-rsvp" />
