@@ -35,6 +35,6 @@ export const events = [
   {
     icon: <Sparklers />,
     description: 'Sparklers & send off',
-    time: '10:30pm',
+    time: '10:00pm',
   },
 ];

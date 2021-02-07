@@ -1,7 +1,7 @@
 export const faqs = [
   {
-    question: 'When’s the RSVP deadline?',
-    response: 'If you could respond by Friday 2nd of April 2021',
+    question: 'When is the RSVP deadline?',
+    response: 'If you could respond by Friday 2nd of April 2021.',
   },
   {
     question: 'Can I bring a plus one?',
@@ -25,7 +25,7 @@ export const faqs = [
   },
   {
     question: 'Is there parking available on site?',
-    response: 'Yes, there is parking available on site.',
+    response: 'Yes, there are up to 120 spots on site.',
   },
   {
     question: 'Will the ceremony be indoors or outdoors?',
@@ -35,7 +35,7 @@ export const faqs = [
   {
     question: 'Will I be able to take photos during the ceremony?',
     response:
-      'We would appreciate it if you save the photo taking till after the ceremony and allow our photographer to capture our moment.',
+      'We would appreciate it if you save the photo taking until after the ceremony and allow our wonderful photographer to capture our moments.',
   },
   {
     question: 'Will hand sanitiser and masks be provided?',
