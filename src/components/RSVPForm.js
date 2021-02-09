@@ -93,7 +93,7 @@ const RSVPForm = () => {
           {/* https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/?_ga=2.108103426.1247306375.1611640096-1259089272.1600833667 */}
           <form
             name="the-kangs-rsvp"
-            data-netlify
+            data-netlify="true"
             data-netlify-honeypot="bot-field"
             hidden
           >
@@ -124,7 +124,6 @@ const RSVPForm = () => {
               height: ['815px', '', '', '850px'],
             }}
           >
-            <Input type="hidden" name="form-name" value="the-kangs-rsvp" />
             <Flex
               sx={{
                 flexDirection: 'column',
