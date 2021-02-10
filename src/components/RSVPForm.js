@@ -124,6 +124,7 @@ const RSVPForm = () => {
               height: ['815px', '', '', '850px'],
             }}
           >
+            <Input type="hidden" name="form-name" value="the-kangs-rsvp" />
             <Flex
               sx={{
                 flexDirection: 'column',
