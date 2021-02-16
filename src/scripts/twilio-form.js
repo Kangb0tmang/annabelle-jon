@@ -6,7 +6,7 @@ exports.handler = async function (context, event, callback) {
   const response = new Twilio.Response();
   response.setHeaders({
     'Access-Control-Allow-Origin':
-      'https://netlify-form--annabelle-jon.netlify.app',
+      'https://concepts--annabelle-jon.netlify.app',
     'Content-Type': 'application/json',
   });
 
@@ -19,8 +19,8 @@ exports.handler = async function (context, event, callback) {
   }
 
   const message = {
-    to: event.data.email,
-    //to: "hello@thekangs.wedding",
+    //to: event.data.email,
+    to: 'hello@thekangs.wedding',
     from: 'hello@thekangs.wedding',
     subject: "The Kang's Wedding RSVP Confirmation",
     html,
