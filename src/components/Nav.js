@@ -63,8 +63,8 @@ const SiteLogo = () => {
           sx={{
             lineHeight: ['', '', '', '35px'],
             textTransform: 'uppercase',
-            letterSpacing: '3px',
-            fontSize: ['', '', '', '35px'],
+            letterSpacing: '5px',
+            fontSize: ['', '', '', '30px'],
             color: theme.colours.lightnavy,
           }}
         >
