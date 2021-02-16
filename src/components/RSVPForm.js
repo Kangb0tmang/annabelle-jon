@@ -6,6 +6,13 @@ import { theme } from '../styles/theme';
 import { ContentWrapper } from './Container';
 import Yes from '../assets/yes.svg';
 import No from '../assets/no.svg';
+import Leaf from '../assets/leaf.svg';
+
+const SmallLeaf = ({ ...props }) => (
+  <Box sx={props.styles}>
+    <Leaf />
+  </Box>
+);
 
 const RSVPForm = () => {
   const { handleSubmit, register, errors, formState } = useForm();
@@ -134,22 +141,42 @@ const RSVPForm = () => {
                 px: '20px',
               }}
             >
-              <Text
-                as="p"
-                sx={{
-                  mb: ['30px', '', '', '40px'],
-                  fontSize: ['30px', '', '', '40px'],
-                  fontWeight: theme.fontWeights.semiBold,
-                }}
-              >
-                Will you be attending?
-              </Text>
+              <Flex sx={{ alignItems: 'center', justifyContent: 'center' }}>
+                <SmallLeaf
+                  styles={{
+                    mr: ['15px', '', '20px'],
+                    transform: 'translateY(-50%) rotate(-130deg)',
+                    width: ['30px', '', '35px'],
+                    height: 'auto',
+                  }}
+                />
+                <Text
+                  as="p"
+                  sx={{
+                    mb: ['30px', '', '', '40px'],
+                    fontSize: ['24px', '', '30px', '40px'],
+                    fontWeight: theme.fontWeights.semiBold,
+                  }}
+                >
+                  Will you be attending?
+                </Text>
+                <SmallLeaf
+                  styles={{
+                    ml: ['15px', '', '20px'],
+                    transform: 'translateY(-50%) scaleX(-1) rotate(-130deg)',
+                    width: ['30px', '', '35px'],
+                    height: 'auto',
+                  }}
+                />
+              </Flex>
               {/* Radio buttons: https://codepen.io/gabrielferreira/pen/oYxNVy/ */}
               {/* https://community.netlify.com/t/checkboxes-and-radio-buttons-in-forms/1486/2 */}
               <Box
                 as="fieldset"
                 sx={{
                   display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   width: '100%',
                   mb: '30px',
                   border: 'none',
