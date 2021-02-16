@@ -318,6 +318,7 @@ const RSVPForm = () => {
                       name="name"
                       sx={{
                         p: '8px 15px',
+                        lineHeight: '25px',
                         fontSize: ['18px', '', '', '22px'],
                       }}
                       ref={register({
@@ -327,7 +328,7 @@ const RSVPForm = () => {
                     <Text
                       as="p"
                       sx={{
-                        fontSize: ['16px'],
+                        fontSize: '16px',
                         fontWeight: theme.fontWeights.semiBold,
                         color: theme.colours.formError,
                       }}
@@ -351,7 +352,11 @@ const RSVPForm = () => {
                       type="email"
                       id="email"
                       name="email"
-                      sx={{ p: '8px 15px', fontSize: ['18px', '', '', '22px'] }}
+                      sx={{
+                        p: '8px 15px',
+                        lineHeight: '25px',
+                        fontSize: ['18px', '', '', '22px'],
+                      }}
                       ref={register({
                         required: 'Please enter your email',
                         pattern: {
@@ -363,7 +368,7 @@ const RSVPForm = () => {
                     <Text
                       as="p"
                       sx={{
-                        fontSize: ['16px'],
+                        fontSize: '16px',
                         fontWeight: theme.fontWeights.semiBold,
                         color: theme.colours.formError,
                       }}
@@ -392,6 +397,7 @@ const RSVPForm = () => {
                           size="10"
                           sx={{
                             p: '8px 15px',
+                            lineHeight: '25px',
                             fontSize: ['18px', '', '', '22px'],
                           }}
                           ref={register({
@@ -405,7 +411,7 @@ const RSVPForm = () => {
                         <Text
                           as="p"
                           sx={{
-                            fontSize: ['16px'],
+                            fontSize: '16px',
                             fontWeight: theme.fontWeights.semiBold,
                             color: theme.colours.formError,
                           }}
@@ -430,6 +436,7 @@ const RSVPForm = () => {
                           rows="5"
                           sx={{
                             p: '8px 15px',
+                            lineHeight: '25px',
                             fontSize: ['18px', '', '', '22px'],
                           }}
                           ref={register}
