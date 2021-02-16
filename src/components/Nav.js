@@ -221,9 +221,7 @@ const NavItem = ({ item }) => (
         p: ['15px', '', '', '', '15px 30px'],
         textDecoration: 'none',
         lineHeight: '22px',
-
         fontSize: '24px',
-        fontWeight: theme.fontWeights.semiBold,
         color: theme.colours.navy,
         '&:after': {
           content: '""',
@@ -277,7 +275,6 @@ const RSVPNavItem = () => (
         lineHeight: '22px',
         border: `2px solid ${theme.colours.navy}`,
         borderRadius: '5px',
-        fontWeight: theme.fontWeights.semiBold,
         fontSize: '24px',
         color: theme.colours.navy,
         transition: 'background 0.3s ease',
