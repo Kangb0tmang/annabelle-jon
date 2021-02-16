@@ -275,7 +275,7 @@ const RSVPNavItem = () => (
         p: ['15px', '', '', '15px 20px'],
         textDecoration: 'none',
         lineHeight: '22px',
-        border: `2px solid ${theme.colours.black}`,
+        border: `2px solid ${theme.colours.navy}`,
         borderRadius: '5px',
         fontWeight: theme.fontWeights.semiBold,
         fontSize: '24px',
