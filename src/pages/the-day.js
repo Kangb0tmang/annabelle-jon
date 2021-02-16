@@ -36,7 +36,7 @@ const OnTheDay = () => {
             textTransform: 'uppercase',
             fontSize: ['55px', '', '', '70px'],
             fontWeight: theme.fontWeights.regular,
-            color: theme.colours.black,
+            color: theme.colours.darkgrey,
           }}
         >
           The Day
@@ -47,7 +47,7 @@ const OnTheDay = () => {
             lineHeight: ['20px', '', '', '30px'],
             fontSize: ['25px', '', '', '35px'],
             fontWeight: theme.fontWeights.regular,
-            color: theme.colours.black,
+            color: theme.colours.darkgrey,
           }}
         >
           What happens on the day?

@@ -35,7 +35,7 @@ const FAQ = () => {
 
             fontSize: ['55px', '', '', '70px'],
             fontWeight: theme.fontWeights.regular,
-            color: theme.colours.black,
+            color: theme.colours.darkgrey,
           }}
         >
           FAQs
@@ -47,7 +47,7 @@ const FAQ = () => {
 
             fontSize: ['25px', '', '', '35px'],
             fontWeight: theme.fontWeights.regular,
-            color: theme.colours.black,
+            color: theme.colours.darkgrey,
           }}
         >
           Answers to questions you might have

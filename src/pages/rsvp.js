@@ -34,7 +34,7 @@ const RSVP = () => {
 
             fontSize: ['55px', '', '', '70px'],
             fontWeight: theme.fontWeights.regular,
-            color: theme.colours.black,
+            color: theme.colours.darkgrey,
           }}
         >
           RSVP
@@ -46,7 +46,7 @@ const RSVP = () => {
 
             fontSize: ['25px', '', '', '35px'],
             fontWeight: theme.fontWeights.regular,
-            color: theme.colours.black,
+            color: theme.colours.darkgrey,
           }}
         >
           We hope you can celebrate with us!

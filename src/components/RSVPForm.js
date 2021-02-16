@@ -156,6 +156,7 @@ const RSVPForm = () => {
                     mb: ['30px', '', '', '40px'],
                     fontSize: ['24px', '', '30px', '40px'],
                     fontWeight: theme.fontWeights.semiBold,
+                    color: theme.colours.darkgrey,
                   }}
                 >
                   Will you be attending?
