@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
 *,
 *:before,
 *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Cormorant Garamond', sans-serif;
   font-size: 10px;
   color: #000;
   -ms-text-size-adjust: 100%;
@@ -29,12 +27,14 @@ body {
 
 button {
   border: none;
+  border-radius: 4px;
   background-color: transparent;
   font-family: inherit;
 }
 
 input,
 textarea {
+  border-radius: 4px;
   font-family: inherit;
 }
 

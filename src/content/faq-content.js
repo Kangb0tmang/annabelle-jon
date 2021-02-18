@@ -1,10 +1,10 @@
 export const faqs = [
   {
-    question: 'When’s the RSVP deadline?',
-    response: 'Monday 29 March 2021',
+    question: 'When is the RSVP deadline?',
+    response: 'If you could respond by Friday 2nd of April 2021.',
   },
   {
-    question: 'Can I bring a plus 1?',
+    question: 'Can I bring a plus one?',
     response:
       'Unfortunately due to venue restrictions, we are unable to accommodate plus ones. We appreciate your understanding.',
   },
@@ -21,11 +21,11 @@ export const faqs = [
   {
     question: 'What time should I arrive?',
     response:
-      'Please arrive at least 15 minutes prior to the wedding start time.',
+      'Please arrive at least 30 minutes prior to the wedding start time.',
   },
   {
     question: 'Is there parking available on site?',
-    response: 'Yes, there is parking available on site.',
+    response: 'Yes, there are up to 120 spots on site.',
   },
   {
     question: 'Will the ceremony be indoors or outdoors?',
@@ -35,7 +35,7 @@ export const faqs = [
   {
     question: 'Will I be able to take photos during the ceremony?',
     response:
-      'We would appreciate it if you save the photo taking till after the ceremony and allow our photographer to capture our moment.',
+      'We would appreciate it if you save the photo taking until after the ceremony and allow our wonderful photographer to capture our moments.',
   },
   {
     question: 'Will hand sanitiser and masks be provided?',
@@ -43,7 +43,7 @@ export const faqs = [
       'Please bring your own face mask, however there will be emergency masks available if needed. Hand sanitisers will be available at the venue.',
   },
   {
-    question: 'What should I do if I can’t make it?’',
+    question: 'What should I do if I am unable to make it?',
     response:
       "Please RSVP as soon as you know you can't make it. We'll miss you! :(",
   },

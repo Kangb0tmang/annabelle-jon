@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box } from 'rebass';
+import { Box, Text } from 'rebass';
+import { theme } from '../styles/theme';
 import Container from './Container';
 import Layout from './Layout';
-import PageHeading from './PageHeading';
 import backgroundImage from '../images/background.jpg';
 
 const PreLaunchPage = () => {
@@ -36,7 +36,18 @@ const PreLaunchPage = () => {
             }}
           >
             <Box sx={{ height: '100vh', mt: ['40%', '25%', '20%'] }}>
-              <PageHeading>Coming Soon</PageHeading>
+              <Text
+                as="h1"
+                sx={{
+                  mb: ['20px', '', '', '30px'],
+                  lineHeight: ['45px', '', '', '55px'],
+                  fontSize: ['55px', '', '', '70px'],
+                  fontWeight: theme.fontWeights.regular,
+                  color: theme.colours.black,
+                }}
+              >
+                Coming Soon
+              </Text>
             </Box>
           </Box>
         </Box>

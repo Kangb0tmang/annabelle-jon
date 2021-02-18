@@ -6,7 +6,7 @@ import { theme } from '../styles/theme';
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date('05/06/2021') - +new Date();
+    const difference = +new Date('06/05/2021') - +new Date();
     let timeLeft = {};
 
     timeLeft = {
@@ -37,15 +37,14 @@ const Countdown = () => {
       <Box
         key={index}
         sx={{
-          mr: ['25px', '', '40px'],
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          px: '40px',
           textAlign: 'center',
           '@media only screen and (max-width: 500px)': {
-            mr: '0',
-            flex: '1 1 50%',
-            p: '10px',
-          },
-          '&:last-child': {
-            mr: ['', '', '0'],
+            px: '10px',
           },
         }}
       >
@@ -53,9 +52,10 @@ const Countdown = () => {
           as="p"
           sx={{
             pb: '20px',
-            lineHeight: ['28px', '', '48px'],
-            fontSize: ['30px', '', '50px'],
-            fontWeight: theme.fontWeights.bold,
+            lineHeight: ['35px', '', '50px'],
+            fontSize: ['50px', '', '65px'],
+            fontWeight: theme.fontWeights.semiBold,
+            color: theme.colours.navy,
           }}
         >
           {timeLeft[interval]}
@@ -64,10 +64,10 @@ const Countdown = () => {
           as="p"
           sx={{
             p: '10px',
-            lineHeight: ['18px', '', '28px'],
-            fontSize: ['20px', '', '30px'],
-            fontWeight: theme.fontWeights.bold,
-            color: theme.colours.navy,
+            lineHeight: ['18px', '', '', '28px'],
+            textTransform: 'capitalize',
+            fontSize: ['18px', '', '24px'],
+            fontWeight: theme.fontWeights.semiBold,
           }}
         >
           {interval}
@@ -82,11 +82,10 @@ const Countdown = () => {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        maxWidth: '600px',
-        m: '0 auto',
+        m: ['0 auto 50px', '', '', 0],
         px: '20px',
         '@media only screen and (max-width: 500px)': {
-          flexWrap: 'wrap',
+          px: '10px',
         },
       }}
     >

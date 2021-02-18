@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://thekangs.wedding',
     title: `Annabelle & Jon`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `RSVP site for Annabelle and Jon's wedding`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -29,12 +29,12 @@ module.exports = {
         background_color: `#122B58`,
         theme_color: `#122B58`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /assets/,
@@ -42,14 +42,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
+            policy: [{ userAgent: `*`, disallow: [`/`] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }],
+            policy: [{ userAgent: `*`, allow: `/` }],
           },
         },
       },
