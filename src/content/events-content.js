@@ -14,7 +14,7 @@ export const events = [
   },
   {
     icon: <Chapel />,
-    description: 'Ceremony starts',
+    description: 'Ceremony begins',
     time: '3:00pm',
   },
   {
