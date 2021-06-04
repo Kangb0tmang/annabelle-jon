@@ -25,12 +25,12 @@ export const events = [
   {
     icon: <Drinks />,
     description: 'Canapes',
-    time: '5:30pm',
+    time: '5:00pm',
   },
   {
     icon: <Reception />,
     description: 'Reception begins',
-    time: '6:00pm',
+    time: '5:30pm',
   },
   {
     icon: <Sparklers />,
