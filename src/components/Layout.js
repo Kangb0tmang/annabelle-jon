@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Box } from 'rebass';
-import { ThemeProvider } from '@emotion/react';
+import { useTheme, ThemeProvider, withTheme } from '@emotion/react';
 import { theme } from '../styles/theme';
 import '../styles/reset.scss';
 
