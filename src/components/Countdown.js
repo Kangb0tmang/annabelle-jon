@@ -6,7 +6,7 @@ import { theme } from '../styles/theme';
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date('07/24/2021') - +new Date();
+    const difference = +new Date('08/15/2021') - +new Date();
     let timeLeft = {};
 
     timeLeft = {
