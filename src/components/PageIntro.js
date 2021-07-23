@@ -7,6 +7,7 @@ const PageIntro = ({ ...props }) => (
     sx={{
       justifyContent: 'space-between',
       width: ['100%', '', '', '', '1240px'],
+      maxWidth: '1260px',
       mx: 'auto',
       mb: '50px',
       px: ['20px', '', '', '20px'],

@@ -30,6 +30,7 @@ const Header = ({ ...props }) => (
       justifyContent: 'space-between',
       alignItems: ['', '', '', 'center'],
       width: '100%',
+      maxWidth: '1260px',
       mt: ['30px', '', '', '40px'],
       mb: ['60px', '', '', '80px'],
     }}
