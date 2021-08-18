@@ -92,7 +92,7 @@ const RSVPForm = () => {
           >
             {rsvp === 'Yes'
               ? 'Thank you for your RSVP. We look forward to celebrating with you!'
-              : "We'll sorry to hear you can't make it. We'll be sharing the day with our friends and family through livestream, stay tuned!"}
+              : "We're sorry to hear you can't make it, thank you for letting us know."}
           </Text>
         </Flex>
       ) : (

@@ -10,31 +10,31 @@ export const events = [
   {
     icon: <Car />,
     description: 'Guests arrive',
-    time: '3:00pm',
+    time: '3:30pm',
   },
   {
     icon: <Chapel />,
     description: 'Ceremony begins',
-    time: '3:30pm',
+    time: '4:00pm',
   },
   {
     icon: <Camera />,
     description: 'Photos',
-    time: '4:15pm',
+    time: '4:45pm',
   },
   {
     icon: <Drinks />,
     description: 'Canapes',
-    time: '5:30pm',
+    time: '6:00pm',
   },
   {
     icon: <Reception />,
     description: 'Reception begins',
-    time: '6:00pm',
+    time: '6:30pm',
   },
   {
     icon: <Sparklers />,
     description: 'Sparklers & send off',
-    time: '10:30pm',
+    time: '10:45pm',
   },
 ];

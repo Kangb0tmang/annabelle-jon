@@ -1,7 +1,7 @@
 export const faqs = [
   {
     question: 'When is the RSVP deadline?',
-    response: 'Please respond by Monday 26 of July 2021.',
+    response: 'Please respond by Sunday 5 of September 2021.',
   },
   {
     question: 'Can I bring a plus one?',
