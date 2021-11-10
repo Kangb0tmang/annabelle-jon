@@ -69,7 +69,7 @@ const Home = () => {
               color: theme.colours.darkgrey,
             }}
           >
-            Friday, October 8th 2021
+            Thursday, December 2nd 2021
           </Text>
         </PageIntro>
         <ImageWrapper>
