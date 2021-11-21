@@ -20,7 +20,7 @@ export const events = [
   {
     icon: <Camera />,
     description: 'Photos',
-    time: '4:45pm',
+    time: '4:40pm',
   },
   {
     icon: <Drinks />,
