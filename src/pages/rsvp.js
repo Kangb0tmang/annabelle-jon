@@ -31,7 +31,6 @@ const RSVP = () => {
           sx={{
             mb: ['30px', '', '', '40px'],
             lineHeight: ['45px', '', '', '55px'],
-
             fontSize: ['55px', '', '', '70px'],
             fontWeight: theme.fontWeights.regular,
             color: theme.colours.darkgrey,
@@ -43,7 +42,6 @@ const RSVP = () => {
           as="p"
           sx={{
             lineHeight: ['20px', '', '', '30px'],
-
             fontSize: ['25px', '', '', '35px'],
             fontWeight: theme.fontWeights.regular,
             color: theme.colours.darkgrey,

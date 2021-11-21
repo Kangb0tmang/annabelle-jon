@@ -61,7 +61,7 @@ const OnTheDay = () => {
           flexDirection: ['column', '', '', 'row'],
           alignItems: ['center', '', '', 'flex-start'],
           margin: ['20px auto 0', '', '', '40px auto 0'],
-          maxWidth: '1200px',
+          maxWidth: '1240px',
           width: '100%',
         }}
       >
