@@ -5,7 +5,6 @@ import RSVPButton from './RSVPButton';
 
 const Footer = () => (
   <>
-    <Countdown />
     <Box
       sx={{
         mt: [0, '', '', '65px'],
