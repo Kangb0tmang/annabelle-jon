@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box } from 'rebass';
-import Countdown from './Countdown';
 import RSVPButton from './RSVPButton';
 
 const Footer = () => (
